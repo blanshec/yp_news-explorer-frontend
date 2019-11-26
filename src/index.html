@@ -16,7 +16,16 @@
 <body>
   <main class="root">
     <header class="header">
-
+      <h3 class="header__heading">
+        News Explorer
+      </h3>
+      <nav class="header__navigation">
+        <ul class="header__nav-links">
+          <li class="header__link"><a href="#">Главная</a></li>
+          <li class="header__link"><a href="#">О проекте</a></li>
+        </ul>
+        <button class="header__button">Авторизоваться</button>
+      </nav>
     </header>
     <section class="search">
 
@@ -27,8 +36,11 @@
     <section class="about-author">
 
     </section>
+    <footer class="footer">
+
+    </footer>
   </main>
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
 </html>
