@@ -1,0 +1,26 @@
+@import "./_active/header__item_active.css";
+
+.header__item {
+  height: 50px;
+  padding: 0 16px;
+
+
+}
+
+@media screen and (max-width: 1441px) {
+  .header__item {
+    margin: 30px 0 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header__item {
+    margin: 16px 0 0;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .header__item {
+    display: none;
+  }
+}

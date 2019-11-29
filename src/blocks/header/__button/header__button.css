@@ -1,0 +1,29 @@
+@import "./_dark/header__button_dark.css";
+@import "./_light/header__button_light.css";
+
+.header__button {
+  align-self: center;
+
+  box-sizing: border-box;
+
+}
+
+@media screen and (max-width: 1441px) {
+  .header__button {
+    max-height: 48px;
+    padding:  12px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header__button {
+    max-height: 40px;
+    padding:  8px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .header__button {
+    display: none;
+  }
+}

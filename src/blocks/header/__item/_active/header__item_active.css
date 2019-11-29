@@ -1,0 +1,4 @@
+.header__item_active {
+  box-sizing: border-box;
+  border-bottom: 3px  white solid;
+}

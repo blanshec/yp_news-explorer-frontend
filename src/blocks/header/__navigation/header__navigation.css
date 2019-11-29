@@ -1,4 +1,5 @@
 .header__navigation {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
