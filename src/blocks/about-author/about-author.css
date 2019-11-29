@@ -1,0 +1,12 @@
+@import "./__title/about-author__title.css";
+@import "./__text/about-author__text.css";
+@import "./__image/about-author__image.css";
+@import "./__side/about-auther__side.css";
+
+.about-author {
+  margin: 80px auto 0;
+  width: 78%;
+
+  display: flex;
+  flex-direction: row;
+}

@@ -16,48 +16,55 @@
 
 <body>
   <main class="root">
-    <header class="header header_dark">
-      <div class="header__container">
-        <a href="#" class="link header__heading header__heading_dark">
-          NewsExplorer
-        </a>
-        <nav class="header__navigation">
+    <div class="lead">
+      <header class="header header_dark">
+        <div class="header__container">
+          <a href="#" class="link header__heading header__heading_dark">
+            NewsExplorer
+          </a>
+          <nav class="header__navigation">
 
-          <buttton class="header__hamburger">
-          </buttton>
+            <buttton class="header__hamburger">
+            </buttton>
 
-          <ul class="header__nav-links">
-            <li class="header__item header__item_active"><a href="#" class="link link_dark">Главная</a></li>
-            <li class="header__item"><a href="#" class="link">О проекте</a></li>
-          </ul>
-          <button class="button header__button header__button_dark">
-            Авторизоваться
-          </button>
+            <ul class="header__nav-links">
+              <li class="header__item header__item_active"><a href="#" class="link link_dark">Главная</a></li>
+              <li class="header__item"><a href="#" class="link">О проекте</a></li>
+            </ul>
+            <button class="button header__button header__button_dark">
+              Авторизоваться
+            </button>
 
-        </nav>
-      </div>
-    </header>
+          </nav>
+        </div>
+      </header>
 
-    <section class="search">
-      <div class="search__container">
-        <h1 class="search__title">Что в мире творится?</h1>
-        <h2 class="search__subtitle">Находите самые свежие статьи на любую тему
-          и сохраняйте в своём личном кабинете.
-        </h2>
-        <form class="search__form" name="news-finder" method="POST">
-          <input class="search__input" type="text" name="search" placeholder="Введите тему новости" required />
-          <button class="button search__button" type="submit">
-            Искать
-          </button>
-        </form>
-      </div>
-    </section>
+      <section class="search">
+        <div class="search__container">
+          <h1 class="search__title">Что в мире творится?</h1>
+          <h3 class="search__subtitle">Находите самые свежие статьи на любую тему
+            и сохраняйте в своём личном кабинете.
+          </h3>
+          <form class="search__form" name="news-finder" method="POST">
+            <input class="search__input" type="text" name="search" placeholder="Введите тему новости" required />
+            <button class="button search__button" type="submit">
+              Искать
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
 
     <section class="results">
-
+      <i class="circle-preloader"></i>
     </section>
-    <section class="about-author">
 
+    <section class="about-author">
+      <img src="<%= require('./images/author-image.jpg')%>" alt="Portrait of the Author" class="about-author__image" />
+      <div class="about-author__side">
+        <h2 class="about-author__title">Об авторе</h2>
+        <p class="about-author__text">Жил, родился, умер</p>
+      </div>
     </section>
     <footer class="footer">
 
