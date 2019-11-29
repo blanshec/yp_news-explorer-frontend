@@ -1,0 +1,41 @@
+@import "./__button/search__button.css";
+@import "./__container/search__container.css";
+@import "./__form/search__form.css";
+@import "./__input/search__input.css";
+@import "./__subtitle/search__subtitle.css";
+@import "./__title/search__title.css";
+
+.search {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  z-index: auto;
+
+  width: 100%;
+}
+
+@media screen and (max-width: 1441px) {
+  .search {
+    background: url('../../images/not-logged-in-bg.png');
+    top: -80px;
+    height: 576px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .search {
+    background: url('../../images/not-logged-in-bg_tablet.png');
+    top: -66px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .search {
+    background: url('../../images/not-logged-in-bg_mobile.png');
+    top: -56px;
+    max-height: 536px;
+  }
+}
