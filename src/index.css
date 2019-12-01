@@ -24,6 +24,9 @@
 /* Import about-author styles */
 @import "./blocks/about-author/about-author.css";
 
+/* Import footer styles */
+@import "./blocks/footer/footer.css";
+
 body {
   margin: 0 auto;
   max-width: 1441px;
