@@ -35,10 +35,12 @@
 
 button:hover {
   background-color: #347eff;
+  border-color: #347eff;
 }
 
 .button:active {
   background-color: #2a65cc;
+  border-color: #2a65cc;
 }
 
 .button:disabled {
