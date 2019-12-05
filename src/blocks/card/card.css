@@ -1,0 +1,13 @@
+@import "./__button/_save/card__button_save.css";
+@import "./__content/card__content.css";
+@import "./__date/card__date.css";
+@import "./__header/card__header.css";
+@import "./__image/card__image.css";
+@import "./__link/card__link.css";
+@import "./__text/card__text.css";
+@import "./__title/card__title.css";
+
+.card {
+  border-radius: 16px;
+  background-color: #fff;
+}
