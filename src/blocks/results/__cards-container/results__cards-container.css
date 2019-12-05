@@ -1,0 +1,8 @@
+.results__cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 64px 0 0;
+
+}
