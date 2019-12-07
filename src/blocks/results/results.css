@@ -5,8 +5,9 @@
 @import "./_inactive/results_inactive.css";
 @import "./__search/results__search.css";
 @import "./__text/resutls__text.css";
+@import "./__button/results__button.css";
 
 .results {
-  padding: 80px 0 0;
+  padding: 80px 0;
   background-color: #F5F6F7;
 }

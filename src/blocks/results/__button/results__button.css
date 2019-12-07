@@ -1,0 +1,10 @@
+.results__button {
+  background-color: #fff;
+  color: #1A1B22;
+
+  margin: 64px auto 0;
+}
+
+.results__button:hover {
+  color: #fff;
+}
