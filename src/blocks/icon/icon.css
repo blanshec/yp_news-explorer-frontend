@@ -1,0 +1,8 @@
+@import "./icon_save/icon_save.css";
+
+.icon {
+  display: block;
+  margin:  0 auto;
+
+  background-color: #B6BCBF;
+}
