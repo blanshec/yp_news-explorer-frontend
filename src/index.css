@@ -15,8 +15,8 @@
 /* Import lead style  */
 @import "./blocks/lead/lead.css";
 
-/* Import login style */
-@import "./blocks/login/login.css";
+/* Import popup style */
+@import "./blocks/popup/popup.css";
 
 /* Import header styles */
 @import "./blocks/header/header.css";

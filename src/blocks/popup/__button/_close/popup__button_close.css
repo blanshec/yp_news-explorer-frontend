@@ -1,4 +1,4 @@
-.login__button_close {
+.popup__button_close {
   mask: url('../../../../images/close.svg');
 
   width: 40px;

@@ -1,6 +1,5 @@
-.login__fieldset {
+.popup__fieldset {
   width: 358px;
-  margin: 22px auto 0;
   padding: 0;
 
   display: flex;

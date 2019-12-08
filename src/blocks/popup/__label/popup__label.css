@@ -1,4 +1,4 @@
-.login__label {
+.popup__label {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -6,8 +6,10 @@
   line-height: 15px;
 
   color: #2F71E5;
+
+  margin: 31px 0 0;
 }
 
-.login__label:last-of-type {
-  margin: 31px 0 0;
+.popup__label:first-of-type {
+  margin: 0;
 }

@@ -1,4 +1,4 @@
-.login__input {
+.popup__input {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -17,6 +17,6 @@
   text-align: baseline;
 }
 
-.login__input::placeholder {
+.popup__input::placeholder {
   opacity: .2;
 }
