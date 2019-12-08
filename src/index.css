@@ -12,8 +12,11 @@
 @import "./blocks/card/card.css";
 @import "./blocks/icon/icon.css";
 
-/* Import lead syle  */
+/* Import lead style  */
 @import "./blocks/lead/lead.css";
+
+/* Import login style */
+@import "./blocks/login/login.css";
 
 /* Import header styles */
 @import "./blocks/header/header.css";

@@ -16,6 +16,27 @@
 
 <body>
   <main class="root">
+    <div class="login">
+      <div class="login__inner">
+        <button class="login__button_close"></button>
+        <div class="login__container">
+          <div class="login__content">
+            <h3 class="login__title">Вход</h3>
+            <form class="login__form">
+              <fieldset class="login__fieldset">
+                <label class="login__label" for="email">Email</label>
+                <input class="login__input" name="email" placeholder="Введите почту">
+                <label class="login__label" for="password">Пароль</label>
+                <input class="login__input" name="password" placeholder="Введите пароль">
+                <button class="button login__button_submit" type="submit" disabled>Войти</button>
+              </fieldset>
+              <span class="login__text">Или <a class="link login__link" href="#">Зарегестриуйтесь</a></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="lead">
       <header class="header header_dark">
         <div class="header__container">
@@ -55,22 +76,6 @@
       </section>
     </div>
 
-    <div class="login">
-      <button class="button login__button_close"></button>
-      <div class="login__container">
-        <h3 class="login__title"></h3>
-        <form class="login__form">
-          <fieldset class="login__fieldset">
-            <label class="login__label" for=""></label>
-            <input class="login__input" name="">
-            <label class="login__label" for=""></label>
-            <input class="login__input" name="">
-            <button class="button login__button_submit" type="submit"></button>
-          </fieldset>
-          <span class="login__text">Или <a class="link login__link" href="#">Зарегестриуйтесь</a></span>
-        </form>
-      </div>
-    </div>
 
     <section class="results">
       <div class="results__search">

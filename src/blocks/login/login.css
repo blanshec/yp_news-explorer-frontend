@@ -7,4 +7,19 @@
 @import "./__link/login__link.css";
 @import "./__text/login__text.css";
 @import "./__title/login__title.css";
+@import "./__content/login__content.css";
+@import "./__inner/login__inner.css";
 
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+
+  background: rgba(0, 0, 0, .5);
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}

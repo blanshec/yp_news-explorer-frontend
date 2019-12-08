@@ -10,9 +10,6 @@
 
   padding: 18px 40px;
   margin: 0;
-  display: flex;
-  align-items: center;
-  text-align: center;
 
   border-radius: 100px;
   border: 0px;
@@ -33,9 +30,11 @@
   }
 }
 
-button:hover {
+.button:hover {
   background-color: #347eff;
   border-color: #347eff;
+  color: #fff;
+  transition: .3s ease-out;
 }
 
 .button:active {
