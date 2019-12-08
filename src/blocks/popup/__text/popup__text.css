@@ -1,3 +1,5 @@
+@import "./_special/popup__text_special.css";
+
 .popup__text {
   font-family: Roboto;
   font-style: normal;
