@@ -4,10 +4,14 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    main: './src/index.js',
+    about: './src/pages/about/index.js',
+    articles: './src/pages/articles/index.js',
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].[chunkhash].js',
+    filename: (chunkData) => (chunkData.chunk.name === 'main' ? '[name].[hash].js' : '[name]/[name].[hash].js'),
   },
   module: {
     rules: [
