@@ -1,0 +1,47 @@
+@keyframes slide-left {
+  from {
+    right: 35px;
+  }
+
+  to {
+    right: 45px;
+  }
+}
+
+.card__button_save:hover > i {
+  background: black;
+}
+
+.card__button_save:hover {
+  background-color: #ffffff;
+}
+
+.card__button_save:hover::before {
+  content: 'Войдите, чтобы сохранять статьи';
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #000000;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 40px;
+
+  position: absolute;
+  right: 45px;
+  bottom: 0px;
+
+  background-color: white;
+
+  animation: slide-left .3s ease-out;
+  overflow: hidden;
+
+}

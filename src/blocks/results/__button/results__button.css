@@ -1,8 +1,8 @@
 .results__button {
   background-color: #fff;
   color: #1A1B22;
-
   margin: 64px auto 0;
+  display: block;
 }
 
 .results__button:hover {

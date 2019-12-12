@@ -1,4 +1,5 @@
-@import "./icon_save/icon_save.css";
+@import "./_save/icon_save.css";
+@import "./_saved/icon_saved.css";
 
 .icon {
   display: block;

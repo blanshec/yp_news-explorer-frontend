@@ -1,12 +1,5 @@
-@keyframes slide-left {
-  from {
-    right: 35px;
-  }
-
-  to {
-    right: 45px;
-  }
-}
+@import "./_save/card__button_save.css";
+@import "./_saved/card__button_saved.css";
 
 .card__button {
   height: 40px;
@@ -23,40 +16,3 @@
   top: 24px;
 }
 
- .card__button:hover > i {
-  background: black;
-}
-
-.card__button:hover {
-  background-color: #ffffff;
-}
-
-.card__button:hover::before {
-  content: 'Войдите, чтобы сохранять статьи';
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-
-  color: #000000;
-
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: center;
-  width: 184px;
-  height: 40px;
-
-  position: absolute;
-  right: 45px;
-  bottom: 0px;
-
-  background-color: white;
-
-  animation: slide-left .3s ease-out;
-  overflow: hidden;
-
-}

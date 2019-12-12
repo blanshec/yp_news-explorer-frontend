@@ -19,7 +19,7 @@
 
     <div class="hidables">
 
-      <section class="popup ">
+      <section class="popup popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -137,7 +137,29 @@
           <div class="card results__card">
             <div class="card__header">
               <img class="card__image" src="<%= require('./images/card01.png')%>" />
-              <button class="card__button">
+              <button class="card__button card__button_saved">
+                <i class="icon icon_saved"></i>
+              </button>
+            </div>
+            <div class="card__content">
+              <div class="card__date">
+                2 августа, 2019
+              </div>
+              <h4 class="card__title">
+                Национальное достояние – парки
+              </h4>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </p>
+              <a class="link card__link" href="#">Лента.ру</a>
+            </div>
+          </div>
+
+          <div class="card results__card">
+            <div class="card__header">
+              <img class="card__image" src="<%= require('./images/card01.png')%>" />
+              <button class="card__button card__button_save">
                 <i class="icon icon_save"></i>
               </button>
             </div>
@@ -159,7 +181,7 @@
           <div class="card results__card">
             <div class="card__header">
               <img class="card__image" src="<%= require('./images/card01.png')%>" />
-              <button class="card__button">
+              <button class="card__button card__button_save">
                 <i class="icon icon_save"></i>
               </button>
             </div>
@@ -181,29 +203,7 @@
           <div class="card results__card">
             <div class="card__header">
               <img class="card__image" src="<%= require('./images/card01.png')%>" />
-              <button class="card__button">
-                <i class="icon icon_save"></i>
-              </button>
-            </div>
-            <div class="card__content">
-              <div class="card__date">
-                2 августа, 2019
-              </div>
-              <h4 class="card__title">
-                Национальное достояние – парки
-              </h4>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <a class="link card__link" href="#">Лента.ру</a>
-            </div>
-          </div>
-
-          <div class="card results__card">
-            <div class="card__header">
-              <img class="card__image" src="<%= require('./images/card01.png')%>" />
-              <button class="card__button">
+              <button class="card__button card__button_save">
                 <i class="icon icon_save"></i>
               </button>
             </div>
