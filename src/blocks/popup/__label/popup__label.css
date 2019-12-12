@@ -7,9 +7,9 @@
 
   color: #2F71E5;
 
-  margin: 31px 0 0;
+  padding: 31px 0 0;
 }
 
 .popup__label:first-of-type {
-  margin: 0;
+  padding: 0;
 }
