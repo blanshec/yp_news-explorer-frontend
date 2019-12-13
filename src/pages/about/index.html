@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Find news that interesting to you">
+  <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
+  <meta name="author" content="Alina Abdurshina">
+  <link rel="icon" href="<%= require('../../images/favicon.png')%>" type="image/png">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>" />
+
+  <title>News Explorer</title>
+</head>
+
+<body>
+  <main class="root">
+    <div class="hidables">
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Вход</h3>
+              <form class="popup__form" name="login" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="email">Email</label>
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <label class="popup__label" for="password">Пароль</label>
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <button class="button popup__button_submit" type="submit" disabled>Войти</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Регитсрация</h3>
+              <form class="popup__form" name="signup" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="email">Email</label>
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <spam class="popup__error">Неверный формат ввода</spam>
+                  <label class="popup__label" for="password">Пароль</label>
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <label class="popup__label" for="username">Имя</label>
+                  <input class="popup__input" name="username" placeholder="Введите своё имя">
+                  <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Пользователь успешно зарегестирован!</h3>
+              <span class="popup__text_special">
+                <a class="link popup__link_special" href="#">
+                  Выполнить вход
+                </a>
+              </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <header class="header header_light">
+      <div class="header__container">
+        <a href="/" class="link header__heading header__heading_light">
+          NewsExplorer
+        </a>
+        <nav class="header__navigation">
+
+          <buttton class="header__hamburger">
+          </buttton>
+
+          <ul class="header__nav-links">
+            <li class="header__item header__item_active"><a href="/" class="link link_light">Главная</a></li>
+            <li class="header__item"><a href="#" class="link link_light">О проекте</a></li>
+          </ul>
+          <button class="button header__button header__button_light">
+            Alison<i class="icon icon__logout icon__logout_light"></i>
+          </button>
+
+        </nav>
+      </div>
+    </header>
+  </main>
+  <script src="<%=htmlWebpackPlugin.files.chunks.about.entry%>"></script>
+</body>
+
+</html>
