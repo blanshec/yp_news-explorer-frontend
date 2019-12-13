@@ -6,6 +6,7 @@
 @import "./__search/results__search.css";
 @import "./__text/resutls__text.css";
 @import "./__button/results__button.css";
+@import "./__not-found/results__not-found.css";
 
 .results {
   padding: 80px 0;
