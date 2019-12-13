@@ -28,9 +28,9 @@
               <form class="popup__form" name="login" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту">
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль">
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -40,7 +40,7 @@
         </div>
       </section>
 
-      <section class="popup ">
+      <section class="popup popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -49,10 +49,10 @@
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту">
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
                   <spam class="popup__error">Неверный формат ввода</spam>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль">
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
                   <label class="popup__label" for="username">Имя</label>
                   <input class="popup__input" name="username" placeholder="Введите своё имя">
                   <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
