@@ -1,0 +1,40 @@
+/* Import normalize.css */
+@import "../../vendor/normalize.css";
+
+/* Import fonts */
+@import "../../vendor/fonts/Roboto/Roboto.css";
+@import "../../vendor/fonts/Roboto-Slab/Roboto-Slab.css";
+
+/* Import common styles */
+@import "../../blocks/button/button.css";
+@import "../../blocks/link/link.css";
+@import "../../blocks/preloader/preloader.css";
+@import "../../blocks/card/card.css";
+@import "../../blocks/icon/icon.css";
+
+/* Import popup style */
+@import "../../blocks/popup/popup.css";
+
+/* Import header styles */
+@import "../../blocks/header/header.css";
+
+/* Import about-author styles */
+@import "../../blocks/about-author/about-author.css";
+
+/* Import footer styles */
+@import "../../blocks/footer/footer.css";
+
+body {
+  margin: 0 auto;
+  max-width: 1441px;
+  background-color: white;
+}
+
+.root {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
