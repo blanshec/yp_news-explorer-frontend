@@ -1,0 +1,15 @@
+@import "./_dark/icon__logout_dark.css";
+@import "./_light/icon__logout_light.css";
+
+.icon__logout {
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+
+  mask: url('../../../images/logout.svg');
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+
+  padding-left: 10px;
+}
