@@ -1,0 +1,7 @@
+@import "./__content/for-clients__content.css";
+@import "./__text/for-clients__text.css";
+@import "./__title/for-clients__title.css";
+
+.for-clients {
+  margin: 105px 0 72px 0;
+}

@@ -103,6 +103,71 @@
         </nav>
       </div>
     </header>
+
+    <section class="for-clients">
+      <section class="for-clients__content">
+        <h2 class="for-clients__title">Клиентам</h2>
+        <p class="for-clients__text">
+          Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими
+          технологиями владеет.
+        </p>
+        <p class="for-clients__text">
+          Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять
+          новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также
+          сайт проще и дешевле поддерживать.
+        </p>
+        <p class="for-clients__text">
+          Студент самостоятельно написал серверный код. В нём реализована функциональность регистрации и входа в
+          систему. Сайт позволяет искать новости за прошедшую неделю и сохранять понравившиеся в личном кабинете. На
+          сервере избранные новости хранятся в базе данных Mongo DB. Студент запрограммировал надёжный сервер:
+          отказоустойчивый и безопасный.
+        </p>
+        <p class="for-clients__text">
+          При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов.
+          Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если
+          посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит,
+          потенциальная аудитория возрастает.
+        </p>
+        <p class="for-clients__text">
+          Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к
+          этому студенту.
+        </p>
+      </section>
+    </section>
+    <section class="about-author">
+      <img src="<%= require('../../images/author-image.jpg')%>" alt="Portrait of the Author"
+        class="about-author__image" />
+      <div class="about-author__side">
+        <h2 class="about-author__title">Об авторе</h2>
+        <p class="about-author__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; Allina Abdurshina 2019</p>
+      <ul class="footer__links">
+        <li class="footer__item"><a class="link footer__link" href="#">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="#">О проекте</a></li>
+        <li class="footer__item"><a class="link footer__link" href="#">Яндекс.Практикум</a></li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__item">
+          <a class="link footer__icon" href="github.com">
+            <img src="<%= require('../../images/facebook-icon.png')%>">
+          </a>
+        </li>
+        <li class="footer__item"><a class="link footer__icon" href="facebook.com">
+            <img src="<%= require('../../images/git-icon.png')%>">
+          </a>
+        </li>
+      </ul>
+    </footer>
   </main>
   <script src="<%=htmlWebpackPlugin.files.chunks.about.entry%>"></script>
 </body>

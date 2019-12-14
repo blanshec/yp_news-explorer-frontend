@@ -18,6 +18,9 @@
 /* Import header styles */
 @import "../../blocks/header/header.css";
 
+/* Import for-clients styles */
+@import "../../blocks/for-clients/for-clients.css";
+
 /* Import about-author styles */
 @import "../../blocks/about-author/about-author.css";
 
