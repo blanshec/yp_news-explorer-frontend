@@ -1,4 +1,5 @@
-@import "./_active/header__item_active.css";
+@import "./_active-dark/header__item_active-dark.css";
+@import "./_active-light/header__item_active-light.css";
 
 .header__item {
   height: 50px;
