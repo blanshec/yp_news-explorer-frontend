@@ -97,7 +97,7 @@
             <li class="header__item header__item_active-light"><a href="#" class="link link_light">О проекте</a></li>
           </ul>
           <button class="button header__button header__button_light">
-            Alison<i class="icon icon__logout icon__logout_light"></i>
+            Авторизироваться
           </button>
 
         </nav>
@@ -106,7 +106,7 @@
 
     <section class="for-clients">
       <section class="for-clients__content">
-        <h2 class="for-clients__title">Клиентам</h2>
+        <h2 class="title">Клиентам</h2>
         <p class="for-clients__text">
           Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими
           технологиями владеет.
@@ -133,6 +133,38 @@
           этому студенту.
         </p>
       </section>
+    </section>
+
+    <section class="technologies">
+      <div class="technologies__container">
+        <h2 class="title">
+          Используемые технологии
+        </h2>
+
+        <div class="technologies__content">
+
+          <div class="technologies__card">
+            <h3 class="technologies__tech-name">HTML</h3>
+            <img class="tehcnologies__image" src="<%= require('../../images/html5.svg')%>" alt="html logo" />
+          </div>
+
+          <div class="technologies__card">
+            <h3 class="technologies__tech-name">CSS</h3>
+            <img class="tehcnologies__image" src="<%= require('../../images/css3.svg')%>" alt="css logo" />
+          </div>
+
+          <div class="technologies__card">
+            <h3 class="technologies__tech-name">JavaScript</h3>
+            <img class="tehcnologies__image" src="<%= require('../../images/js.svg')%>" alt="JavaScript logo" />
+          </div>
+
+          <div class="technologies__card">
+            <h3 class="technologies__tech-name">Webpack</h3>
+            <img class="tehcnologies__image" src="<%= require('../../images/webpack.svg')%>" alt="Webpack logo" />
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <section class="about-author">

@@ -11,6 +11,7 @@
 @import "../../blocks/preloader/preloader.css";
 @import "../../blocks/card/card.css";
 @import "../../blocks/icon/icon.css";
+@import "../../blocks/title/title.css";
 
 /* Import popup style */
 @import "../../blocks/popup/popup.css";
@@ -20,6 +21,9 @@
 
 /* Import for-clients styles */
 @import "../../blocks/for-clients/for-clients.css";
+
+/* Import technologies styles */
+@import "../../blocks/technologies/technologies.css";
 
 /* Import about-author styles */
 @import "../../blocks/about-author/about-author.css";
