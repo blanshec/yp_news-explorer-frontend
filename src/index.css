@@ -11,6 +11,7 @@
 @import "./blocks/preloader/preloader.css";
 @import "./blocks/card/card.css";
 @import "./blocks/icon/icon.css";
+@import "./blocks/title/title.css";
 
 /* Import lead style  */
 @import "./blocks/lead/lead.css";
