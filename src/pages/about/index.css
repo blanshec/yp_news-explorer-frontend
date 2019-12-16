@@ -28,6 +28,9 @@
 /* Import about-author styles */
 @import "../../blocks/about-author/about-author.css";
 
+/* Import slider styles */
+@import "../../blocks/slider/slider.css";
+
 /* Import footer styles */
 @import "../../blocks/footer/footer.css";
 
