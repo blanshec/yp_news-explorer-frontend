@@ -1,0 +1,7 @@
+@import "./_l/icon__arrow_l.css";
+@import "./_r/icon__arrow_r.css";
+
+.icon__arrow {
+  width: 24px;
+  height: 24px;
+}

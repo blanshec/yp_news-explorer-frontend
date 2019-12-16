@@ -1,0 +1,10 @@
+.icon.icon__arrow_r {
+  mask: url('../../../../images/arrow-r.svg');
+
+  background: black;
+
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+
+}
