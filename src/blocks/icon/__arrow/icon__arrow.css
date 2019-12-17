@@ -1,7 +1,12 @@
-@import "./_l/icon__arrow_l.css";
-@import "./_r/icon__arrow_r.css";
-
 .icon__arrow {
-  width: 24px;
-  height: 24px;
+  min-width: 8px;
+  height: 13px;
+
+  mask-image: url('../../../images/arrow.svg');
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+
+  margin: 0;
+  background-color: #1A1B22;
 }
