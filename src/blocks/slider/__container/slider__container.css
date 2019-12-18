@@ -1,0 +1,30 @@
+.slider__container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 80px 0 0 0;
+
+  display: grid;
+  grid-template-rows: 1fr 400px 1fr;
+  grid-template-areas: "title git-btn"
+                       "slider slider"
+                       "pag pag";
+}
+
+.slider__container:before,
+.slider__container:after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  width: 88px;
+  top: 178px;
+  height: 288px;
+  pointer-events: none;
+}
+.slider__container:before {
+  left: 0;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+}
+.slider__container:after {
+  right: 0;
+  background: linear-gradient(to left, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+}

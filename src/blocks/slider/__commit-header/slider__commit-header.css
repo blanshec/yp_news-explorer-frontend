@@ -1,0 +1,7 @@
+.slider__commit-header {
+  grid-area: creds;
+
+  display: grid;
+  grid-template-areas: "avatar name"
+                       "avatar email";
+}

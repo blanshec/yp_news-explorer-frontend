@@ -11,8 +11,8 @@
 
 @media screen and (max-width: 1441px) {
   .header__container {
-    margin: 0 104px;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 85%;
   }
 }
 

@@ -8,8 +8,8 @@
   }
 }
 
-.card__button_save:hover > i {
-  background: black;
+.card__button_save:hover > object {
+  fill: black;
 }
 
 .card__button_save:hover {
