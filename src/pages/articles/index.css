@@ -21,6 +21,8 @@
 /* Import header styles */
 @import "../../blocks/header/header.css";
 
+@import "../../blocks/svd-lead/svd-lead.css";
+
 @import "../../blocks/saved-articles/saved-articles.css";
 
 /* Import footer styles */

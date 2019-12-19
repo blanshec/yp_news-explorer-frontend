@@ -1,0 +1,8 @@
+@import "./__title/svd-lead__title.css";
+@import "./__subtitle/svd-lead__subtitle.css";
+@import "./__keywords/svd-lead__keywords.css";
+
+.svd-lead {
+  margin: 40px auto 56px ;
+  width: 85%;
+}
