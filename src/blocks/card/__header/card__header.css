@@ -7,6 +7,9 @@
   color: #1A1B22;
 
   max-height: 272px;
+  width: calc(100% + 24px);
+  margin: -24px 0 20px -24px;
+
 
   position: relative;
 }

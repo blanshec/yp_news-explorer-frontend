@@ -8,12 +8,8 @@
   }
 }
 
-.card__button_save:hover > object {
-  fill: black;
-}
-
-.card__button_save:hover {
-  background-color: #ffffff;
+.card__button_save:hover > .icon {
+  background-color: black;
 }
 
 .card__button_save:hover::before {
@@ -43,5 +39,4 @@
 
   animation: slide-left .3s ease-out;
   overflow: hidden;
-
 }

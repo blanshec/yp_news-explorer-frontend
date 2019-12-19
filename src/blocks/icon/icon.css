@@ -3,6 +3,7 @@
 @import "./__logout/icon__logout.css";
 @import './__not-found/icon__not-found.css';
 @import "./__arrow/icon__arrow.css";
+@import "./__delete/icon__delete.css";
 
 .icon {
   display: block;

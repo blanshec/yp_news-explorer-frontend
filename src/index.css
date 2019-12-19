@@ -4,6 +4,7 @@
 /* Import fonts */
 @import "./vendor/fonts/Roboto/Roboto.css";
 @import "./vendor/fonts/Roboto-Slab/Roboto-Slab.css";
+@import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
 /* Import common styles */
 @import "./blocks/button/button.css";
@@ -36,7 +37,6 @@
 
 body {
   margin: 0 auto;
-  max-width: 1441px;
   background-color: white;
 }
 

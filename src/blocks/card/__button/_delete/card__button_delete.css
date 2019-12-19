@@ -1,0 +1,8 @@
+.card__button_delete {
+  background-color: white;
+}
+
+.card__button_delete:hover> .icon {
+  background-color: black;
+
+}

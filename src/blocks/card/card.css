@@ -1,3 +1,8 @@
+/* Import seperate styles */
+@import "./_found/card_found.css";
+@import "./_saved/card_saved.css";
+
+/* Import common elements */
 @import "./__button/card__button.css";
 @import "./__content/card__content.css";
 @import "./__date/card__date.css";
@@ -10,4 +15,11 @@
 .card {
   border-radius: 16px;
   background-color: #fff;
+
+  width: 400px;
+  margin: 0 16px 16px 0;
+  padding: 24px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: block;
 }

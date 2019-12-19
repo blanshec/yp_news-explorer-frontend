@@ -1,0 +1,7 @@
+.card.card_found {
+  max-height: 576px;
+}
+
+.card_found:nth-child(3) {
+  margin: 0 0 16px 0;
+}
