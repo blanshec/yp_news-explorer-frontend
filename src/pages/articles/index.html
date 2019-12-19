@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Find news that interesting to you">
+  <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
+  <meta name="author" content="Alina Abdurshina">
+  <link rel="icon" href="<%= require('../../images/favicon.png')%>" type="image/png">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css%>" />
+
+  <title>News Explorer</title>
+</head>
+
+<body>
+  <main class="root">
+    <div class="hidables">
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Вход</h3>
+              <form class="popup__form" name="login" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="email">Email</label>
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <label class="popup__label" for="password">Пароль</label>
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <button class="button popup__button_submit" type="submit" disabled>Войти</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Регитсрация</h3>
+              <form class="popup__form" name="signup" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="email">Email</label>
+                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <spam class="popup__error">Неверный формат ввода</spam>
+                  <label class="popup__label" for="password">Пароль</label>
+                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <label class="popup__label" for="username">Имя</label>
+                  <input class="popup__input" name="username" placeholder="Введите своё имя">
+                  <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup_inactive">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Пользователь успешно зарегестирован!</h3>
+              <span class="popup__text_special">
+                <a class="link popup__link_special" href="#">
+                  Выполнить вход
+                </a>
+              </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <header class="header header_light">
+      <div class="header__container">
+        <a href="/" class="link header__heading header__heading_light">
+          NewsExplorer
+        </a>
+        <nav class="header__navigation">
+
+          <buttton class="header__hamburger">
+          </buttton>
+
+          <ul class="header__nav-links">
+            <li class="header__item"><a href="/" class="link link_light">Главная</a></li>
+            <li class="header__item"><a href="/about" class="link link_light">О проекте</a></li>
+            <li class="header__item header__item_active-light"><a href="/articles" class="link link_light">Сохраненные
+                статьи</a></li>
+          </ul>
+          <button class="button header__button header__button_light">
+            Alison<i class="icon icon__logout icon__logout_light"></i>
+          </button>
+
+        </nav>
+      </div>
+    </header>
+
+    <section class="svd-lead">
+      <h2 class="svd-lead__subtitle">Сохраненные статьи</h2>
+      <h3 class="svd-lead__title">Alison, у вас 5 сохраненных статьей</h3>
+      <p class="svd-lead__keywords">По ключевым словам: Природа, Тайга и 2 другим</p>
+    </section>
+
+    <section class="saved-articles">
+      <div class="saved-articles__container">
+
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; Allina Abdurshina 2019</p>
+      <ul class="footer__links">
+        <li class="footer__item"><a class="link footer__link" href="/">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="/about">О проекте</a></li>
+        <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
+            target="_blank">Яндекс.Практикум</div>
+        </li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__item">
+          <a class="link footer__icon" href="https://facebook.com/" target="_blank">
+            <img src="<%= require('../../images/facebook-icon.png')%>">
+          </a>
+        </li>
+        <li class="footer__item"><a class="link footer__icon" href="https://github.com/blanshec/" target="_blank">
+            <img src="<%= require('../../images/git-icon.png')%>">
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+  <script src="<%=htmlWebpackPlugin.files.chunks.articles.entry%>"></script>
+</body>
+
+</html>
