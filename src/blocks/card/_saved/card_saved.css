@@ -1,7 +1,7 @@
 @import "../__tag/card__tag.css";
 
 .card.card_saved {
-  max-height: 576px;
+  height: 576px;
 }
 
 .card_saved:nth-child(3) {

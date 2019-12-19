@@ -1,5 +1,5 @@
 .card.card_found {
-  max-height: 576px;
+  height: 576px;
 }
 
 .card_found:nth-child(3) {
