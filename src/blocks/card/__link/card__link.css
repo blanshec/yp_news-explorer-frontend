@@ -1,9 +1,9 @@
-.card__link > .link {
+.link.card__link {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: #B6BCBF;
 
-  margin: 18px 0 0 0;
+  margin: 10px 0 0 0;
 }
