@@ -7,6 +7,7 @@
 @import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
 /* Import common styles */
+@import "./blocks/noscroll/noscroll.css";
 @import "./blocks/button/button.css";
 @import "./blocks/link/link.css";
 @import "./blocks/preloader/preloader.css";
