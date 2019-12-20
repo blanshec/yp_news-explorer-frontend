@@ -6,7 +6,7 @@
 @import "./__title/search__title.css";
 
 .search {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -14,28 +14,23 @@
   z-index: auto;
 
   width: 100%;
+  background: url('../../images/not-logged-in-bg.png');
+  top: -80px;
+  height: 576px;
 }
 
-@media screen and (max-width: 1441px) {
-  .search {
-    background: url('../../images/not-logged-in-bg.png');
-    top: -80px;
-    height: 576px;
-  }
-}
-
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1023px) {
   .search {
     background: url('../../images/not-logged-in-bg_tablet.png');
     top: -66px;
-    max-height: 400px;
+    height: 400px;
   }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 767px) {
   .search {
     background: url('../../images/not-logged-in-bg_mobile.png');
     top: -56px;
-    max-height: 536px;
+    height: 536px;
   }
 }

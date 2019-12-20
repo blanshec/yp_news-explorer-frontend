@@ -11,3 +11,18 @@
 
   width: 545px;
 }
+
+@media screen and (max-width: 1023px) {
+  .search__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 16px 0 0;
+    width: 452px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__subtitle {
+    width: 100%;
+  }
+}

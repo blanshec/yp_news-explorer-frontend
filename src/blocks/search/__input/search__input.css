@@ -7,7 +7,7 @@
 
   position: relative;
   padding-left: 24px;
-  min-width: 608px;
+  width: 608px;
   height: 62px;
 
   background: #FFFFFF;
@@ -15,4 +15,18 @@
   box-sizing: border-box;
   backdrop-filter: blur(8px);
   border-radius: 100px;
+
+  grid-area: searchbox;
+}
+@media screen and (max-width: 1023px) {
+  .search__input {
+    height: 56px;
+    max-width: 488px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .search__input {
+    height: 56px;
+    width: 100%;
+  }
 }

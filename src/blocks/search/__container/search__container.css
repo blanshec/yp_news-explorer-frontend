@@ -8,3 +8,23 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 1023px) {
+  .search__container {
+    padding: 66px 0 0;
+    width: 448px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__container {
+    padding: 56px 0 32px 0;
+    width: 288px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .search__container {
+    width: 100%;
+  }
+}

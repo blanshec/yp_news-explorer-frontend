@@ -1,3 +1,15 @@
 .lead {
   max-height: 576px;
 }
+
+@media screen and (max-width: 1023px) {
+  .lead {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lead {
+    height: 536px;
+  }
+}

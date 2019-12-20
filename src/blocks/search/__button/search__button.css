@@ -7,6 +7,8 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  grid-area: button;
 }
 
 .search__button:hover {
@@ -15,4 +17,16 @@
 
 .search__button:active {
   background-color: #2A65CC;
+}
+
+@media screen and (max-width: 1023px) {
+  .search__button {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .search__button {
+    width: 100%;
+    text-align: center;
+  }
 }
