@@ -4,6 +4,7 @@
 @import './__not-found/icon__not-found.css';
 @import "./__arrow/icon__arrow.css";
 @import "./__delete/icon__delete.css";
+@import './__hambruger/icon__hamburger.css';
 
 .icon {
   display: block;
