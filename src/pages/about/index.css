@@ -13,7 +13,7 @@
 @import "../../blocks/card/card.css";
 @import "../../blocks/icon/icon.css";
 @import "../../blocks/title/title.css";
-@import "./blocks/noscroll/noscroll.css";
+@import "../../blocks/noscroll/noscroll.css";
 
 
 /* Import popup style */

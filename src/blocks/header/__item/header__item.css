@@ -3,22 +3,24 @@
 
 .header__item {
   height: 50px;
+  align-self: flex-end;
+  margin: 0 32px 0 0;
 }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 1023px) {
   .header__item {
-    margin: 30px 32px 0 0;
+    margin: 0 16px 0 0;
+    height: 44px;
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   .header__item {
-    margin: 16px 0 0;
+    width: 100%;
+    margin: 0;
+    height: unset;
   }
-}
-
-@media screen and (max-width: 321px) {
-  .header__item {
-    display: none;
+  .header__item > .link {
+    color: white;
   }
 }

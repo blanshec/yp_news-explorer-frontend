@@ -2,28 +2,26 @@
 @import "./_light/header__button_light.css";
 
 .header__button {
+  font-size: 18px;
   align-self: center;
-
   display: flex;
   flex-direction: row;
   line-height: 24px;
 }
-@media screen and (max-width: 1441px) {
+
+@media screen and (max-width: 1023px) {
   .header__button {
+    font-size: 16px;
     max-height: 48px;
     padding:  12px;
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   .header__button {
-    max-height: 40px;
-    padding:  8px;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .header__button {
-    display: none;
+    display: flex;
+    justify-content: center;
+    min-height: 56px;
+    width: 100%;
   }
 }

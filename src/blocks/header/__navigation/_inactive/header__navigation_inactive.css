@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+  .header__navigation.header__navigation_inactive {
+    display: none;
+  }
+  .header__container::before {
+    display: none;
+  }
+}

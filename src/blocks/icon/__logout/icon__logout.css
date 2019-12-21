@@ -13,3 +13,10 @@
 
   padding-left: 12px;
 }
+
+@media screen and (max-width: 767px) {
+  .icon.icon__logout {
+    margin: 0 0 0 5px;
+    display:inline-block;
+  }
+}
