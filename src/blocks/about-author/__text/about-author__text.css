@@ -5,4 +5,11 @@
   font-size: 18px;
   line-height: 24px;
 
+  margin: 24px 0 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .about-author__text {
+    margin: 16px 0 0 0;
+  }
 }
