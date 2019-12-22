@@ -59,7 +59,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: 'styles/style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
