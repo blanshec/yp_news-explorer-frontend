@@ -10,3 +10,10 @@
 
   list-style: none;
 }
+
+@media screen and (max-width: 767px) {
+  .footer__social {
+    grid-area: social;
+    align-self: start;
+  }
+}

@@ -4,7 +4,7 @@
 @import "./__side/about-auther__side.css";
 
 .about-author {
-  margin: 80px auto 0;
+  margin: 80px auto;
   width: 85%;
 
   display: flex;
@@ -13,13 +13,14 @@
 
 @media screen and (max-width: 1023px) {
   .about-author {
-    margin: 40px auto 0;
+    margin: 61px auto;
     width: 90%;
   }
 }
 
 @media screen and (max-width: 767px) {
   .about-author {
+    margin: 32px auto;
     flex-direction: column;
   }
 }

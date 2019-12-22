@@ -14,3 +14,17 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1023px) {
+  .footer {
+    height: 64px;
+   width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 224px;
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    grid-template-areas: "links social" "copyright copyright";
+  }
+}

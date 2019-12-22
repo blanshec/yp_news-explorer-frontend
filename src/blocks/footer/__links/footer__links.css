@@ -10,3 +10,19 @@
 
   list-style: none;
 }
+
+@media screen and (max-width: 767px) {
+  .footer__links {
+   min-width: 384px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__links {
+    align-self: start;
+    grid-area: links;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+    height: 120px;
+  }
+}
