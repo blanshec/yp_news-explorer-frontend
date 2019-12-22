@@ -5,6 +5,7 @@
 @import "./__arrow/icon__arrow.css";
 @import "./__delete/icon__delete.css";
 @import './__hambruger/icon__hamburger.css';
+@import "./__close/icon__close.css";
 
 .icon {
   display: block;

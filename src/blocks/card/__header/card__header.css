@@ -1,15 +1,15 @@
 .card__header {
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 30px;
-  color: #1A1B22;
-
   max-height: 272px;
   width: calc(100% + 24px);
   margin: -24px 0 20px -24px;
 
 
   position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__header {
+    max-height: 150px;
+    width: 224px;
+  }
 }

@@ -83,6 +83,7 @@
     </div>
 
     <header class="header header_light">
+      <!-- When switching between open and closed menu on mobile dont forget to update Heading and Button icon styles accordingly -->
       <div class="header__container">
         <a href="/" class="link title header__heading header__heading_light">
           NewsExplorer
@@ -90,18 +91,17 @@
         <button class="header__menu">
           <icon class="icon icon__hamburger icon__hamburger_light"></icon>
         </button>
-        <nav class="header__navigation">
 
-
+        <nav class="header__navigation header__navigation_inactive">
           <ul class="header__nav-links">
-            <li class="header__item header__item_active-dark"><a href="/" class="link link_light">Главная</a></li>
+            <li class="header__item header__item_active-light"><a href="/" class="link link_light">Главная</a></li>
             <li class="header__item"><a href="/about" class="link">О проекте</a></li>
           </ul>
           <button class="button header__button header__button_light">
             Авторизоваться
           </button>
-
         </nav>
+
       </div>
     </header>
 

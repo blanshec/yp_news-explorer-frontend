@@ -1,0 +1,11 @@
+
+.icon__close {
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+
+    mask: url('../../../images/close.svg');
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
