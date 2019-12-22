@@ -28,3 +28,23 @@
   right: 0;
   background: linear-gradient(to left, rgb(255, 255, 255), rgba(0, 0, 0, 0));
 }
+
+@media screen and (max-width: 1023px) {
+  .slider__container {
+    width: 90%;
+    padding: 40px 0 0 0;
+  }
+  .slider__container:before,
+  .slider__container:after {
+   content: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider__container {
+    width: 90%;
+    padding: 32px 0 0 0;
+    grid-template-rows: 1fr 264px 48px 56px;
+    grid-template-areas: "title" "slider" "pag" "git-btn";
+  }
+}

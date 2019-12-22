@@ -11,3 +11,18 @@
                        "creds creds"
                        "text text";
 }
+@media screen and (max-width: 1023px) {
+  .slider__commit-card {
+    height: 242px;
+    min-width: 336px;
+    padding: 16px;
+    margin: 0 8px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slider__commit-card {
+    height: 264px;
+    min-width: 288px;
+    margin: 0 8px 0 0;
+  }
+}

@@ -8,3 +8,9 @@
 
   grid-area: name;
 }
+
+@media screen and (max-wdith: 767px) {
+  .slider__commit-name {
+    font-size: 20px;
+  }
+}

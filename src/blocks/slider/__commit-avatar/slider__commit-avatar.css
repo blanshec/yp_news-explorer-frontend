@@ -6,3 +6,10 @@
 
   grid-area: avatar;
 }
+
+@media screen and (max-width: 767px) {
+  .slider__commit-avatar {
+    width: 48px;
+    height: 48px;
+  }
+}

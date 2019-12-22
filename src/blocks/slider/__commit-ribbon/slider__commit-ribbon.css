@@ -14,3 +14,12 @@
 
   overflow-x: auto;
 }
+
+@media screen and (max-width: 767px) {
+  .slider__commit-ribbon {
+    margin: 16px 0 16px;
+    left: unset;
+    right: unset;
+    align-self: center;
+  }
+}

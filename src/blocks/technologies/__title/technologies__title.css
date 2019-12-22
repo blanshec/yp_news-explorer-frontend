@@ -5,18 +5,16 @@
   font-size: 40px;
   line-height: 46px;
 }
+@media screen and (max-width: 1439px) {
+  .technologies__title{
+    margin: 0;
+  }
+}
 @media screen and (max-width: 1023px) {
   .technologies__title{
     font-size: 30px;
     line-height: 34px;
     width: 336px;
     margin: 0;
-  }
-}
-
-
-@media screen and (max-width: 767px) {
-  .technologies__title {
-
   }
 }
