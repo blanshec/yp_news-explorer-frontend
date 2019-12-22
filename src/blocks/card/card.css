@@ -28,5 +28,13 @@
   .card {
     width: 224px;
     margin: 0 8px 8px 0;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 288px;
+    margin: 0 8px 8px 0;
   }
 }

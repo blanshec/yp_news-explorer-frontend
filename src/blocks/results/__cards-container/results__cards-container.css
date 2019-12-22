@@ -4,14 +4,16 @@
   flex-wrap: wrap;
 
   margin: 64px 0 0;
-
-  overflow: hidden;
-  max-height: 576px;
 }
 
 @media screen and (max-width: 1023px) {
   .results__cards-container {
     margin: 32px 0 0;
-    max-height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__cards-container {
+    margin: 24px 0 0;
   }
 }

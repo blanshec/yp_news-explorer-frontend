@@ -7,17 +7,16 @@
   color: #1A1B22;
 
   margin: 16px 0 0 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+
 }
 
 @media screen and (max-width: 1023px) {
   .card__text {
     margin: 10px 0 0 0;
-    height: 100%;
-    flex-grow: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 }

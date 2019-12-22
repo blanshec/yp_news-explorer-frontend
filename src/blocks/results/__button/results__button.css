@@ -5,6 +5,18 @@
   display: block;
 }
 
-.results__button:hover {
+.button.results__button:hover {
   color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .results__button {
+    margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__button {
+    margin: 5px auto 0;
+  }
 }
