@@ -6,3 +6,16 @@
   margin: 40px auto 56px ;
   width: 85%;
 }
+@media screen and (max-width: 1023px) {
+  .svd-lead {
+    width: 90%;
+    margin: 24px auto 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .svd-lead {
+    width: 90%;
+    margin: 8px auto 32px;
+  }
+}

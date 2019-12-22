@@ -11,3 +11,16 @@
 
   margin: 30px 0 0;
 }
+
+@media screen and (max-width: 1023px) {
+  .svd-lead__keywords{
+    font-size: 14px;
+    margin: 16px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .svd-lead__keywords {
+    font-size: 18px;
+  }
+}
