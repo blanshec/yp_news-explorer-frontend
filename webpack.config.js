@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -17,27 +18,27 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        use: { loader: 'babel-loader' },
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
-
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../' },
           },
           {
             loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
+            options: { importLoaders: 1 },
           },
           {
             loader: 'postcss-loader',
+            options: {
+              config: {
+                path: `${__dirname}/postcss.config.js`,
+              },
+            },
           },
         ],
       },
@@ -51,7 +52,22 @@ module.exports = {
           'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
-            options: {},
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 85,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: 90,
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
           },
         ],
       },
@@ -59,7 +75,16 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/style.[contenthash].css',
+      filename: 'css/style.[contenthash].css',
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      // eslint-disable-next-line global-require
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true,
     }),
     new HtmlWebpackPlugin({
       inject: false,
