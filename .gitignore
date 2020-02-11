@@ -2,10 +2,12 @@
 logs
 *.log
 npm-debug.log*
-.checklist.*
 
 # Dependency directory
 node_modules
+
+# Dists
+/dist
 
 # Optional npm cache directory
 .npm
@@ -14,7 +16,8 @@ node_modules
 .DS_Store
 .idea
 
+# misc.
+package-lock.json
+.checklist.*
 *.env
-
-/dist
 
