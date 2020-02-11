@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open --watch",
-    "pages": "gh-pages -d dist"
+    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "pages": "gh-pages -d dist",
+    "deploy": "npm run build && scp -i ~/AWS/news-explorer.pem -r ./dist/* ubuntu@ec2-35-180-133-184.eu-west-3.compute.amazonaws.com:~/yp_news-explorer-frontend"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,7 @@
     "core-js": "3.1.4",
     "cross-env": "^6.0.3",
     "cssnano": "4.1.10",
-    "dotenv": "^8.2.0",
+    "dotenv": "8.2.0",
     "package.json": "2.0.1",
     "swiper": "5.2.1",
     "validator": "11.1.0"
