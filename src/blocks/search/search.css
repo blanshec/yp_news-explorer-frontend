@@ -4,7 +4,6 @@
 @import "./__input/search__input.css";
 @import "./__subtitle/search__subtitle.css";
 @import "./__title/search__title.css";
-@import "./__background/search__background.css";
 
 .search {
   background-size: contain;
@@ -14,13 +13,15 @@
   position: relative;
   z-index: auto;
 
+  width: 100%;
+  background: url('../../images/not-logged-in-bg.png');
   top: -80px;
-  overflow: hidden;
   height: 576px;
 }
 
 @media screen and (max-width: 1023px) {
   .search {
+    background: url('../../images/not-logged-in-bg_tablet.png');
     top: -66px;
     height: 400px;
   }
@@ -28,6 +29,7 @@
 
 @media screen and (max-width: 767px) {
   .search {
+    background: url('../../images/not-logged-in-bg_mobile.png');
     top: -56px;
     height: 536px;
   }
