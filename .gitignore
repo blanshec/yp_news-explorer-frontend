@@ -17,7 +17,6 @@ node_modules
 .idea
 
 # misc.
-package-lock.json
 .checklist
 *.env
 
