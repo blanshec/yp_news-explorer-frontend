@@ -87,19 +87,19 @@
     <div class="lead">
       <header class="header header_dark">
         <div class="header__container">
-          <a href="/" class="link title header__heading header__heading_dark">
+          <a href="./" class="link title header__heading header__heading_dark">
             NewsExplorer
           </a>
           <button class="header__menu">
             <icon class="icon icon__hamburger icon__hamburger_dark"></icon>
           </button>
 
-          <!-- Toggle header__navigation_inactive class to show and hide nav-bar on <767px res -->
+          <!-- Toggle header__navigation_inactive class to show and hide nav-bar on < 767px res -->
           <nav class="header__navigation header__navigation_inactive">
             <ul class="header__nav-links">
-              <li class="header__item header__item_active-dark"><a href="/" class="link link_dark">Главная</a></li>
-              <li class="header__item"><a href="/about" class="link">О проекте</a></li>
-              <li class="header__item"><a href="/articles" class="link">Сохраненные статьи</a></li>
+              <li class="header__item header__item_active-dark"><a href="./" class="link link_dark">Главная</a></li>
+              <li class="header__item"><a href="./about" class="link">О проекте</a></li>
+              <li class="header__item"><a href="./articles" class="link">Сохраненные статьи</a></li>
             </ul>
             <button class="button header__button header__button_dark">
               Alison<i class="icon icon__logout icon__logout_dark"></i>
@@ -152,7 +152,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="<%= require('./images/card01.png')%>" />
+              <img class="card__image" src="<%= require('./images/card01.png')%>" alt="card header: national parks" />
               <button class="card__button card__button_saved">
                 <i class="icon icon__saved"></i>
               </button>
@@ -174,7 +174,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="<%= require('./images/card01.png')%>" />
+              <img class="card__image" src="<%= require('./images/card01.png')%>" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -196,7 +196,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="<%= require('./images/card01.png')%>" />
+              <img class="card__image" src="<%= require('./images/card01.png')%>" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -218,7 +218,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="<%= require('./images/card01.png')%>" />
+              <img class="card__image" src="<%= require('./images/card01.png')%>" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -245,7 +245,10 @@
     </section>
 
     <section class="about-author">
-      <img src="<%= require('./images/author-image.jpg')%>" alt="Portrait of the Author" class="about-author__image" />
+      <picture>
+        <img src="<%= require('./images/author-image.jpg')%>" alt="Portrait of the Author"
+          class="about-author__image" />
+      </picture>
       <div class="about-author__side">
         <h2 class="title about-author__title">Об авторе</h2>
         <p class="about-author__text">
@@ -261,18 +264,20 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Abdurshina 2019</p>
       <ul class="footer__links">
-        <li class="footer__item"><a class="link footer__link" href="#">Главная</a></li>
-        <li class="footer__item"><a class="link footer__link" href="#">О проекте</a></li>
-        <li class="footer__item"><a class="link footer__link" href="#">Яндекс.Практикум</a></li>
+        <li class="footer__item"><a class="link footer__link" href="./">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="./about/">О проекте</a></li>
+        <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
+            target="_blank">Яндекс.Практикум</a></li>
       </ul>
       <ul class="footer__social">
         <li class="footer__item">
-          <a class="link footer__icon" href="github.com">
-            <img src="<%= require('./images/facebook-icon.png')%>">
+          <a class="link footer__icon" href="https://www.facebook.com/alina.abdurshina" target="_blank">
+            <img src="<%= require('./images/facebook-icon.png')%>" alt="icon: facebook">
           </a>
         </li>
-        <li class="footer__item"><a class="link footer__icon" href="facebook.com">
-            <img src="<%= require('./images/git-icon.png')%>">
+        <li class="footer__item">
+          <a class="link footer__icon" href="https://www.github.com/blanshec" target="_blank">
+            <img src="<%= require('./images/git-icon.png')%>" alt="icon: facebook">
           </a>
         </li>
       </ul>

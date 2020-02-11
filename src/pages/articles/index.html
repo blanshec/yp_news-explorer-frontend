@@ -11,7 +11,7 @@
   <link rel="icon" href="<%= require('../../images/favicon.png')%>" type="image/png">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css%>" />
 
-  <title>News Explorer</title>
+  <title>News Explorer / Сохраненные статьи</title>
 </head>
 
 <body>
@@ -84,7 +84,7 @@
 
     <header class="header header_light">
       <div class="header__container">
-        <a href="/" class="link title header__heading header__heading_light">
+        <a href="../" class="link title header__heading header__heading_light">
           NewsExplorer
         </a>
         <button class="header__menu">
@@ -94,9 +94,9 @@
 
 
           <ul class="header__nav-links">
-            <li class="header__item "><a href="/" class="link ">Главная</a></li>
-            <li class="header__item"><a href="/about" class="link">О проекте</a></li>
-            <li class="header__item header__item_active-light"><a href="/articles" class="link link_light">Сохраненные
+            <li class="header__item "><a href="../" class="link ">Главная</a></li>
+            <li class="header__item"><a href="../about/" class="link">О проекте</a></li>
+            <li class="header__item header__item_active-light"><a href="./" class="link link_light">Сохраненные
                 статьи</a></li>
           </ul>
           <button class="button header__button header__button_light">
@@ -118,7 +118,8 @@
 
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <img class="card__image" src="../<%= require('../../images/card01.png')%>"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -135,12 +136,12 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <img class="card__image" src="../ require('../../images/card01.png')%>" alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -157,12 +158,12 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <img class="card__image" src="../ require('../../images/card01.png')%>" alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -179,12 +180,12 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <img class="card__image" src="../ require('../../images/card01.png')%>" alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -201,12 +202,12 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="<%= require('../../images/card01.png')%>" />
+            <img class="card__image" src="../ require('../../images/card01.png')%>" alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -223,7 +224,7 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
 
@@ -234,20 +235,21 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Allina Abdurshina 2019</p>
       <ul class="footer__links">
-        <li class="footer__item"><a class="link footer__link" href="/">Главная</a></li>
-        <li class="footer__item"><a class="link footer__link" href="/about">О проекте</a></li>
-        <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
-            target="_blank">Яндекс.Практикум</div>
+        <li class="footer__item"><a class="link footer__link" href="../">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="../about">О проекте</a></li>
+        <li class="footer__item">
+          <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум
+          </a>
         </li>
       </ul>
       <ul class="footer__social">
         <li class="footer__item">
-          <a class="link footer__icon" href="https://facebook.com/" target="_blank">
-            <img src="<%= require('../../images/facebook-icon.png')%>">
+          <a class="link footer__icon" href="https://facebook.com/abdurshina.alina" target="_blank">
+            <img src="<%= require('../../images/facebook-icon.png')%>" alt="icon: facebook">
           </a>
         </li>
         <li class="footer__item"><a class="link footer__icon" href="https://github.com/blanshec/" target="_blank">
-            <img src="<%= require('../../images/git-icon.png')%>">
+            <img src="<%= require('../../images/git-icon.png')%>" alt="icon: github">
           </a>
         </li>
       </ul>
