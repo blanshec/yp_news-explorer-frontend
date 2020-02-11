@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+.checklist.*
 
 # Dependency directory
 node_modules
