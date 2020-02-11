@@ -3,12 +3,12 @@
   grid-template-areas: "searchbox button";
   grid-template-rows: 62px;
 
-
-
   position: relative;
 
   width: 100%;
   margin: 64px 0 0;
+
+  z-index: 2;
 }
 
 @media screen and (max-width: 1023px) {

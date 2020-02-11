@@ -122,6 +122,11 @@
             </button>
           </form>
         </div>
+        <picture class="search__background">
+          <source media="(max-width: 767px)" srcset="<%= require('./images/not-logged-in-bg_mobile.png')%>">
+          <source media="(max-width: 1023px)" srcset="<%= require('./images/not-logged-in-bg_tablet.png')%>">
+          <img src="<%= require('./images/not-logged-in-bg.png')%>" alt="Chris standing up holding his daughter Elva">
+        </picture>
       </section>
     </div>
 
