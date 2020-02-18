@@ -7,6 +7,7 @@
 
 @media screen and (max-width: 767px) {
   .technologies__content {
+    margin: 40px 0 0 0;
     flex-direction: row;
     flex-wrap: wrap;
   }
