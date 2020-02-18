@@ -14,6 +14,6 @@
 
 @media screen and (max-width: 767px) {
   .results__cards-container {
-    margin: 24px 0 0;
+    margin: 24px auto 0;
   }
 }
