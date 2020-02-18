@@ -3,10 +3,12 @@
   color: #1A1B22;
   margin: 64px auto 0;
   display: block;
+  width: 288px;
+  height: 64px;
 }
 
 .button.results__button:hover {
-  color: #fff;
+  background-color: #E6E8EB;
 }
 
 @media screen and (max-width: 1023px) {

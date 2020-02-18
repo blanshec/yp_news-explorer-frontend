@@ -12,12 +12,21 @@
 }
 
 .search__button:hover {
-  background-color: #347EFF;
+  background-color: #347eff;
+  border-color: #347eff;
+  color: #fff;
 }
 
 .search__button:active {
-  background-color: #2A65CC;
+  background-color: #2a65cc;
+  border-color: #2a65cc;
 }
+
+.search__button:disabled {
+  color: #b6bcbf;
+  background-color: #e6e8eb;
+}
+
 
 @media screen and (max-width: 1023px) {
   .search__button {

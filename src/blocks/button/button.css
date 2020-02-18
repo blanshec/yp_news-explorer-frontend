@@ -16,28 +16,8 @@
   border-radius: 100px;
   border: 0px;
   cursor: pointer;
-
 }
 
 .button:hover {
-  background-color: #347eff;
-  border-color: #347eff;
-  color: #fff;
   transition: .3s ease-out;
-}
-
-.button:active {
-  background-color: #2a65cc;
-  border-color: #2a65cc;
-}
-
-.button:disabled {
-  color: #b6bcbf;
-  background-color: #e6e8eb;
-}
-
-@media screen and (max-width: 1023px) {
-  .button {
-    background-color: white;
-  }
 }
