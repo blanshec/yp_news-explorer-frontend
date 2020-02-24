@@ -4,6 +4,8 @@
 
 <https://newsexplo.tk/>
 
+<https://blanshec.github.io/yp_news-explorer-frontend/>
+
 ### Технологии
 
 CSS, HTML, Webpack, Javascript
@@ -17,4 +19,5 @@ CSS, HTML, Webpack, Javascript
 Запуск:
 `npm run dev` - запуск в режиме разработки
 `npm run build` - продакшен версия
-`npm run deploy` - деплой на gh-pages
+`npm run pages` - деплой на gh-pages
+`npm run deploy` - деплой на сервер проекта
