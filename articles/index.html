@@ -9,9 +9,9 @@
   <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
   <meta name="author" content="Alina Abdurshina">
   <link rel="icon" href="./images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="../style.7a05a03a8ac13a4865e2.css?2c90ad251166b0a4ba69" />
+  <link rel="stylesheet" href="../css/style.db7ebbb00904282988d6.css?5ec7aed650a4e2cfc227" />
 
-  <title>News Explorer</title>
+  <title>News Explorer / Сохраненные статьи</title>
 </head>
 
 <body>
@@ -27,9 +27,9 @@
               <form class="popup__form" name="login" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -48,12 +48,15 @@
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
                   <spam class="popup__error">Неверный формат ввода</spam>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required
+                    minlength="8">
                   <label class="popup__label" for="username">Имя</label>
-                  <input class="popup__input" name="username" placeholder="Введите своё имя">
+                  <input class="popup__input" name="username" name="name" placeholder="Введите свое имя" required
+                    minlength="2">
+                  <spam class="popup__error">Такой пользователь уже есть</spam>
                   <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
@@ -84,7 +87,7 @@
 
     <header class="header header_light">
       <div class="header__container">
-        <a href="/" class="link title header__heading header__heading_light">
+        <a href="../" class="link title header__heading header__heading_light">
           NewsExplorer
         </a>
         <button class="header__menu">
@@ -94,9 +97,9 @@
 
 
           <ul class="header__nav-links">
-            <li class="header__item "><a href="/" class="link ">Главная</a></li>
-            <li class="header__item"><a href="/about" class="link">О проекте</a></li>
-            <li class="header__item header__item_active-light"><a href="/articles" class="link link_light">Сохраненные
+            <li class="header__item "><a href="../" class="link ">Главная</a></li>
+            <li class="header__item"><a href="../about/" class="link">О проекте</a></li>
+            <li class="header__item header__item_active-light"><a href="./" class="link link_light">Сохраненные
                 статьи</a></li>
           </ul>
           <button class="button header__button header__button_light">
@@ -118,7 +121,8 @@
 
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="./images/card01.png" />
+            <img class="card__image" src=".././images/card01.png"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -135,12 +139,13 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="./images/card01.png" />
+            <img class="card__image" src=".././images/card01.png"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -157,12 +162,13 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="./images/card01.png" />
+            <img class="card__image" src=".././images/card01.png"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -179,12 +185,13 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="./images/card01.png" />
+            <img class="card__image" src=".././images/card01.png"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -201,12 +208,13 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
         <div class="card card_saved">
           <div class="card__header">
-            <img class="card__image" src="./images/card01.png" />
+            <img class="card__image" src=".././images/card01.png"
+              alt="card header: national parks" />
             <span class="card__tag">История</span>
             <button class="card__button card__button_delete">
               <i class="icon icon__delete"></i>
@@ -223,7 +231,7 @@
               В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
               парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
-            <a class="link card__link" href="https://lenta.ru">Лента.ру</a>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
           </div>
         </div>
 
@@ -234,26 +242,27 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Allina Abdurshina 2019</p>
       <ul class="footer__links">
-        <li class="footer__item"><a class="link footer__link" href="/">Главная</a></li>
-        <li class="footer__item"><a class="link footer__link" href="/about">О проекте</a></li>
-        <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
-            target="_blank">Яндекс.Практикум</div>
+        <li class="footer__item"><a class="link footer__link" href="../">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="../about">О проекте</a></li>
+        <li class="footer__item">
+          <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум
+          </a>
         </li>
       </ul>
       <ul class="footer__social">
         <li class="footer__item">
-          <a class="link footer__icon" href="https://facebook.com/" target="_blank">
-            <img src="./images/facebook-icon.png">
+          <a class="link footer__icon" href="https://facebook.com/abdurshina.alina" target="_blank">
+            <img src="./images/facebook-icon.png" alt="icon: facebook">
           </a>
         </li>
         <li class="footer__item"><a class="link footer__icon" href="https://github.com/blanshec/" target="_blank">
-            <img src="./images/git-icon.png">
+            <img src="./images/git-icon.png" alt="icon: github">
           </a>
         </li>
       </ul>
     </footer>
   </main>
-  <script src="../articles/articles.2c90ad251166b0a4ba69.js?2c90ad251166b0a4ba69"></script>
+  <script src="../articles/articles.5ec7aed650a4e2cfc227.js?5ec7aed650a4e2cfc227"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
   <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
   <meta name="author" content="Alina Abdurshina">
   <link rel="icon" href="./images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="style.ee30473d7387e295ab05.css?2c90ad251166b0a4ba69" />
+  <link rel="stylesheet" href="css/style.9a6a44b9f48d46301743.css?5ec7aed650a4e2cfc227" />
 
   <title>News Explorer</title>
 </head>
@@ -19,7 +19,7 @@
 
     <div class="hidables">
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__login popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -28,9 +28,9 @@
               <form class="popup__form" name="login" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -40,7 +40,7 @@
         </div>
       </section>
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__signup popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -49,12 +49,15 @@
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" placeholder="Введите почту" type="email">
+                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
                   <spam class="popup__error">Неверный формат ввода</spam>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" placeholder="Введите пароль" type="password">
+                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required
+                    minlength="8">
                   <label class="popup__label" for="username">Имя</label>
-                  <input class="popup__input" name="username" placeholder="Введите своё имя">
+                  <input class="popup__input" name="username" name="name" placeholder="Введите свое имя" required
+                    minlength="2">
+                  <spam class="popup__error">Такой пользователь уже есть</spam>
                   <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
@@ -64,7 +67,7 @@
         </div>
       </section>
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__message popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -87,19 +90,19 @@
     <div class="lead">
       <header class="header header_dark">
         <div class="header__container">
-          <a href="/" class="link title header__heading header__heading_dark">
+          <a href="./" class="link title header__heading header__heading_dark">
             NewsExplorer
           </a>
           <button class="header__menu">
             <icon class="icon icon__hamburger icon__hamburger_dark"></icon>
           </button>
 
-          <!-- Toggle header__navigation_inactive class to show and hide nav-bar on <767px res -->
+          <!-- Toggle header__navigation_inactive class to show and hide nav-bar on < 767px res -->
           <nav class="header__navigation header__navigation_inactive">
             <ul class="header__nav-links">
-              <li class="header__item header__item_active-dark"><a href="/" class="link link_dark">Главная</a></li>
-              <li class="header__item"><a href="/about" class="link">О проекте</a></li>
-              <li class="header__item"><a href="/articles" class="link">Сохраненные статьи</a></li>
+              <li class="header__item header__item_active-dark"><a href="./" class="link link_dark">Главная</a></li>
+              <li class="header__item"><a href="./about" class="link">О проекте</a></li>
+              <li class="header__item"><a href="./articles" class="link">Сохраненные статьи</a></li>
             </ul>
             <button class="button header__button header__button_dark">
               Alison<i class="icon icon__logout icon__logout_dark"></i>
@@ -152,7 +155,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="./images/card01.png" />
+              <img class="card__image" src="./images/card01.png" alt="card header: national parks" />
               <button class="card__button card__button_saved">
                 <i class="icon icon__saved"></i>
               </button>
@@ -174,7 +177,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="./images/card01.png" />
+              <img class="card__image" src="./images/card01.png" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -196,7 +199,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="./images/card01.png" />
+              <img class="card__image" src="./images/card01.png" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -218,7 +221,7 @@
 
           <div class="card card_found">
             <div class="card__header">
-              <img class="card__image" src="./images/card01.png" />
+              <img class="card__image" src="./images/card01.png" alt="card header: national parks" />
               <button class="card__button card__button_save">
                 <i class="icon icon__save"></i>
               </button>
@@ -245,7 +248,10 @@
     </section>
 
     <section class="about-author">
-      <img src="./images/author-image.jpg" alt="Portrait of the Author" class="about-author__image" />
+      <picture>
+        <img src="./images/author-image.jpg" alt="Portrait of the Author"
+          class="about-author__image" />
+      </picture>
       <div class="about-author__side">
         <h2 class="title about-author__title">Об авторе</h2>
         <p class="about-author__text">
@@ -261,25 +267,27 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Abdurshina 2019</p>
       <ul class="footer__links">
-        <li class="footer__item"><a class="link footer__link" href="#">Главная</a></li>
-        <li class="footer__item"><a class="link footer__link" href="#">О проекте</a></li>
-        <li class="footer__item"><a class="link footer__link" href="#">Яндекс.Практикум</a></li>
+        <li class="footer__item"><a class="link footer__link" href="./">Главная</a></li>
+        <li class="footer__item"><a class="link footer__link" href="./about/">О проекте</a></li>
+        <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
+            target="_blank">Яндекс.Практикум</a></li>
       </ul>
       <ul class="footer__social">
         <li class="footer__item">
-          <a class="link footer__icon" href="github.com">
-            <img src="./images/facebook-icon.png">
+          <a class="link footer__icon" href="https://www.facebook.com/alina.abdurshina" target="_blank">
+            <img src="./images/facebook-icon.png" alt="icon: facebook">
           </a>
         </li>
-        <li class="footer__item"><a class="link footer__icon" href="facebook.com">
-            <img src="./images/git-icon.png">
+        <li class="footer__item">
+          <a class="link footer__icon" href="https://www.github.com/blanshec" target="_blank">
+            <img src="./images/git-icon.png" alt="icon: facebook">
           </a>
         </li>
       </ul>
     </footer>
 
   </main>
-  <script src="main.2c90ad251166b0a4ba69.js?2c90ad251166b0a4ba69"></script>
+  <script src="main.5ec7aed650a4e2cfc227.js?5ec7aed650a4e2cfc227"></script>
 </body>
 
 </html>
