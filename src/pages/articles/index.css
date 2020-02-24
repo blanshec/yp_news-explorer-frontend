@@ -8,13 +8,13 @@
 
 
 /* Import common styles */
-@import "../../blocks/noscroll/noscroll.css";
-@import "../../blocks/button/button.css";
-@import "../../blocks/link/link.css";
-@import "../../blocks/preloader/preloader.css";
-@import "../../blocks/card/card.css";
-@import "../../blocks/icon/icon.css";
-@import "../../blocks/title/title.css";
+@import "../../blocks/common/noscroll/noscroll.css";
+@import "../../blocks/common/button/button.css";
+@import "../../blocks/common/link/link.css";
+@import "../../blocks/common/preloader/preloader.css";
+@import "../../blocks/common/card/card.css";
+@import "../../blocks/common/icon/icon.css";
+@import "../../blocks/common/title/title.css";
 
 /* Import popup style */
 @import "../../blocks/popup/popup.css";
