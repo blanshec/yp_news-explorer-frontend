@@ -4,7 +4,7 @@
 
   background-color: #2F71E5;
 
-  mask: url('../../../images/saved-flag.svg');
+  mask: url('../../../../images/saved-flag.svg');
   mask-position: center;
   mask-size: cover;
   mask-repeat: no-repeat;

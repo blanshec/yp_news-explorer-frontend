@@ -2,7 +2,7 @@
   height: 19px;
   width: 14px;
 
-  mask: url('../../../images/save-flag.svg');
+  mask: url('../../../../images/save-flag.svg');
   mask-position: center;
   mask-size: cover;
   mask-repeat: no-repeat;
