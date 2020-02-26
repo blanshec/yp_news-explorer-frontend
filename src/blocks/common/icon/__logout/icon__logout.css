@@ -6,7 +6,7 @@
   width: 24px;
   box-sizing: border-box;
 
-  mask: url('../../../images/logout.svg');
+  mask: url('../../../../images/logout.svg');
   mask-position: center;
   mask-size: cover;
   mask-repeat: no-repeat;
