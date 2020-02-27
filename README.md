@@ -2,7 +2,7 @@
 
 ## Дипломная работа Yandex.Praktikum
 
-<https://newsexplo.tk/>
+<https://newsexplo.gq/>
 
 <https://blanshec.github.io/yp_news-explorer-frontend/>
 
