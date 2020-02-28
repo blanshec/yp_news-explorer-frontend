@@ -9,23 +9,11 @@
 @import "./__link/popup__link.css";
 @import "./__text/popup__text.css";
 @import "./__title/popup__title.css";
-@import "./_inactive/popup_inactive.css";
+@import "./_is-active/popup_is-active.css";
 @import "./__error/popup__error.css";
 
 .popup {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 200;
-
-  background: rgba(0, 0, 0, .5);
-
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
