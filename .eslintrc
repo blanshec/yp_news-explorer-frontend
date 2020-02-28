@@ -2,6 +2,7 @@
   "extends": "airbnb-base",
   "rules": {
     "no-dupe-keys": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-undef": "off",
   }
 }
