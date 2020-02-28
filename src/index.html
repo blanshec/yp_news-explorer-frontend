@@ -18,34 +18,12 @@
   <main class="root">
 
     <div class="hidables">
-
-      <section class="popup popup__login popup_inactive">
+      <section class="popup popup__signup">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
             <div class="popup__content">
-              <h3 class="popup__title">Вход</h3>
-              <form class="popup__form" name="login" method="POST">
-                <fieldset class="popup__fieldset">
-                  <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
-                  <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
-                  <button class="button popup__button_submit" type="submit" disabled>Войти</button>
-                </fieldset>
-                <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="popup popup__signup popup_inactive">
-        <div class="popup__inner">
-          <button class="popup__button_close"></button>
-          <div class="popup__container">
-            <div class="popup__content">
-              <h3 class="popup__title">Регитсрация</h3>
+              <h3 class="popup__title">Регистрация</h3>
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
@@ -67,7 +45,28 @@
         </div>
       </section>
 
-      <section class="popup popup__message popup_inactive">
+      <section class="popup popup__login">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Вход</h3>
+              <form class="popup__form" name="login" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="email">Email</label>
+                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
+                  <label class="popup__label" for="password">Пароль</label>
+                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
+                  <button class="button popup__button_submit" type="submit" disabled>Войти</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup__message">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -85,7 +84,6 @@
       </section>
 
     </div>
-
 
     <div class="lead">
       <header class="header header_dark">

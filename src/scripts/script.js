@@ -1,12 +1,19 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-undef */
-import Popup from '../blocks/popup/popup';
+import config from './config';
+import BackendApi from './backendApi';
+import Header from '../blocks/header/header';
+import PopupSignup from '../blocks/popup/popupSignup';
+import PopupLogin from '../blocks/popup/popupLogin';
 
-document.querySelector('.header').addEventListener('click', (event) => {
-  if (event.target.classList.contains('header__button')) {
-    const popup = new Popup(event.target);
-    popup.open();
-    // eslint-disable-next-line no-alert
-    alert('hello');
-  }
+const api = new BackendApi(config.BackendApi);
+
+const popupSignup = new PopupSignup({
+  element: document.querySelector(config.elements.popupSignup),
+});
+const popupLogin = new PopupLogin({
+  element: document.querySelector(config.elements.popupLogin),
+});
+
+
+const header = new Header({
+  element: document.querySelector(config.elements.header),
 });

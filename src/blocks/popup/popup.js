@@ -1,14 +1,20 @@
+import Component from '../Component';
+import config from '../../scripts/config';
 
-export default class Popup {
-  constructor(popup) {
-    this.popupElement = popup;
+export default class Popup extends Component {
+  constructor(element) {
+    super(element);
+    this.closeButton = this.element.querySelector(config.elements.popupCloseButton);
+    this.closeButton.onclick = this.close.bind(this);
   }
 
   open() {
-    alert('inpuen');
-    this.popupElement.classList.remove('popup_inactive');
-    const button = this.popupElement.querySelector('');
-    button.setAttribute('disabled', true);
-    button.classList.add('.popup__button_disabled');
+    this.element.classList.add('popup_is-active');
+    document.querySelector(config.elements.root).classList.add(config.elements.status.noscroll);
+  }
+
+  close() {
+    this.element.classList.remove('popup_is-active');
+    document.querySelector(config.elements.root).classList.remove(config.elements.status.noscroll);
   }
 }
