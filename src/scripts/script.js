@@ -7,9 +7,11 @@ import PopupLogin from '../blocks/popup/popupLogin';
 const api = new BackendApi(config.BackendApi);
 
 const popupSignup = new PopupSignup({
+  api,
   element: document.querySelector(config.elements.popupSignup),
 });
 const popupLogin = new PopupLogin({
+  api,
   element: document.querySelector(config.elements.popupLogin),
 });
 

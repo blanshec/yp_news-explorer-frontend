@@ -9,6 +9,7 @@ const config = {
   elements: {
     status: {
       noscroll: 'noscroll',
+      nodisplay: 'nodisplay',
     },
     root: '.root',
     header: '.header',
@@ -17,6 +18,14 @@ const config = {
     popupSignup: '.popup__signup',
     popupLogin: '.popup__login',
     popupCloseButton: '.popup__button_close',
+    popupTitle: '.popup__title',
+    popupForm: '.popup__form',
+    popupFieldset: '.popup__fieldset',
+    popupInput: '.popup__input',
+    popupLabel: 'popup__label',
+    popupError: 'popup__error',
+    popupButtonSubmit: 'popup__button_submit',
+    popupLink: 'popup__link',
   },
 };
 
