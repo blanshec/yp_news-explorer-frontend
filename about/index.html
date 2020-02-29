@@ -9,7 +9,7 @@
   <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
   <meta name="author" content="Alina Abdurshina">
   <link rel="icon" href="./images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="../css/style.a0cfda1bd1918569a5b3.css?5ec7aed650a4e2cfc227" />
+  <link rel="stylesheet" href="../css/style.eda0866f79ced5b50661.css?ef0fdb73b4bf6e99d531" />
 
   <title>News Explorer / О проекте</title>
 </head>
@@ -18,7 +18,7 @@
   <main class="root">
     <div class="hidables">
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__login popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -27,9 +27,11 @@
               <form class="popup__form" name="login" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
+                  <input class="popup__input" name="email" type="email" id="login_email" placeholder="Введите почту"
+                    required>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
+                  <input class="popup__input" name="password" type="password" id="login_password"
+                    placeholder="Введите пароль" required>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -39,7 +41,7 @@
         </div>
       </section>
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__signup popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -48,15 +50,16 @@
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
-                  <spam class="popup__error">Неверный формат ввода</spam>
+                  <input class="popup__input" name="email" type="email" id="signup_email" placeholder="Введите почту"
+                    required>
+                  <span class="popup__error">Неверный формат ввода</span>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required
-                    minlength="8">
+                  <input class="popup__input" name="password" type="password" id="signup_password"
+                    placeholder="Введите пароль" required minlength="8">
                   <label class="popup__label" for="username">Имя</label>
-                  <input class="popup__input" name="username" name="name" placeholder="Введите свое имя" required
-                    minlength="2">
-                  <spam class="popup__error">Такой пользователь уже есть</spam>
+                  <input class="popup__input" name="username" id="signup_username" placeholder="Введите свое имя"
+                    required minlength="2">
+                  <span class="popup__error">Такой пользователь уже есть</span>
                   <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
@@ -66,7 +69,7 @@
         </div>
       </section>
 
-      <section class="popup popup_inactive">
+      <section class="popup popup__message popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -76,7 +79,6 @@
                 <a class="link popup__link_special" href="#">
                   Выполнить вход
                 </a>
-              </span>
               </span>
             </div>
           </div>
@@ -284,17 +286,17 @@
       <ul class="footer__social">
         <li class="footer__item">
           <a class="link footer__icon" href="https://www.facebook.com/alina.abdurshina" target="_blank">
-            <img src=".././images/facebook-icon.png" alt="icon: facebook">
+            <img src=".././images/facebook-icon.svg" alt="icon: facebook">
           </a>
         </li>
         <li class="footer__item"><a class="link footer__icon" href="https://www.github.com/blanshec" target="_blank">
-            <img src=".././images/git-icon.png" alt="icon: github">
+            <img src=".././images/git-icon.svg" alt="icon: github">
           </a>
         </li>
       </ul>
     </footer>
   </main>
-  <script src="../about/about.5ec7aed650a4e2cfc227.js?5ec7aed650a4e2cfc227"></script>
+  <script src="../about/about.ef0fdb73b4bf6e99d531.js?ef0fdb73b4bf6e99d531"></script>
 </body>
 
 </html>
