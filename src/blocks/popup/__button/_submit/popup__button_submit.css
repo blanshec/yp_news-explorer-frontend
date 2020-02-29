@@ -14,7 +14,7 @@
   color: #B6BCBF;
 }
 
-.popup__button_submit:hover {
+.popup__button_submit:active:hover {
   background-color: #347eff;
   border-color: #347eff;
   color: #fff;
