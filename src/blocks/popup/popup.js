@@ -17,4 +17,7 @@ export default class Popup extends Component {
     this.element.classList.remove('popup_is-active');
     document.querySelector(config.elements.root).classList.remove(config.elements.status.noscroll);
   }
+  test() {
+    console.log('your a fucking idiot')
+  }
 }

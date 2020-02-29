@@ -28,16 +28,16 @@
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
                   <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
-                  <spam class="popup__error popup__error_email">Неверный формат ввода</spam>
+                  <span class="popup__error popup__error_email nodisplay"></span>
                   <label class="popup__label" for="password">Пароль</label>
                   <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required
                     minlength="8">
-                  <spam class="popup__error popup__error_password">Неверный пароль</spam>
+                  <span class="popup__error popup__error_password nodisplay"></span>
                   <label class="popup__label" for="username">Имя</label>
                   <input class="popup__input" name="username" name="name" placeholder="Введите свое имя" required
                     minlength="2">
-                  <spam class="popup__error popup__error_username">Такой пользователь уже есть</spam>
-                  <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
+                  <span class="popup__error popup__error_username nodisplay"></span>
+                  <button class="button popup__button_submit" type="submit" disabled>Зарегистрироваться</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
               </form>
@@ -56,8 +56,10 @@
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
                   <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
+                  <span class="popup__error popup__error_email nodisplay"></span>
                   <label class="popup__label" for="password">Пароль</label>
                   <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
+                  <span class="popup__error popup__error_password nodisplay"></span>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>

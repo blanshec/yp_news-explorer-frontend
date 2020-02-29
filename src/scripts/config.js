@@ -22,10 +22,19 @@ const config = {
     popupForm: '.popup__form',
     popupFieldset: '.popup__fieldset',
     popupInput: '.popup__input',
-    popupLabel: 'popup__label',
-    popupError: 'popup__error',
-    popupButtonSubmit: 'popup__button_submit',
-    popupLink: 'popup__link',
+    popupLabel: '.popup__label',
+    popupError: '.popup__error',
+    popupErrorEmail: '.popup__error_email',
+    popupErrorUsername: '.popup__error_username',
+    popupErrorPassword: '.popup__error_password',
+    popupButtonSubmit: '.popup__button_submit',
+    popupLink: '.popup__link',
+  },
+  params: {
+    validPasswordMinLength: 8,
+    validPasswordMaxLength: 30,
+    validNameMinLength: 2,
+    validNameMaxLength: 30,
   },
 };
 
