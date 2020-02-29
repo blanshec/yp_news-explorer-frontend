@@ -24,6 +24,7 @@
     background: url('../../images/not-logged-in-bg_tablet.png');
     top: -66px;
     height: 400px;
+    background-size: cover;
   }
 }
 
@@ -32,5 +33,7 @@
     background: url('../../images/not-logged-in-bg_mobile.png');
     top: -56px;
     height: 536px;
+    background-size: cover;
+    background-position-x: center;
   }
 }

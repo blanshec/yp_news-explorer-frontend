@@ -4,29 +4,16 @@
   height: 576px;
 }
 
-.card_saved:nth-child(3) {
-  margin: 0 0 16px 0;
-}
-
-@media screen and (max-width: 1439px) {
-  .card_saved:nth-child(3) {
-    margin: 0 16px 16px 0;
-  }
-}
-
 @media screen and (max-width: 1023px) {
-  .card.card.card_saved {
+  .card.card_saved {
     height: 420px;
   }
-  .card_saved:nth-child(3) {
-    margin: 0 0 8px 0;
-  }
+
 }
 
 
 @media screen and (max-width: 767px) {
-  .card.card.card_saved {
-    margin: 0 0 10px 0;
+  .card.card_saved {
     height: 440px;
   }
 }

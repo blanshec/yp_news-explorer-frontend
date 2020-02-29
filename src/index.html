@@ -28,9 +28,11 @@
               <form class="popup__form" name="login" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
+                  <input class="popup__input" name="email" type="email" id="login_email" placeholder="Введите почту"
+                    required>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required>
+                  <input class="popup__input" name="password" type="password" id="login_password"
+                    placeholder="Введите пароль" required>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -49,15 +51,16 @@
               <form class="popup__form" name="signup" method="POST">
                 <fieldset class="popup__fieldset">
                   <label class="popup__label" for="email">Email</label>
-                  <input class="popup__input" name="email" type="email" placeholder="Введите почту" required>
-                  <spam class="popup__error">Неверный формат ввода</spam>
+                  <input class="popup__input" name="email" type="email" id="signup_email" placeholder="Введите почту"
+                    required>
+                  <span class="popup__error">Неверный формат ввода</span>
                   <label class="popup__label" for="password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" placeholder="Введите пароль" required
-                    minlength="8">
+                  <input class="popup__input" name="password" type="password" id="signup_password"
+                    placeholder="Введите пароль" required minlength="8">
                   <label class="popup__label" for="username">Имя</label>
-                  <input class="popup__input" name="username" name="name" placeholder="Введите свое имя" required
-                    minlength="2">
-                  <spam class="popup__error">Такой пользователь уже есть</spam>
+                  <input class="popup__input" name="username" id="signup_username" placeholder="Введите свое имя"
+                    required minlength="2">
+                  <span class="popup__error">Такой пользователь уже есть</span>
                   <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
@@ -78,7 +81,6 @@
                   Выполнить вход
                 </a>
               </span>
-              </span>
             </div>
           </div>
         </div>
@@ -94,7 +96,7 @@
             NewsExplorer
           </a>
           <button class="header__menu">
-            <icon class="icon icon__hamburger icon__hamburger_dark"></icon>
+            <div class="icon icon__hamburger icon__hamburger_dark"></div>
           </button>
 
           <!-- Toggle header__navigation_inactive class to show and hide nav-bar on < 767px res -->
@@ -248,10 +250,7 @@
     </section>
 
     <section class="about-author">
-      <picture>
-        <img src="<%= require('./images/author-image.jpg')%>" alt="Portrait of the Author"
-          class="about-author__image" />
-      </picture>
+      <img src="<%= require('./images/author-image.jpg')%>" alt="Portrait of the Author" class="about-author__image" />
       <div class="about-author__side">
         <h2 class="title about-author__title">Об авторе</h2>
         <p class="about-author__text">

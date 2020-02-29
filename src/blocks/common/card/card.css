@@ -34,8 +34,8 @@
 
 @media screen and (max-width: 767px) {
   .card {
-    padding: 16px;
     width: 288px;
     margin: 0 8px 8px 0;
+    padding: 16px;
   }
 }

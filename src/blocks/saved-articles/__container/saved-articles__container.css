@@ -3,21 +3,23 @@
   margin: 0 auto;
   padding: 62px 0;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 10px;
 }
 
 @media screen and (max-width: 1023px) {
   .saved-articles__container {
     width: 90%;
     padding: 32px 0;
+    grid-template-columns: repeat(auto-fill, 224px);
+    grid-gap: 8px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .saved-articles__container {
-    width: 90%;
+    grid-template-columns: repeat(auto-fill, 288px);
     padding: 24px 0;
   }
 }
