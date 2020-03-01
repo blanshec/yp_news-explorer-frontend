@@ -1,6 +1,6 @@
 /* roboto-slab-500 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab',Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   src: url('roboto-slab-v10-cyrillic_cyrillic-ext_latin-500.eot'); /* IE9 Compat Modes */
@@ -13,7 +13,7 @@
 }
 /* roboto-slab-regular - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url('roboto-slab-v10-cyrillic_cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
@@ -26,7 +26,7 @@
 }
 /* roboto-slab-600 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   src: url('roboto-slab-v10-cyrillic_cyrillic-ext_latin-600.eot'); /* IE9 Compat Modes */
@@ -39,7 +39,7 @@
 }
 /* roboto-slab-800 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
   src: url('roboto-slab-v10-cyrillic_cyrillic-ext_latin-800.eot'); /* IE9 Compat Modes */

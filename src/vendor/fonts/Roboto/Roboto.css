@@ -1,6 +1,6 @@
 /* roboto-regular - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
@@ -13,7 +13,7 @@
 }
 /* roboto-italic - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 400;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-italic.eot'); /* IE9 Compat Modes */
@@ -26,7 +26,7 @@
 }
 /* roboto-500 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-500.eot'); /* IE9 Compat Modes */
@@ -39,7 +39,7 @@
 }
 /* roboto-500italic - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 500;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-500italic.eot'); /* IE9 Compat Modes */
@@ -52,7 +52,7 @@
 }
 /* roboto-700 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-700.eot'); /* IE9 Compat Modes */
@@ -65,7 +65,7 @@
 }
 /* roboto-700italic - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 700;
   src: url('roboto-v20-cyrillic_cyrillic-ext_latin-700italic.eot'); /* IE9 Compat Modes */
