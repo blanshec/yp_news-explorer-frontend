@@ -4,6 +4,7 @@
 
 @media screen and (max-width: 767px) {
   .header__menu {
+    z-index: 10;
     display: block;
     position: absolute;
     right: 16px;

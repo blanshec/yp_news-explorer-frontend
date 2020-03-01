@@ -17,7 +17,8 @@
 <body>
   <main class="root">
     <div class="hidables">
-
+      <!-- Для отображение попапа уберите класс popup__inactive. 
+        При открытии попапа добавьте класс noscroll к элементу main.root -->
       <section class="popup popup__login popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
@@ -88,16 +89,21 @@
     </div>
 
     <header class="header header_light">
+      <!-- На данной странице отображен вариант с расскрытым мобильным меню.  
+        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже. 
+        Так же не забудьте, пожалуйста, добавить noscroll класс к элементу main.root.  -->
       <div class="header__container">
+        <!-- При отображении мобильного меню необходимо переключить  -light и _light классы на -dark и _dark
+        соответственно у элементов заголовка header__heading и кнопки мобильного меню icon__hamburger. -->
         <a href="../" class="link title header__heading header__heading_light">
           NewsExplorer
         </a>
         <button class="header__menu">
           <span class="icon icon__hamburger icon__hamburger_light"></span>
         </button>
-        <nav class="header__navigation">
 
-
+        <!-- Toggle header__navigation_inactive class to show and hide nav-bar on < 767px res -->
+        <nav class="header__navigation ">
           <ul class="header__nav-links">
             <li class="header__item "><a href="../" class="link ">Главная</a></li>
             <li class="header__item header__item_active-light"><a href="./" class="link link_light">Сохраненные
@@ -106,7 +112,6 @@
           <button class="button header__button header__button_light">
             Alison<i class="icon icon__logout icon__logout_light"></i>
           </button>
-
         </nav>
       </div>
     </header>

@@ -2,7 +2,7 @@
   .header__navigation.header__navigation_inactive {
     display: none;
   }
-  .header__container::before {
+  .header__navigation::before {
     display: none;
   }
 }
