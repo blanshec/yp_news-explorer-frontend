@@ -9,7 +9,7 @@
   <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
   <meta name="author" content="Alina Abdurshina">
   <link rel="icon" href="./images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.7afe5fc322d826538396.css?d286ea7d618008ad8b74" />
+  <link rel="stylesheet" href="css/style.6d420e365a91911fe1e3.css?e4ad44dad1e52672201a" />
 
   <title>News Explorer</title>
 </head>
@@ -18,7 +18,8 @@
   <main class="root">
 
     <div class="hidables">
-
+      <!-- Для отображение попапа уберите класс popup__inactive. 
+        При открытии попапа добавьте класс noscroll к элементу main.root -->
       <section class="popup popup__login popup_inactive">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
@@ -88,10 +89,14 @@
 
     </div>
 
-
     <div class="lead">
       <header class="header header_dark">
+        <!-- На данной странице отображен вариант с закрытым мобильным меню.  
+        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже. 
+        Так же не забудьте, пожалуйста, добавить noscroll класс к элементу main.root.  -->
         <div class="header__container">
+          <!-- При отображении мобильного меню необходимо переключить  -light и _light классы на -dark и _dark
+        соответственно у элементов заголовка header__heading и кнопки мобильного меню icon__hamburger. -->
           <a href="./" class="link title header__heading header__heading_dark">
             NewsExplorer
           </a>
@@ -103,7 +108,6 @@
           <nav class="header__navigation header__navigation_inactive">
             <ul class="header__nav-links">
               <li class="header__item header__item_active-dark"><a href="./" class="link link_dark">Главная</a></li>
-              <li class="header__item"><a href="./about" class="link">О проекте</a></li>
               <li class="header__item"><a href="./articles" class="link">Сохраненные статьи</a></li>
             </ul>
             <button class="button header__button header__button_dark">
@@ -267,7 +271,6 @@
       <p class="footer__copyright">&copy; Abdurshina 2019</p>
       <ul class="footer__links">
         <li class="footer__item"><a class="link footer__link" href="./">Главная</a></li>
-        <li class="footer__item"><a class="link footer__link" href="./about/">О проекте</a></li>
         <li class="footer__item"><a class="link footer__link" href="https://praktikum.yandex.ru/"
             target="_blank">Яндекс.Практикум</a></li>
       </ul>
@@ -286,7 +289,7 @@
     </footer>
 
   </main>
-  <script src="main.d286ea7d618008ad8b74.js?d286ea7d618008ad8b74"></script>
+  <script src="main.e4ad44dad1e52672201a.js?e4ad44dad1e52672201a"></script>
 </body>
 
 </html>
