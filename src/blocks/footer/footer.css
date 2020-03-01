@@ -24,9 +24,9 @@
   .footer {
     width: 90%;
     margin: 20px auto 0;
-    height: 224px;
+    height: 176px;
     display: grid;
-    grid-template-rows: 120px 1fr;
+    grid-template-rows: 74px 1fr;
     grid-template-areas: "links social" "copyright copyright";
   }
 }
