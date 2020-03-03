@@ -1,0 +1,16 @@
+@import "./_special/popup__text_special.css";
+
+.popup__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #000000;
+
+  margin: 16px auto 0;
+
+  display: block;
+}

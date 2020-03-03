@@ -1,0 +1,31 @@
+@import "./__menu/header__menu.css";
+@import "./__container/header__container.css";
+@import "./__navigation/header__navigation.css";
+@import "./__heading/header__heading.css";
+@import "./__item/header__item.css";
+@import "./__nav-links/header__nav-links.css";
+@import "./__navigation/header__navigation.css";
+@import "./__button/header__button.css";
+
+@import "./_dark/header_dark.css";
+@import "./_light/header_light.css";
+
+.header {
+  box-sizing: border-box;
+  min-height: 80px;
+
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    min-height: 66px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    min-height: 56px;
+  }
+}

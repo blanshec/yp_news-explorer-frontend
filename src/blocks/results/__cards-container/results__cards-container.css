@@ -1,0 +1,23 @@
+.results__cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 10px;
+  
+
+  margin: 64px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .results__cards-container {
+    grid-template-columns: repeat(auto-fill, 224px);
+    grid-gap: 8px;
+    margin: 32px 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__cards-container {
+    grid-template-columns: repeat(auto-fill, 288px);
+    margin: 24px auto 0;
+  }
+}

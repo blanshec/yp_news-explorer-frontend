@@ -1,0 +1,26 @@
+@import "./_active-dark/header__item_active-dark.css";
+@import "./_active-light/header__item_active-light.css";
+
+.header__item {
+  height: 50px;
+  align-self: flex-end;
+  margin: 0 32px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__item {
+    margin: 0 16px 0 0;
+    height: 44px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__item {
+    width: 100%;
+    margin: 0;
+    height: unset;
+  }
+  .header__item > .link {
+    color: white;
+  }
+}

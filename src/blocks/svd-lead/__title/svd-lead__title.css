@@ -1,0 +1,22 @@
+.svd-lead__title {
+  font-size: 40px;
+  line-height: 46px;
+
+  width: 530px;
+  margin: 28px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .svd-lead__title {
+    width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 16px 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .svd-lead__title {
+    width: 100%;
+  }
+}

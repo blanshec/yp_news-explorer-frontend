@@ -1,0 +1,12 @@
+.icon__delete {
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+
+  mask: url('../../../../images/trash.svg');
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+
+  padding-left: 12px;
+}

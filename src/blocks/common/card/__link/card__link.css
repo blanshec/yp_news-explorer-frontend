@@ -1,0 +1,11 @@
+.link.card__link {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  letter-spacing: 0.4px;
+text-transform: uppercase;
+
+  margin: 10px 0 0 0;
+}

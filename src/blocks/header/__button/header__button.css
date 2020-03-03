@@ -1,0 +1,29 @@
+@import "./_dark/header__button_dark.css";
+@import "./_light/header__button_light.css";
+
+.header__button {
+  font-size: 18px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  line-height: 24px;
+
+  padding: 11px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__button {
+    font-size: 16px;
+    max-height: 48px;
+    padding:  12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__button {
+    display: flex;
+    justify-content: center;
+    min-height: 56px;
+    width: 100%;
+  }
+}

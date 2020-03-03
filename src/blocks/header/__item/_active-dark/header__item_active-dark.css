@@ -1,0 +1,10 @@
+.header__item_active-dark {
+  box-sizing: border-box;
+  border-bottom: 3px  white solid;
+}
+
+@media screen and (max-width: 767px) {
+  .header__item_active-dark {
+    border-bottom: none;
+  }
+}

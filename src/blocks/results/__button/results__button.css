@@ -1,0 +1,24 @@
+.results__button {
+  background-color: #fff;
+  color: #1A1B22;
+  margin: 64px auto 0;
+  display: block;
+  width: 288px;
+  height: 64px;
+}
+
+.button.results__button:hover {
+  background-color: #E6E8EB;
+}
+
+@media screen and (max-width: 1023px) {
+  .results__button {
+    margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__button {
+    margin: 5px auto 0;
+  }
+}

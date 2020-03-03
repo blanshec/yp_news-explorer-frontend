@@ -1,0 +1,14 @@
+.technologies__content {
+  display: flex;
+  flex-direction: row;
+
+ justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .technologies__content {
+    margin: 40px 0 0 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../__tag/card__tag.css";
+
+.card.card_saved {
+  height: 576px;
+}
+
+@media screen and (max-width: 1023px) {
+  .card.card_saved {
+    height: 420px;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .card.card_saved {
+    height: 440px;
+  }
+}

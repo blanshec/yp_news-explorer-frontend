@@ -1,0 +1,20 @@
+@import "./_save/card__button_save.css";
+@import "./_saved/card__button_saved.css";
+@import "./_delete/card__button_delete.css";
+
+.card__button {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  background-color: white;
+
+  border-radius: 8px;
+
+  border: none;
+  z-index: 1;
+
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+

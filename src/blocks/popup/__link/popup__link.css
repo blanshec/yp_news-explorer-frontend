@@ -1,0 +1,13 @@
+@import "./_special/popup__link_special.css";
+
+.popup__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+
+  color: #2F71E5;
+}

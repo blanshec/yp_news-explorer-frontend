@@ -1,0 +1,15 @@
+@import "./__save/icon__save.css";
+@import "./__saved/icon__saved.css";
+@import "./__logout/icon__logout.css";
+@import './__not-found/icon__not-found.css';
+@import "./__arrow/icon__arrow.css";
+@import "./__delete/icon__delete.css";
+@import './__hambruger/icon__hamburger.css';
+@import "./__close/icon__close.css";
+
+.icon {
+  display: block;
+  margin:  0 auto;
+
+  background-color: #B6BCBF;
+}

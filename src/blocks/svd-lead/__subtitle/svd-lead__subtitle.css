@@ -1,0 +1,21 @@
+.svd-lead__subtitle {
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: rgba(26, 27, 34, 0.5);
+}
+
+
+@media screen and (max-width: 1023px) {
+  .svd-lead__subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .svd-lead__subtitle {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,16 @@
+.slider__commit-name {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+
+  grid-area: name;
+}
+
+@media screen and (max-wdith: 767px) {
+  .slider__commit-name {
+    font-size: 20px;
+  }
+}

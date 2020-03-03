@@ -1,0 +1,35 @@
+.search__form {
+  display: grid;
+  grid-template-areas: "searchbox button";
+  grid-template-rows: 62px;
+
+
+
+  position: relative;
+
+  width: 100%;
+  margin: 64px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .search__form {
+    flex-grow: 1;
+    grid-template-rows: 56px;
+    margin: 48px 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__form {
+    flex-grow: 1;
+    margin: 122px 0 0;
+    display: block;
+    border-radius: 0;
+
+    display: grid;
+    grid-template-areas: "searchbox"
+                         "button";
+    grid-template-rows: 56px 56px;
+    grid-gap: 16px;
+  }
+}

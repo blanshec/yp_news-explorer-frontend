@@ -1,0 +1,23 @@
+.card__header {
+  max-height: 272px;
+  width: calc(100% + 24px);
+  margin: -24px 0 20px -24px;
+
+
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__header {
+    height: 150px;
+    width: 224px;
+    margin: -16px 0 16px -16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card__header {
+    min-height: 196px;
+    width: 288px;
+  }
+}

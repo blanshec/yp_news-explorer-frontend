@@ -1,0 +1,15 @@
+.header__menu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+}

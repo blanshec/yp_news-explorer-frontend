@@ -1,0 +1,21 @@
+@import "./__title/svd-lead__title.css";
+@import "./__subtitle/svd-lead__subtitle.css";
+@import "./__keywords/svd-lead__keywords.css";
+
+.svd-lead {
+  margin: 40px auto 56px ;
+  width: 85%;
+}
+@media screen and (max-width: 1023px) {
+  .svd-lead {
+    width: 90%;
+    margin: 24px auto 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .svd-lead {
+    width: 90%;
+    margin: 8px auto 32px;
+  }
+}

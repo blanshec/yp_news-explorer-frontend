@@ -1,0 +1,59 @@
+/* Import normalize.css */
+@import "./vendor/normalize.css";
+
+/* Import fonts */
+@import "./vendor/fonts/Roboto/Roboto.css";
+@import "./vendor/fonts/Roboto-Slab/Roboto-Slab.css";
+@import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
+
+/* Import common styles */
+@import "./blocks/common/noscroll/noscroll.css";
+@import "./blocks/common/button/button.css";
+@import "./blocks/common/link/link.css";
+@import "./blocks/common/preloader/preloader.css";
+@import "./blocks/common/card/card.css";
+@import "./blocks/common/icon/icon.css";
+@import "./blocks/common/title/title.css";
+
+/* Import lead style  */
+@import "./blocks/lead/lead.css";
+
+/* Import popup style */
+@import "./blocks/popup/popup.css";
+
+/* Import header styles */
+@import "./blocks/header/header.css";
+
+/* Import search styles */
+@import "./blocks/search/search.css";
+
+/* Import results style  */
+@import "./blocks/results/results.css";
+
+/* Import about-author styles */
+@import "./blocks/about-author/about-author.css";
+
+/* Import footer styles */
+@import "./blocks/footer/footer.css";
+
+body {
+  margin: 0;
+  background-color:  #e4e4e4;;
+}
+
+.root {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  background-color: white;
+  min-height: 100vh;
+  min-width: 320px;
+
+  font-family: "Roboto", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}

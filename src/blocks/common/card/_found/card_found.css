@@ -1,0 +1,15 @@
+.card.card_found {
+  height: 576px;
+}
+
+@media screen and (max-width: 1023px) {
+  .card.card_found {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card.card_found {
+    height: 440px;
+  }
+}

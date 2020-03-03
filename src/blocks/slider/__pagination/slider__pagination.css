@@ -1,0 +1,14 @@
+.slider__pagination {
+  display: block;
+
+  background: #1A1B22;;
+
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  grid-area: pag;
+
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+}

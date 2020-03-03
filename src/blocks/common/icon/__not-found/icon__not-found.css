@@ -1,0 +1,9 @@
+.icon.icon__not-found {
+  height: 96px;
+  width: 96px;
+
+  mask: url('../../../../images/not-found.svg');
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}

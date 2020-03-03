@@ -1,0 +1,28 @@
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 85%;
+
+  height: 80px;
+
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__container {
+    margin: 0 40px;
+    min-width: 90%;
+    height: 66px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    margin: 0 auto;
+    min-width: 90%;
+    height: 56px;
+  }
+}

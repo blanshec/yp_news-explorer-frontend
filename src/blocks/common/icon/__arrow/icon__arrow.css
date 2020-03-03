@@ -1,0 +1,12 @@
+.icon__arrow {
+  min-width: 8px;
+  height: 13px;
+
+  mask-image: url('../../../../images/arrow.svg');
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+
+  margin: 0;
+  background-color: #1A1B22;
+}

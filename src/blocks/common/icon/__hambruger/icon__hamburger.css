@@ -1,0 +1,13 @@
+@import "./_light/icon__hamburger_light.css";
+@import "./_dark/icon__hamburger_dark.css";
+
+.icon__hamburger {
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+
+    mask: url('../../../../images/hamburger.svg');
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
