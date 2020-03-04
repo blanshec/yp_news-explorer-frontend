@@ -4,7 +4,7 @@ import Header from '../blocks/header/header';
 import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
 
-const api = new BackendApi(config.BackendApi);
+const api = new BackendApi(config.backendApi);
 
 const popupSignup = new PopupSignup({
   api,

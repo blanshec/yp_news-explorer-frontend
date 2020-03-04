@@ -16,10 +16,10 @@ export default class PopupSignup extends Popup {
     this.errorEmail = this.element.querySelector(config.elements.popupErrorEmail);
     this.errorUsername = this.element.querySelector(config.elements.popupErrorUsername);
     this.errorPassword = this.element.querySelector(config.elements.popupErrorPassword);
-    this.invalidInputs = {
+    this.validInputs = {
       email: false,
-      username: false,
       password: false,
+      username: false,
     };
 
     this.inputs.forEach((_input) => {
@@ -42,10 +42,16 @@ export default class PopupSignup extends Popup {
   }
 
   async signUp(event) {
-    event.prevenDefault();
+    event.preventDefault();
     const data = {};
 
-
+    this.inputs.forEach((input) => {
+      data[input.name] = input.value;
+    });
+    this.api.signUp(data).then(() => {
+    }).catch((error) => {
+      this.submitButton.textContent = error.message;
+    });
   }
 
   validateEmail(event) {
@@ -53,10 +59,10 @@ export default class PopupSignup extends Popup {
     const isValid = validator.isEmail(input.value);
 
     if (isValid) {
-      this.invalidInputs.email = false;
+      this.validInputs.email = true;
       this.errorEmail.classList.add(config.elements.status.nodisplay);
     } else {
-      this.invalidInputs.email = true;
+      this.validInputs.email = false;
       if (input.value.length === 0) {
         this.errorEmail.textContent = ERRORS.emailRequired;
       } else {
@@ -76,10 +82,10 @@ export default class PopupSignup extends Popup {
     });
 
     if (isValid) {
-      this.invalidInputs.password = false;
+      this.validInputs.password = true;
       this.errorPassword.classList.add(config.elements.status.nodisplay);
     } else {
-      this.invalidInputs.password = true;
+      this.validInputs.password = false;
       if (input.value.length === 0) {
         this.errorPassword.textContent = ERRORS.passwordRequired;
       } else {
@@ -101,10 +107,10 @@ export default class PopupSignup extends Popup {
     });
 
     if (isValid) {
-      this.invalidInputs.username = false;
+      this.validInputs.username = true;
       this.errorUsername.classList.add(config.elements.status.nodisplay);
     } else {
-      this.invalidInputs = true;
+      this.validInputs.username = false;
       if (input.value.length === 0) {
         this.errorUsername.textContent = ERRORS.usernameRequired;
       } else {
@@ -119,15 +125,15 @@ export default class PopupSignup extends Popup {
   }
 
   validateForm() {
-    console.log(this.invalidInputs)
-    const values = Object.values(this.invalidInputs);
-
-    values.forEach((value) => {
-      if (!value) {
-        this.submitButton.disabled = true;
-      } else {
-        this.submitButton.disabled = false;
-      }
+    const values = Object.values(this.validInputs);
+    const isValidForm = values.reduce((value, next) => {
+      return value && next;
     });
+    if (isValidForm) {
+      this.submitButton.disabled = false;
+    } else {
+      this.submitButton.disabled = true;
+    }
+    return true;
   }
 }

@@ -5,10 +5,11 @@ export default class BackendApi {
     this.props = props;
   }
 
-  static request(url, requestData) {
+  request(url, requestData) {
     return fetch(url, requestData)
       .then(async (res) => {
         if (!res.ok) {
+          console.log('in request')
           const message = await res.json().then((answer) => answer.message);
           throw new Error(message);
         }
@@ -19,14 +20,14 @@ export default class BackendApi {
       });
   }
 
-  static getRequest(data) {
+  getRequest(data) {
     return {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        // eslint-disable-next-line quote-props
-        'authorization': `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
       },
+      mode: 'cors',
+      credentials: 'include',
       body: JSON.stringify(data),
     };
   }

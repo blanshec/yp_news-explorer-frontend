@@ -6,6 +6,6 @@ const ERRORS = {
   usernameRequired: 'Введите имя пользователя',
   usernameIsInvalid: 'Имя пользователя должно быть от 2-ух до 30-ти символов',
   inputOutOfBound: 'Слишком много полей ввода',
-}
+};
 
 export default ERRORS;
