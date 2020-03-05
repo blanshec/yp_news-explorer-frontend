@@ -5,35 +5,26 @@ export default class BackendApi {
     this.props = props;
   }
 
-  request(url, requestData) {
-    return fetch(url, requestData)
-      .then(async (res) => {
+  signUp(data) {
+    console.log(data)
+    return fetch(this.props.signup,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify(data),
+      })
+      .then((res) => {
         if (!res.ok) {
-          console.log('in request')
-          const message = await res.json().then((answer) => answer.message);
-          throw new Error(message);
+          throw new Error(res.status);
         }
         return res.json();
       })
       .catch((err) => {
         throw new Error(err.message);
       });
-  }
-
-  getRequest(data) {
-    return {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      mode: 'cors',
-      credentials: 'include',
-      body: JSON.stringify(data),
-    };
-  }
-
-  async signUp(data) {
-    await this.request(this.props.signup, this.getRequest(data));
   }
 
   async signIn() {

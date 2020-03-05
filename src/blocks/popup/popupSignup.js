@@ -126,9 +126,7 @@ export default class PopupSignup extends Popup {
 
   validateForm() {
     const values = Object.values(this.validInputs);
-    const isValidForm = values.reduce((value, next) => {
-      return value && next;
-    });
+    const isValidForm = values.reduce((value, next) => value && next);
     if (isValidForm) {
       this.submitButton.disabled = false;
     } else {
