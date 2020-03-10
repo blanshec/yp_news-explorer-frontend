@@ -9,18 +9,44 @@
   <meta name="keywords" content="Yandex, Praktikum, News, Explorer">
   <meta name="author" content="Alina Abdurshina">
   <link rel="icon" href="./images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.8ca8a51462c7dd10d585.css?ae0aff669c2429c87bea" />
+  <link rel="stylesheet" href="css/style.97a115bf5ab5c493ff90.css?33a8e9c22f201ff61f45" />
 
   <title>News Explorer</title>
 </head>
 
 <body>
   <main class="root">
-
     <div class="hidables">
-      <!-- Для отображение попапа уберите класс popup__inactive. 
-        При открытии попапа добавьте класс noscroll к элементу main.root -->
-      <section class="popup popup__login popup_inactive">
+      <section class="popup popup__signup">
+        <div class="popup__inner">
+          <button class="popup__button_close"></button>
+          <div class="popup__container">
+            <div class="popup__content">
+              <h3 class="popup__title">Регистрация</h3>
+              <form class="popup__form" name="signup" method="POST">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__label" for="signup_email">Email</label>
+                  <input class="popup__input" name="email" type="email" id="signup_email" placeholder="Введите почту"
+                    required>
+                  <span class="popup__error popup__error_email nodisplay"></span>
+                  <label class="popup__label" for="signup_password">Пароль</label>
+                  <input class="popup__input" name="password" type="password" id="signup_password"
+                    placeholder="Введите пароль" required minlength="8">
+                  <span class="popup__error popup__error_password nodisplay"></span>
+                  <label class="popup__label" for="signup_username">Имя</label>
+                  <input class="popup__input" name="username" name="name" id="signup_username"
+                    placeholder="Введите свое имя" required minlength="2">
+                  <span class="popup__error popup__error_username nodisplay"></span>
+                  <button class="button popup__button_submit" type="submit" disabled>Зарегистрироваться</button>
+                </fieldset>
+                <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup__login">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -31,9 +57,11 @@
                   <label class="popup__label" for="login_email">Email</label>
                   <input class="popup__input" name="email" type="email" id="login_email" placeholder="Введите почту"
                     required>
+                  <span class="popup__error popup__error_email nodisplay"></span>
                   <label class="popup__label" for="login_password">Пароль</label>
                   <input class="popup__input" name="password" type="password" id="login_password"
                     placeholder="Введите пароль" required>
+                  <span class="popup__error popup__error_password nodisplay"></span>
                   <button class="button popup__button_submit" type="submit" disabled>Войти</button>
                 </fieldset>
                 <span class="popup__text">Или <a class="link popup__link" href="#">Зарегестриуйтесь</a></span>
@@ -43,35 +71,7 @@
         </div>
       </section>
 
-      <section class="popup popup__signup popup_inactive">
-        <div class="popup__inner">
-          <button class="popup__button_close"></button>
-          <div class="popup__container">
-            <div class="popup__content">
-              <h3 class="popup__title">Регитсрация</h3>
-              <form class="popup__form" name="signup" method="POST">
-                <fieldset class="popup__fieldset">
-                  <label class="popup__label" for="signup_email">Email</label>
-                  <input class="popup__input" name="email" type="email" id="signup_email" placeholder="Введите почту"
-                    required>
-                  <span class="popup__error">Неверный формат ввода</span>
-                  <label class="popup__label" for="signup_password">Пароль</label>
-                  <input class="popup__input" name="password" type="password" id="signup_password"
-                    placeholder="Введите пароль" required minlength="8">
-                  <label class="popup__label" for="signup_username">Имя</label>
-                  <input class="popup__input" name="username" id="signup_username" placeholder="Введите свое имя"
-                    required minlength="2">
-                  <span class="popup__error">Такой пользователь уже есть</span>
-                  <button class="button popup__button_submit" type="submit" disabled>Зарегестрироваться</button>
-                </fieldset>
-                <span class="popup__text">Или <a class="link popup__link" href="#">Войти</a></span>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="popup popup__message popup_inactive">
+      <section class="popup popup__message">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -86,13 +86,12 @@
           </div>
         </div>
       </section>
-
     </div>
 
     <div class="lead">
       <header class="header header_dark">
-        <!-- На данной странице отображен вариант с закрытым мобильным меню.  
-        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже. 
+        <!-- На данной странице отображен вариант с закрытым мобильным меню.
+        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже.
         Так же не забудьте, пожалуйста, добавить noscroll класс к элементу main.root.  -->
         <div class="header__container">
           <!-- При отображении мобильного меню необходимо переключить  -light и _light классы на -dark и _dark
@@ -111,7 +110,7 @@
               <li class="header__item"><a href="./articles" class="link">Сохраненные статьи</a></li>
             </ul>
             <button class="button header__button header__button_dark">
-              Alison<i class="icon icon__logout icon__logout_dark"></i>
+              Авторизоваться
             </button>
           </nav>
 
@@ -289,7 +288,7 @@
     </footer>
 
   </main>
-  <script src="main.ae0aff669c2429c87bea.js?ae0aff669c2429c87bea"></script>
+  <script src="main.33a8e9c22f201ff61f45.js?33a8e9c22f201ff61f45"></script>
 </body>
 
 </html>
