@@ -1,3 +1,3 @@
 // eslint-disable-next-line import/extensions
-import '../../scripts/script.js';
+import '../../js/script.js';
 import './index.css';

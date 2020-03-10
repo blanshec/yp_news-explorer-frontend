@@ -1,8 +1,8 @@
 import validator from 'validator';
 import Popup from './popup';
-import EVENTS from '../../scripts/events';
-import ERRORS from '../../scripts/errorMessages';
-import config from '../../scripts/config';
+import EVENTS from '../../js/constants/events';
+import ERRORS from '../../js/constants/errorMessages';
+import config from '../../js/constants/config';
 
 export default class PopupSignup extends Popup {
   constructor(props) {
@@ -25,36 +25,44 @@ export default class PopupSignup extends Popup {
     this.inputs.forEach((_input) => {
       if (_input.name === 'email') {
         this.inputEmail = _input;
-        this.inputEmail.addEventListener('input', this.validateEmail.bind(this));
+        this.inputEmail.addEventListener('input', this._validateEmail.bind(this));
       } else if (_input.name === 'password') {
         this.inputPassword = _input;
-        this.inputPassword.addEventListener('input', this.validatePassword.bind(this));
+        this.inputPassword.addEventListener('input', this._validatePassword.bind(this));
       } else if (_input.name === 'username') {
         this.inputUsername = _input;
-        this.inputUsername.addEventListener('input', this.validateUsername.bind(this));
+        this.inputUsername.addEventListener('input', this._validateUsername.bind(this));
       } else {
         throw new Error(ERRORS.inputOutOfBounds);
       }
     });
 
-    this.form.onsubmit = this.signUp.bind(this);
+    this.form.onsubmit = this._signUp.bind(this);
     document.addEventListener(EVENTS.headerButtonClicked, this.open.bind(this));
   }
 
-  async signUp(event) {
+  _signUp(event) {
     event.preventDefault();
     const data = {};
 
     this.inputs.forEach((input) => {
       data[input.name] = input.value;
     });
-    this.api.signUp(data).then(() => {
-    }).catch((error) => {
-      this.submitButton.textContent = error.message;
-    });
+    this.api.signUp(data)
+      .then(() => {
+        document.dispatchEvent(new CustomEvent(EVENTS.authUpdated, {
+          detail: {
+            isLoggedIn: true,
+          },
+        }));
+        this.close();
+      })
+      .catch((error) => {
+        this.submitButton.textContent = error.message;
+      });
   }
 
-  validateEmail(event) {
+  _validateEmail(event) {
     const input = event.target;
     const isValid = validator.isEmail(input.value);
 
@@ -70,11 +78,11 @@ export default class PopupSignup extends Popup {
       }
       this.errorEmail.classList.remove(config.elements.status.nodisplay);
     }
-    this.validateForm();
+    this._validateForm();
     return isValid;
   }
 
-  validatePassword(event) {
+  _validatePassword(event) {
     const input = event.target;
     const isValid = validator.isLength(input.value, {
       min: config.params.validPasswordMinLength,
@@ -94,12 +102,12 @@ export default class PopupSignup extends Popup {
       this.errorPassword.classList.remove(config.elements.status.nodisplay);
     }
 
-    this.validateForm();
+    this._validateForm();
 
     return isValid;
   }
 
-  validateUsername(event) {
+  _validateUsername(event) {
     const input = event.target;
     const isValid = validator.isLength(input.value, {
       min: config.params.validNameMinLength,
@@ -119,12 +127,12 @@ export default class PopupSignup extends Popup {
       this.errorUsername.classList.remove(config.elements.status.nodisplay);
     }
 
-    this.validateForm();
+    this._validateForm();
 
     return isValid;
   }
 
-  validateForm() {
+  _validateForm() {
     const values = Object.values(this.validInputs);
     const isValidForm = values.reduce((value, next) => value && next);
     if (isValidForm) {

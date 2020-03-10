@@ -4,5 +4,6 @@
     "no-dupe-keys": "off",
     "linebreak-style": "off",
     "no-undef": "off",
+    "no-underscore-dangle": "off",
   }
 }

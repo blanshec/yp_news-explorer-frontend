@@ -10,6 +10,10 @@ const config = {
     status: {
       noscroll: 'noscroll',
       nodisplay: 'nodisplay',
+      buttonThemeDark: 'header__button_dark',
+      buttonThemeLight: 'header__button_light',
+      buttonIconDark: 'icon__logout_dark',
+      buttonIconLight: 'icon__logout_light',
     },
     root: '.root',
     header: '.header',

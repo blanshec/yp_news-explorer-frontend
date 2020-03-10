@@ -1,5 +1,5 @@
-import config from './config';
-import BackendApi from './backendApi';
+import config from './constants/config';
+import BackendApi from './api/backendApi';
 import Header from '../blocks/header/header';
 import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
