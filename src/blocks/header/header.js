@@ -10,6 +10,7 @@ export default class Header extends Component {
       element: document.querySelector(config.elements.headerButton),
     });
   }
+
   render(props) {
 
   }

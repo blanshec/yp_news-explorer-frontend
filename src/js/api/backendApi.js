@@ -5,7 +5,7 @@ export default class BackendApi {
     this.props = props;
   }
 
-  request(url, requestData) {
+  _request(url, requestData) {
     return fetch(url, requestData)
       .then(async (res) => {
         if (!res.ok) {
@@ -20,29 +20,49 @@ export default class BackendApi {
       });
   }
 
-  getRequest(data) {
+  _getRequest(data) {
     return {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        credentials: 'include',
       },
       body: JSON.stringify(data),
     };
   }
 
   async signUp(data) {
-    await this.request(this.props.signup, this.getRequest(data));
+    await this._request(this.props.signup, this._getRequest(data));
   }
 
-  async signIn() {
-    const result = await this.request(this.props.login, this.getRequest(data));
+  async signIn(data) {
+    const result = await this._request(this.props.login, this._getRequest(data));
+    console.log(result)
     if (result.token) {
+      console.log(result.token)
       localStorage.setItem('token', result.token);
     }
   }
 
   async signOut() {
     localStorage.removeItem('token');
+  }
+
+  getUsername() {
+    const dataRequest = {
+      method: 'GET',
+      credentials: 'include',
+    };
+    console.log(dataRequest)
+    return fetch(this.props.getUser, dataRequest)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        return res.json();
+      })
+      .catch((err) => {
+        throw new Error(err.message);
+      });
   }
 }

@@ -50,11 +50,6 @@ export default class PopupSignup extends Popup {
     });
     this.api.signUp(data)
       .then(() => {
-        document.dispatchEvent(new CustomEvent(EVENTS.authUpdated, {
-          detail: {
-            isLoggedIn: true,
-          },
-        }));
         this.close();
       })
       .catch((error) => {

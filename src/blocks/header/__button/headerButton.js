@@ -11,17 +11,15 @@ export default class HeaderButton extends Component {
     this._render();
   }
 
-  _init() {
 
-  }
   _render() {
     this.element.addEventListener(EVENTS.authUpdated, () => {
-      const isLoggedIn = event.detail.isLoggedIn;
+      const { isLoggedIn } = event.detail;
       if (isLoggedIn) {
         this.element.textContent = 'is-logged';
       } else {
         console.log('fuck');
       }
-    })
+    });
   }
 }
