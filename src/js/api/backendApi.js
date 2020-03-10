@@ -24,8 +24,8 @@ export default class BackendApi {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        credentials: 'include',
       },
+      credentials: 'include',
       body: JSON.stringify(data),
     };
   }
