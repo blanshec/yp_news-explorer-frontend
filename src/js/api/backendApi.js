@@ -19,23 +19,24 @@ export default class BackendApi {
       });
   }
 
-  _getRequest(data) {
+  _postRequest(data) {
     return {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
+      mode: 'cors',
       credentials: 'include',
       body: JSON.stringify(data),
     };
   }
 
   async signUp(data) {
-    await this._request(this.props.signup, this._getRequest(data));
+    await this._request(this.props.signup, this._postRequest(data));
   }
 
   async signIn(data) {
-    await this._request(this.props.login, this._getRequest(data));
+    await this._request(this.props.login, this._postRequest(data));
   }
 
   async signOut() {
