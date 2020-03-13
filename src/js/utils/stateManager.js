@@ -14,6 +14,7 @@ class stateManager {
     }
 
     document.addEventListener(EVENTS.authUpdated, (event) => {
+      this.usernameExists = !!localStorage.getItem('username');
       this._renderHeader(event);
     });
     this.headerButton.element.addEventListener('click', () => {

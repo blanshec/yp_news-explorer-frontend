@@ -22,14 +22,9 @@ export default class PopupLogin extends Popup {
 
     this.inputs.forEach((_input) => {
       if (_input.name === 'email') {
-        this.inputEmail = _input;
-        this.inputEmail.addEventListener('input', this._validateEmail.bind(this));
+        _input.addEventListener('input', this._validateEmail.bind(this));
       } else if (_input.name === 'password') {
-        this.inputPassword = _input;
-        this.inputPassword.addEventListener('input', this._validatePassword.bind(this));
-      } else if (_input.name === 'username') {
-        this.inputUsername = _input;
-        this.inputUsername.addEventListener('input', this._validateUsername.bind(this));
+        _input.addEventListener('input', this._validatePassword.bind(this));
       } else {
         throw new Error(ERRORS.inputOutOfBounds);
       }
@@ -46,12 +41,16 @@ export default class PopupLogin extends Popup {
       data[input.name] = input.value;
     });
     this.api.signIn(data)
+      .then((res) => {
+        if (!res.ok) throw new Error('Ошибка логина');
+        return res.json();
+      })
       .then(() => {
-        document.dispatchEvent(new CustomEvent(EVENTS.authUpdated, {
+        this.constructor._dispatchNewEvent(EVENTS.authUpdated, {
           detail: {
             isLoggedIn: true,
           },
-        }));
+        });
         this.close();
       })
       .catch((error) => {

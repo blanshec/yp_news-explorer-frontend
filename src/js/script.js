@@ -1,8 +1,10 @@
 import config from './constants/config';
 import BackendApi from './api/backendApi';
+import NewsApi from './api/newsApi';
 import StateManager from './utils/stateManager';
 
 import Header from '../blocks/header/header';
+import HeaderButton from '../blocks/header/__button/headerButton';
 import Popup from '../blocks/popup/popup';
 import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
@@ -36,8 +38,13 @@ switchPopupButtons.forEach((button) => {
 });
 
 
+const headerButton = new HeaderButton({
+  api,
+  element: document.querySelector(config.elements.headerButton),
+});
 const header = new Header({
   api,
+  headerButton,
   element: document.querySelector(config.elements.header),
 });
 

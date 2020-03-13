@@ -8,18 +8,27 @@ export default class HeaderButton extends Component {
     this.api = props.api;
   }
 
-  async signOutUser() {
-    await this.api.signOut();
-    localStorage.removeItem('username');
-    this.constructor._dispatchNewEvent(new CustomEvent(EVENTS.authUpdated, {
-      detail: {
-        isLoggedIn: false,
-      },
-    }));
+  openPopup() {
+    this.constructor._dispatchNewEvent(EVENTS.headerButtonClicked);
   }
 
-  openPopup() {
-    this.constructor._dispatchNewEvent(new CustomEvent(EVENTS.headerButtonClicked));
+  async signOutUser() {
+    await this.api.signOut()
+      .then((res) => {
+        if (!res.ok) throw new Error('Ошибка выхода');
+        return res.json();
+      })
+      .then(() => {
+        localStorage.removeItem('username');
+        this.constructor._dispatchNewEvent(EVENTS.authUpdated, {
+          detail: {
+            isLoggedIn: false,
+          },
+        });
+      })
+      .catch(() => {
+        throw new Error();
+      });
   }
 
   async render(event) {
@@ -37,14 +46,6 @@ export default class HeaderButton extends Component {
     }
   }
 
-  async _requestUserData() {
-    return this.api.getUsername()
-      .then((res) => {
-        localStorage.setItem('username', res);
-      })
-      .catch(() => { });
-  }
-
   _addLogoutIcon() {
     const icon = document.createElement('i');
     icon.classList.add('icon', 'icon__logout');
@@ -60,7 +61,11 @@ export default class HeaderButton extends Component {
     }
   }
 
-  static _dispatchNewEvent(event) {
-    return document.dispatchEvent(event);
+  async _requestUserData() {
+    return this.api.getUsername()
+      .then((res) => {
+        localStorage.setItem('username', res);
+      })
+      .catch(() => { });
   }
 }

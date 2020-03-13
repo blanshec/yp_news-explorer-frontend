@@ -56,7 +56,6 @@ export default class BackendApi {
     await this._request(this.props.login, this._postRequest(data));
   }
 
-
   async getUsername() {
     return fetch(this.props.getUser, { credentials: 'include' })
       .then((res) => {

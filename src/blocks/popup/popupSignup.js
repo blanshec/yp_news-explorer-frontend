@@ -50,6 +50,10 @@ export default class PopupSignup extends Popup {
       data[input.name] = input.value;
     });
     this.api.signUp(data)
+      .then((res) => {
+        if (!res.ok) throw new Error('Ошибка регистрации');
+        return res.json();
+      })
       .then(() => {
         this.close();
         this.popupMessage.open();
