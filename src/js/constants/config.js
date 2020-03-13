@@ -2,6 +2,7 @@ const config = {
   backendApi: {
     baseUrl: 'https://api.newsexplo.gq',
     login: 'https://api.newsexplo.gq/signin',
+    logout: 'https://api.newsexplo.gq/logout',
     signup: 'https://api.newsexplo.gq/signup',
     getUser: 'https://api.newsexplo.gq/users/me',
     articles: 'https://api.newsexplo.gq/articles',
@@ -21,6 +22,7 @@ const config = {
     popup: '.popup',
     popupSignup: '.popup__signup',
     popupLogin: '.popup__login',
+    popupMessage: '.popup__message',
     popupCloseButton: '.popup__button_close',
     popupTitle: '.popup__title',
     popupForm: '.popup__form',
@@ -33,6 +35,7 @@ const config = {
     popupErrorPassword: '.popup__error_password',
     popupButtonSubmit: '.popup__button_submit',
     popupLink: '.popup__link',
+    headerItemSaved: '.header__item-saved',
   },
   params: {
     validPasswordMinLength: 8,

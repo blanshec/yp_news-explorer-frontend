@@ -105,12 +105,17 @@
         <!-- Toggle header__navigation_inactive class to show and hide nav-bar on < 767px res -->
         <nav class="header__navigation ">
           <ul class="header__nav-links">
-            <li class="header__item "><a href="../" class="link ">Главная</a></li>
-            <li class="header__item header__item_active-light"><a href="./" class="link link_light">Сохраненные
-                статьи</a></li>
+            <li class="header__item header__item-main">
+              <a href="../" class="link ">Главная</a>
+            </li>
+            <li class="header__item header__item-saved header__item_active-light nodisplay">
+              <a href="./" class="link link_light">
+                Сохраненные статьи
+              </a>
+            </li>
           </ul>
           <button class="button header__button header__button_light">
-            Alison<i class="icon icon__logout icon__logout_light"></i>
+            Авторизоваться
           </button>
         </nav>
       </div>

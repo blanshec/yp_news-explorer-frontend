@@ -5,21 +5,62 @@ import config from '../../../js/constants/config';
 export default class HeaderButton extends Component {
   constructor(props) {
     super(props.element);
-    this.element.addEventListener('click', () => {
-      document.dispatchEvent(new CustomEvent(EVENTS.headerButtonClicked));
-    });
-    this._render();
+    this.api = props.api;
   }
 
+  async signOutUser() {
+    await this.api.signOut();
+    localStorage.removeItem('username');
+    this.constructor._dispatchNewEvent(new CustomEvent(EVENTS.authUpdated, {
+      detail: {
+        isLoggedIn: false,
+      },
+    }));
+  }
 
-  _render() {
-    this.element.addEventListener(EVENTS.authUpdated, () => {
-      const { isLoggedIn } = event.detail;
-      if (isLoggedIn) {
-        this.element.textContent = 'is-logged';
-      } else {
-        console.log('fuck');
-      }
-    });
+  openPopup() {
+    this.constructor._dispatchNewEvent(new CustomEvent(EVENTS.headerButtonClicked));
+  }
+
+  async render(event) {
+    if (!event) {
+      this.element.textContent = localStorage.getItem('username');
+      this._addLogoutIcon();
+      return;
+    }
+
+    if (event.detail.isLoggedIn) {
+      await this._requestUserData();
+      this._addLogoutIcon();
+    } else {
+      this.element.textContent = 'Авторизоваться';
+    }
+  }
+
+  async _requestUserData() {
+    return this.api.getUsername()
+      .then((res) => {
+        localStorage.setItem('username', res);
+      })
+      .catch(() => { });
+  }
+
+  _addLogoutIcon() {
+    const icon = document.createElement('i');
+    icon.classList.add('icon', 'icon__logout');
+
+    if (this.element.classList.contains(config.elements.status.buttonThemeDark)) {
+      this.element.textContent = `${localStorage.getItem('username')}`;
+      icon.classList.add(config.elements.status.buttonIconDark);
+      this.element.appendChild(icon);
+    } else {
+      this.element.textContent = `${localStorage.getItem('username')}`;
+      icon.classList.add(config.elements.status.buttonIconLight);
+      this.element.appendChild(icon);
+    }
+  }
+
+  static _dispatchNewEvent(event) {
+    return document.dispatchEvent(event);
   }
 }

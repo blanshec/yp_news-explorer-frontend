@@ -25,10 +25,27 @@ export default class BackendApi {
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
-      mode: 'cors',
       credentials: 'include',
       body: JSON.stringify(data),
     };
+  }
+
+  async signOut() {
+    return fetch(this.props.logout,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      })
+      .then((res) => {
+        if (!res.ok) throw new Error(`Ошибка при выходе: ${res.status}`);
+        return res.json();
+      })
+      .catch((err) => {
+        throw new Error(err.message);
+      });
   }
 
   async signUp(data) {
@@ -39,11 +56,16 @@ export default class BackendApi {
     await this._request(this.props.login, this._postRequest(data));
   }
 
-  async signOut() {
-    localStorage.removeItem('token');
-  }
 
   async getUsername() {
-    await this._request(this.props.getUser, { credentials: 'include' });
+    return fetch(this.props.getUser, { credentials: 'include' })
+      .then((res) => {
+        if (!res.ok) throw new Error(`Ошибка чтения ${res.status}`);
+        return res.json();
+      })
+      .then((userData) => userData.username)
+      .catch((err) => {
+        throw new Error(err.message);
+      });
   }
 }

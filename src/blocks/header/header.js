@@ -1,17 +1,30 @@
 import Component from '../Component';
 import HeaderButton from './__button/headerButton';
 import config from '../../js/constants/config';
-import events from '../../js/constants/events';
 
-export default class Header extends Component {
+class Header extends Component {
   constructor(props) {
     super(props.element);
-    const headerButton = new HeaderButton({
+    this.api = props.api;
+    this.menuItemSaved = document.querySelector(config.elements.headerItemSaved);
+    this.headerButton = new HeaderButton({
+      api: this.api,
       element: document.querySelector(config.elements.headerButton),
     });
   }
 
-  render(props) {
+  render(event) {
+    if (!event) {
+      this.menuItemSaved.classList.remove(config.elements.status.nodisplay);
+      return;
+    }
 
+    if (event.detail.isLoggedIn) {
+      this.menuItemSaved.classList.remove(config.elements.status.nodisplay);
+    } else {
+      this.menuItemSaved.classList.add(config.elements.status.nodisplay);
+    }
   }
 }
+
+export default Header;

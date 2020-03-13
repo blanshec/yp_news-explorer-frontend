@@ -36,7 +36,6 @@ export default class PopupLogin extends Popup {
     });
 
     this.form.onsubmit = this._signIn.bind(this);
-    document.addEventListener(EVENTS.headerButtonClicked, this.open.bind(this));
   }
 
   _signIn(event) {
