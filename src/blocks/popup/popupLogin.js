@@ -2,19 +2,19 @@ import validator from 'validator';
 import Popup from './popup';
 import EVENTS from '../../js/constants/events';
 import ERRORS from '../../js/constants/errorMessages';
-import config from '../../js/constants/config';
+import CONFIG from '../../js/constants/config';
 
 export default class PopupLogin extends Popup {
   constructor(props) {
     super(props.element);
     this.api = props.api;
-    this.submitButton = this.element.querySelector(config.elements.popupButtonSubmit);
-    this.form = this.element.querySelector(config.elements.popupForm);
-    this.errors = this.element.querySelectorAll(config.elements.popupError);
-    this.inputs = this.element.querySelectorAll(config.elements.popupInput);
-    this.labels = this.element.querySelectorAll(config.elements.popupLabel);
-    this.errorEmail = this.element.querySelector(config.elements.popupErrorEmail);
-    this.errorPassword = this.element.querySelector(config.elements.popupErrorPassword);
+    this.submitButton = this.element.querySelector(CONFIG.elements.popupButtonSubmit);
+    this.form = this.element.querySelector(CONFIG.elements.popupForm);
+    this.errors = this.element.querySelectorAll(CONFIG.elements.popupError);
+    this.inputs = this.element.querySelectorAll(CONFIG.elements.popupInput);
+    this.labels = this.element.querySelectorAll(CONFIG.elements.popupLabel);
+    this.errorEmail = this.element.querySelector(CONFIG.elements.popupErrorEmail);
+    this.errorPassword = this.element.querySelector(CONFIG.elements.popupErrorPassword);
     this.validInputs = {
       email: false,
       password: false,
@@ -41,10 +41,6 @@ export default class PopupLogin extends Popup {
       data[input.name] = input.value;
     });
     this.api.signIn(data)
-      .then((res) => {
-        if (!res.ok) throw new Error('Ошибка логина');
-        return res.json();
-      })
       .then(() => {
         this.constructor._dispatchNewEvent(EVENTS.authUpdated, {
           detail: {
@@ -64,7 +60,7 @@ export default class PopupLogin extends Popup {
 
     if (isValid) {
       this.validInputs.email = true;
-      this.errorEmail.classList.add(config.elements.status.nodisplay);
+      this.errorEmail.classList.add(CONFIG.elements.status.nodisplay);
     } else {
       this.validInputs.email = false;
       if (input.value.length === 0) {
@@ -72,7 +68,7 @@ export default class PopupLogin extends Popup {
       } else {
         this.errorEmail.textContent = ERRORS.emailIsInvalid;
       }
-      this.errorEmail.classList.remove(config.elements.status.nodisplay);
+      this.errorEmail.classList.remove(CONFIG.elements.status.nodisplay);
     }
     this._validateForm();
     return isValid;
@@ -81,13 +77,13 @@ export default class PopupLogin extends Popup {
   _validatePassword(event) {
     const input = event.target;
     const isValid = validator.isLength(input.value, {
-      min: config.params.validPasswordMinLength,
-      max: config.params.validPasswordMaxLength,
+      min: CONFIG.params.validPasswordMinLength,
+      max: CONFIG.params.validPasswordMaxLength,
     });
 
     if (isValid) {
       this.validInputs.password = true;
-      this.errorPassword.classList.add(config.elements.status.nodisplay);
+      this.errorPassword.classList.add(CONFIG.elements.status.nodisplay);
     } else {
       this.validInputs.password = false;
       if (input.value.length === 0) {
@@ -95,7 +91,7 @@ export default class PopupLogin extends Popup {
       } else {
         this.errorPassword.textContent = ERRORS.passwordIsInvalid;
       }
-      this.errorPassword.classList.remove(config.elements.status.nodisplay);
+      this.errorPassword.classList.remove(CONFIG.elements.status.nodisplay);
     }
 
     this._validateForm();

@@ -6,9 +6,7 @@
 @import "./vendor/fonts/Roboto-Slab/Roboto-Slab.css";
 @import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
-/* Import common styles */
-@import "./blocks/common/noscroll/noscroll.css";
-@import "./blocks/common/nodisplay/nodisplay.css";
+/* Import common styles */ 
 @import "./blocks/common/button/button.css";
 @import "./blocks/common/link/link.css";
 @import "./blocks/common/preloader/preloader.css";
@@ -36,6 +34,10 @@
 
 /* Import footer styles */
 @import "./blocks/footer/footer.css";
+
+/* Import behavioral styles */
+@import "./blocks/common/noscroll/noscroll.css";
+@import "./blocks/common/nodisplay/nodisplay.css";
 
 body {
   margin: 0;

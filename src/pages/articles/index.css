@@ -6,10 +6,7 @@
 @import "../../vendor/fonts/Roboto-Slab/Roboto-Slab.css";
 @import "../../vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
-
 /* Import common styles */
-@import "../../blocks/common/noscroll/noscroll.css";
-@import "../../blocks/common/nodisplay/nodisplay.css";
 @import "../../blocks/common/button/button.css";
 @import "../../blocks/common/link/link.css";
 @import "../../blocks/common/preloader/preloader.css";
@@ -23,12 +20,19 @@
 /* Import header styles */
 @import "../../blocks/header/header.css";
 
+/* Import saved lead styles */
 @import "../../blocks/svd-lead/svd-lead.css";
 
+/* Import saved articles styles */
 @import "../../blocks/saved-articles/saved-articles.css";
 
 /* Import footer styles */
 @import "../../blocks/footer/footer.css";
+
+/* Import behavior styles */
+@import "../../blocks/common/noscroll/noscroll.css";
+@import "../../blocks/common/nodisplay/nodisplay.css";
+
 
 body {
   margin: 0;
