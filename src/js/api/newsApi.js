@@ -1,6 +1,6 @@
 class NewsApi {
   constructor(props) {
-    this.url = props.url;
+    this.url = props.newsUrl;
   }
 }
 

@@ -1,4 +1,4 @@
-const config = {
+const CONFIG = {
   backendApi: {
     baseUrl: 'https://api.newsexplo.gq',
     login: 'https://api.newsexplo.gq/signin',
@@ -13,28 +13,48 @@ const config = {
   },
   elements: {
     status: {
+      // Common statuses
       noscroll: 'noscroll',
       nodisplay: 'nodisplay',
+
+      // Header statuses
       headerNavInactive: 'header__navigation_inactive',
       headerThemeDark: 'header_dark',
       headerThemeLight: 'header_light',
       headerHeadingDark: 'header__heading_dark',
       headerHeadingLight: 'header__heading_light',
-      headerMenuDark: 'icon__hamburger_dark',
-      headerMenuLight: 'icon__hamburger_light',
       buttonThemeDark: 'header__button_dark',
       buttonThemeLight: 'header__button_light',
+
+      // Icon statuses
+      headerMenuDark: 'icon__hamburger_dark',
+      headerMenuLight: 'icon__hamburger_light',
       buttonIconDark: 'icon__logout_dark',
       buttonIconLight: 'icon__logout_light',
+      iconSave: 'icon__save',
+      iconSaved: 'icon__saved',
     },
+
+    // Common adds for classList.add/remove/toggle
+    commonAdds: {
+      iconElement: 'icon',
+      linkElement: 'link',
+      titleElement: 'title',
+    },
+
+    // Common elements
     root: '.root',
-    iconElement: '.icon',
+    icon: '.icon',
+
+    // Header elements
     header: '.header',
     headerButton: '.header__button',
     headerMenu: '.header__menu',
     headerHeading: '.header__heading',
     headerItemSaved: '.header__item-saved',
     headerNavigation: '.header__navigation',
+
+    // Popup elements
     popup: '.popup',
     popupSignup: '.popup__signup',
     popupLogin: '.popup__login',
@@ -51,6 +71,35 @@ const config = {
     popupErrorPassword: '.popup__error_password',
     popupButtonSubmit: '.popup__button_submit',
     popupLink: '.popup__link',
+
+    // Results elements
+    resultsContainer: '.results__container',
+    resultsNFContainer: '.results__not-found',
+    resultsSearchContainer: '.results__search',
+    // Card elements
+    cardContainer: '.results__cards-container',
+    cardTemplate: '#card-template',
+    card: '.card',
+    cardDate: '.card__date',
+    cardTitle: '.card__title',
+    cardImage: '.card__image',
+    cardText: '.card__text',
+    cardLink: '.card__link',
+    cardGen: {
+      cardElement: 'card',
+      cardFoundElement: 'card_found',
+      cardSavedElement: 'card_saved',
+      cardImageElement: 'card__image',
+      cardButtonElement: 'card__button',
+      cardBtnSavedElement: 'card__button_saved',
+      cardBtnSaveElement: 'card__button_save',
+      cardBtnDeleteElement: 'card__button_delete',
+      cardContentElement: 'card__content',
+      cardDateElement: 'card__date',
+      cardTitleElement: 'card__title',
+      cardTextElement: 'card__text',
+      cardLinkElement: 'card__link',
+    },
   },
   params: {
     validPasswordMinLength: 8,
@@ -60,4 +109,4 @@ const config = {
   },
 };
 
-export default config;
+export default CONFIG;

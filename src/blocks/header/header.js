@@ -1,14 +1,14 @@
 import Component from '../Component';
 
-import config from '../../js/constants/config';
+import CONFIG from '../../js/constants/config';
 
 class Header extends Component {
   constructor(props) {
     super(props.element);
     this.api = props.api;
     this.headerButton = props.headerButton;
-    this.menuItemSaved = document.querySelector(config.elements.headerItemSaved);
-    this.headerMenuButton = document.querySelector(config.elements.headerMenu);
+    this.menuItemSaved = document.querySelector(CONFIG.elements.headerItemSaved);
+    this.headerMenuButton = document.querySelector(CONFIG.elements.headerMenu);
 
     this._handleMobileMenu();
   }
@@ -16,25 +16,25 @@ class Header extends Component {
   _handleMobileMenu() {
     this.headerMenuButton.addEventListener('click', () => {
       // Control color theme on pages where its needed (light themed pages)
-      if (this.element.classList.contains(config.elements.status.headerThemeLight)) {
+      if (this.element.classList.contains(CONFIG.elements.status.headerThemeLight)) {
         document
-          .querySelector(config.elements.headerHeading)
-          .classList.toggle(config.elements.status.headerHeadingDark);
+          .querySelector(CONFIG.elements.headerHeading)
+          .classList.toggle(CONFIG.elements.status.headerHeadingDark);
         document
-          .querySelector(config.elements.headerHeading)
-          .classList.toggle(config.elements.status.headerHeadingLight);
+          .querySelector(CONFIG.elements.headerHeading)
+          .classList.toggle(CONFIG.elements.status.headerHeadingLight);
         this.headerMenuButton
-          .querySelector(config.elements.iconElement)
-          .classList.toggle(config.elements.status.headerMenuDark);
+          .querySelector(CONFIG.elements.icon)
+          .classList.toggle(CONFIG.elements.status.headerMenuDark);
         this.headerMenuButton
-          .querySelector(config.elements.iconElement)
-          .classList.toggle(config.elements.status.headerMenuLight);
+          .querySelector(CONFIG.elements.icon)
+          .classList.toggle(CONFIG.elements.status.headerMenuLight);
       }
 
       // Open mobile menu. Change button icon
       document
-        .querySelector(config.elements.headerNavigation)
-        .classList.toggle(config.elements.status.headerNavInactive);
+        .querySelector(CONFIG.elements.headerNavigation)
+        .classList.toggle(CONFIG.elements.status.headerNavInactive);
       this.headerMenuButton
         .querySelector('.icon')
         .classList.toggle('icon__hamburger');
@@ -42,21 +42,21 @@ class Header extends Component {
         .querySelector('.icon')
         .classList.toggle('icon__close');
       document
-        .querySelector(config.elements.root)
-        .classList.toggle(config.elements.status.noscroll);
+        .querySelector(CONFIG.elements.root)
+        .classList.toggle(CONFIG.elements.status.noscroll);
     });
   }
 
   render(event) {
     if (!event) {
-      this.menuItemSaved.classList.remove(config.elements.status.nodisplay);
+      this.menuItemSaved.classList.remove(CONFIG.elements.status.nodisplay);
       return;
     }
 
     if (event.detail.isLoggedIn) {
-      this.menuItemSaved.classList.remove(config.elements.status.nodisplay);
+      this.menuItemSaved.classList.remove(CONFIG.elements.status.nodisplay);
     } else {
-      this.menuItemSaved.classList.add(config.elements.status.nodisplay);
+      this.menuItemSaved.classList.add(CONFIG.elements.status.nodisplay);
     }
   }
 }
