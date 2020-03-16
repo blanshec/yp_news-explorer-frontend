@@ -1,0 +1,18 @@
+.search__error {
+  color: red;
+  position: absolute;
+  left: 30px;
+  top: -20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .search__error {
+    top: -35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__error {
+    top: -40px;
+  }
+}

@@ -17,7 +17,7 @@
 <body>
   <main class="root">
     <div class="hidables">
-      <section class="popup popup__signup">
+      <section class="popup popup__signup nodisplay">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -46,7 +46,7 @@
         </div>
       </section>
 
-      <section class="popup popup__login">
+      <section class="popup popup__login nodisplay">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -71,7 +71,7 @@
         </div>
       </section>
 
-      <section class="popup popup__message">
+      <section class="popup popup__message nodisplay">
         <div class="popup__inner">
           <button class="popup__button_close"></button>
           <div class="popup__container">
@@ -131,29 +131,33 @@
     <section class="saved-articles">
       <div class="saved-articles__container">
 
-        <div class="card card_saved">
-          <div class="card__header">
-            <img class="card__image" src="../<%= require('../../images/card01.png')%>"
-              alt="card header: national parks" />
-            <span class="card__tag">История</span>
-            <button class="card__button card__button_delete">
-              <i class="icon icon__delete"></i>
-            </button>
-          </div>
-          <div class="card__content">
-            <div class="card__date">
-              2 августа, 2019
+        <template id='card-template'>
+          <div class="card card_saved">
+            <div class="card__header">
+              <img class="card__image" src="../<%= require('../../images/card01.png')%>"
+                alt="card header: national parks" />
+              <span class="card__tag">История</span>
+              <button class="card__button card__button_delete">
+                <i class="icon icon__delete"></i>
+              </button>
             </div>
-            <h4 class="title card__title">
-              Национальное достояние – парки
-            </h4>
-            <p class="card__text">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
-          </div>
-        </div> 
+            <div class="card__content">
+              <div class="card__date">
+                2 августа, 2019
+              </div>
+              <h4 class="title card__title">
+                Национальное достояние – парки
+              </h4>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </p>
+              <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
+            </div>
+        </template>
+
+      </div>
+
 
     </section>
 

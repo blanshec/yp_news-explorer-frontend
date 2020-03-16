@@ -9,14 +9,14 @@ export default class HeaderButton extends Component {
   }
 
   openPopup() {
-    this.constructor._dispatchNewEvent(EVENTS.headerButtonClicked);
+    this.constructor.dispatchNewEvent(EVENTS.headerButtonClicked);
   }
 
   async signOutUser() {
     await this.api.signOut()
       .then(() => {
         localStorage.removeItem('username');
-        this.constructor._dispatchNewEvent(EVENTS.authUpdated, {
+        this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
           detail: {
             isLoggedIn: false,
           },

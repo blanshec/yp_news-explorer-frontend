@@ -56,6 +56,30 @@ export default class BackendApi {
     await this._request(this.props.login, this._postRequest(data));
   }
 
+  async saveArticle(data) {
+    await this._request(this.props.articles, this._postRequest(data));
+  }
+
+  async getArticles() {
+    const data = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      credentials: 'include',
+    };
+    return fetch(this.props.articles, data)
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        await res.json();
+      })
+      .catch((err) => {
+        throw new Error(err.message);
+      });
+  }
+
   async getUsername() {
     return fetch(this.props.getUser, { credentials: 'include' })
       .then((res) => {

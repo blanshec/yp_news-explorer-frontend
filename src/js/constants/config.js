@@ -45,6 +45,7 @@ const CONFIG = {
     // Common elements
     root: '.root',
     icon: '.icon',
+    errorBox: '.errrorbox',
 
     // Header elements
     header: '.header',
@@ -72,16 +73,27 @@ const CONFIG = {
     popupButtonSubmit: '.popup__button_submit',
     popupLink: '.popup__link',
 
+    // Search elements
+    searchForm: '.search__form',
+    searchInput: '.search__input',
+    searchButton: '.search__button',
+    searchError: '.search__error',
+
     // Results elements
+    resultsMain: '.results',
     resultsContainer: '.results__container',
-    resultsNFContainer: '.results__not-found',
-    resultsSearchContainer: '.results__search',
+    resultsNotFound: '.results__not-found',
+    resultsPreloader: '.results__search',
+    resultsShowmoreButton: '.results__button',
+
     // Card elements
     cardContainer: '.results__cards-container',
     cardTemplate: '#card-template',
     card: '.card',
+    cardButton: '.card__button',
     cardDate: '.card__date',
     cardTitle: '.card__title',
+    cardTag: '.card__tag',
     cardImage: '.card__image',
     cardText: '.card__text',
     cardLink: '.card__link',
@@ -101,11 +113,16 @@ const CONFIG = {
       cardLinkElement: 'card__link',
     },
   },
+  months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
   params: {
     validPasswordMinLength: 8,
     validPasswordMaxLength: 30,
     validNameMinLength: 2,
     validNameMaxLength: 30,
+    validateSearchMinLength: 1,
+    validateSearchMaxLength: 30,
+    searchTimeSpan: 604800000,
+    pageSize: 6,
   },
 };
 

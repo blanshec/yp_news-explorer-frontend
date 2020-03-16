@@ -128,18 +128,39 @@
             и сохраняйте в своём личном кабинете.
           </h3>
           <form class="search__form" name="news-finder" method="POST">
-            <input class="search__input" type="text" name="search" placeholder="Введите тему новости" required />
+            <input class="search__input" type="text" name="searchQuery" placeholder="Введите тему новости" required />
             <button class="button search__button" type="submit">
               Искать
             </button>
+            <span class="search__error nodisplay"></span>
           </form>
         </div>
       </section>
     </div>
 
-    <section class="results">
+    <section class="results nodisplay">
       <!-- Для отображения секции результатов необходимо снять флаг
           nodisplay с секции результата и с желаемого результата -->
+      <template id='card-template'>
+        <div class="card card_found">
+          <div class="card__header">
+            <img class="card__image" src="" alt="" />
+            <span class="card__tag nodisplay"></span>
+            <button class="card__button card__button_save-loggedout" disabled>
+              <i class="icon icon__save"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+            </div>
+            <h4 class="title card__title">
+            </h4>
+            <p class="card__text">
+            </p>
+            <a class="link card__link" href="" target="_blank"></a>
+          </div>
+        </div>
+      </template>
 
       <div class="results__search nodisplay">
         <i class="circle-preloader"></i>
@@ -159,37 +180,13 @@
         <h2 class="title results__title">
           Результаты поиска
         </h2>
-
         <div class="results__cards-container ">
-          <template id='card-template'>
-            <div class="card card_found">
-              <div class="card__header">
-                <img class="card__image" src="https://i.pinimg.com/564x/ff/56/27/ff56272632e99ec63c9e2ed5ab30d369.jpg
-                " alt="card header: national parks" />
-                <button class="card__button card__button_saved">
-                  <i class="icon icon__saved"></i>
-                </button>
-              </div>
-              <div class="card__content">
-                <div class="card__date">
-                  2 августа, 2019
-                </div>
-                <h4 class="title card__title">
-                  Национальное достояние – парки
-                </h4>
-                <p class="card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-                  национальных
-                  парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <a class="link card__link" href="#">Лента.ру</a>
-              </div>
-            </div>
-          </template>
+
         </div>
 
         <button class="button results__button">Показать еще</button>
       </div>
+
     </section>
 
     <section class="about-author">

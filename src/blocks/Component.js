@@ -3,7 +3,7 @@ export default class Component {
     this.element = element;
   }
 
-  static _dispatchNewEvent(event, props) {
+  static dispatchNewEvent(event, props) {
     return document.dispatchEvent(new CustomEvent(event, props));
   }
 }

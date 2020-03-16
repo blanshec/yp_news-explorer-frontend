@@ -1,4 +1,5 @@
 import CONFIG from './constants/config';
+import EVENTS from './constants/events';
 import BackendApi from './api/backendApi';
 import NewsApi from './api/newsApi';
 import StateManager from './utils/stateManager';
@@ -8,6 +9,7 @@ import HeaderButton from '../blocks/header/__button/headerButton';
 import Popup from '../blocks/popup/popup';
 import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
+import SearchBar from '../blocks/search/search';
 import CardGenerator from '../blocks/common/card/card';
 import NewsFeed from '../blocks/results/newsfeed';
 
@@ -51,8 +53,25 @@ const header = new Header({
   element: document.querySelector(CONFIG.elements.header),
 });
 
-const newsFeed = new NewsFeed({ element: document.querySelector(CONFIG.elements.resultsContainer) });
-// const cardGenerator = new CardGenerator();
-// cardGenerator.addCard();
+const cardGenerator = new CardGenerator();
+const newsFeed = new NewsFeed({
+  element: document.querySelector(CONFIG.elements.resultsMain),
+  cardGenerator,
+  api,
+});
+const searchBar = new SearchBar({
+  element: document.querySelector(CONFIG.elements.searchForm),
+  newsApi,
+  results: newsFeed,
+});
+
 const stateManager = new StateManager({ header });
 stateManager.initHandlers();
+
+document.addEventListener(EVENTS.saveNewsData, async (customEvent) => {
+  const result = await api.saveArticle(customEvent.detail);
+  console.log(result)
+  if (result && result.data) {
+    document.dispatchEvent(new CustomEvent(EVENTS.savedNews, { detail: result.data }));
+  }
+});

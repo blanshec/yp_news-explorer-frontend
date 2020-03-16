@@ -4,6 +4,7 @@
 @import "./__input/search__input.css";
 @import "./__subtitle/search__subtitle.css";
 @import "./__title/search__title.css";
+@import "./__error/search__error.css";
 
 .search {
   background-size: contain;

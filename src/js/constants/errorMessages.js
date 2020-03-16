@@ -6,6 +6,8 @@ const ERRORS = {
   usernameRequired: 'Введите имя пользователя',
   usernameIsInvalid: 'Имя пользователя должно быть от 2-ух до 30-ти символов',
   inputOutOfBound: 'Слишком много полей ввода',
+  newsSearchQueryError: 'Ошибка запроса новостей',
+  searchQueryIsInvalid: 'Поисковый запрос должен быть от 1-го до 30-ти символов',
 };
 
 export default ERRORS;

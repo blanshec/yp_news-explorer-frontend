@@ -42,7 +42,7 @@ export default class PopupLogin extends Popup {
     });
     this.api.signIn(data)
       .then(() => {
-        this.constructor._dispatchNewEvent(EVENTS.authUpdated, {
+        this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
           detail: {
             isLoggedIn: true,
           },

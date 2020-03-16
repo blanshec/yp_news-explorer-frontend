@@ -38,6 +38,7 @@
 /* Import behavioral styles */
 @import "./blocks/common/noscroll/noscroll.css";
 @import "./blocks/common/nodisplay/nodisplay.css";
+@import "./blocks//common//errorbox/errorbox.css";
 
 body {
   margin: 0;

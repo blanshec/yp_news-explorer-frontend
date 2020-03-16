@@ -8,6 +8,10 @@ class stateManager {
     this.usernameExists = !!localStorage.getItem('username');
   }
 
+  getUsernameExists() {
+    return this.usernameExists;
+  }
+
   initHandlers() {
     if (this.usernameExists) {
       this._renderHeader();

@@ -8,12 +8,12 @@
   }
 }
 
-.card__button_save:hover > .icon {
+.card__button_save-loggedout:hover > .icon {
   background-color: black;
 }
 
-.card__button_save:hover::before {
-  content: 'Сохранить';
+.card__button_save-loggedout:hover::before {
+  content: 'Войдите, чтобы сохранять статьи';
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
