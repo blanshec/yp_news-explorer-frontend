@@ -59,12 +59,15 @@ const newsFeed = new NewsFeed({
   cardGenerator,
   api,
 });
-// eslint-disable-next-line no-unused-vars
-const searchBar = new SearchBar({
-  element: document.querySelector(CONFIG.elements.searchForm),
-  newsApi,
-  articles: newsFeed,
-});
+
+if (window.location.href === './') {
+  // eslint-disable-next-line no-unused-vars
+  const searchBar = new SearchBar({
+    element: document.querySelector(CONFIG.elements.searchForm),
+    newsApi,
+    articles: newsFeed,
+  });
+}
 
 const stateManager = new StateManager({ header });
 stateManager.initHandlers();

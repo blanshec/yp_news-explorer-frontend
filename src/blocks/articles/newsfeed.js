@@ -9,13 +9,15 @@ class NewsFeed extends Component {
     this.notFoundBlock = this.element.querySelector(CONFIG.elements.articlesNotFound);
     this.container = this.element.querySelector(CONFIG.elements.articlesContainer);
     this.cardContainer = this.element.querySelector(CONFIG.elements.cardContainer);
-    this.showMoreButton = this.element.querySelector(CONFIG.elements.articlesShowmoreButton);
     this.pageSize = CONFIG.params.pageSize;
     this.news = {};
 
     this.cardGenerator = props.cardGenerator;
 
-    this.showMoreButton.addEventListener('click', () => this.showMore());
+    if (window.location.href === './') {
+      this.showMoreButton = this.element.querySelector(CONFIG.elements.articlesShowmoreButton);
+      this.showMoreButton.addEventListener('click', () => this.showMore());
+    }
   }
 
   async loadCards(params) {
@@ -48,7 +50,7 @@ class NewsFeed extends Component {
     }
   }
 
-  showarticles(data) {
+  showArticles(data) {
     this.news = data;
     this.loadCards({ news: this.news, start: 0 });
     this.element.classList.remove(CONFIG.elements.status.nodisplay);
@@ -59,7 +61,7 @@ class NewsFeed extends Component {
     this.loadCards({ news: this.news, start: this.currentIndex });
   }
 
-  hidearticles() {
+  hideArticles() {
     this.element.classList.add(CONFIG.elements.status.nodisplay);
     this.container.classList.add(CONFIG.elements.status.nodisplay);
   }
@@ -87,7 +89,7 @@ class NewsFeed extends Component {
   hideAll() {
     this.hidePreloader();
     this.hideNotFound();
-    this.hidearticles();
+    this.hideArticles();
   }
 
   clear() {

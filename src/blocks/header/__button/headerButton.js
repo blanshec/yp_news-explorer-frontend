@@ -57,7 +57,7 @@ export default class HeaderButton extends Component {
     }
   }
 
-  async _requestUserData() {
+  _requestUserData() {
     return this.api.getUsername()
       .then((res) => {
         localStorage.setItem('username', res);

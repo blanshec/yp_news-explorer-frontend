@@ -1,4 +1,15 @@
 const CONFIG = {
+  localhost: {
+    url: 'http://localhost:8080/',
+  },
+  localBackendApi: {
+    baseUrl: 'http://localhost:3000',
+    login: 'http://localhost:3000/signin',
+    logout: 'http://localhost:3000/logout',
+    signup: 'http://localhost:3000/signup',
+    getUser: 'http://localhost:3000/users/me',
+    articles: 'http://localhost:3000/articles',
+  },
   backendApi: {
     baseUrl: 'https://api.newsexplo.gq',
     login: 'https://api.newsexplo.gq/signin',
@@ -106,7 +117,7 @@ const CONFIG = {
     validateSearchMinLength: 1,
     validateSearchMaxLength: 30,
     searchTimeSpan: 604800000,
-    pageSize: 6,
+    pageSize: 3,
   },
 };
 
