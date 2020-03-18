@@ -8,7 +8,6 @@ const CONFIG = {
     articles: 'https://api.newsexplo.gq/articles',
   },
   newsApi: {
-    apiKey: '9463a3af98f2474a93847c50157b49d3',
     newsUrl: 'https://newsapi.org/v2/everything?sortBy=popularity&apiKey=9463a3af98f2474a93847c50157b49d3&language=ru&pageSize=100',
   },
   elements: {
@@ -79,15 +78,15 @@ const CONFIG = {
     searchButton: '.search__button',
     searchError: '.search__error',
 
-    // Results elements
-    resultsMain: '.results',
-    resultsContainer: '.results__container',
-    resultsNotFound: '.results__not-found',
-    resultsPreloader: '.results__search',
-    resultsShowmoreButton: '.results__button',
+    // Articles elements
+    articlesMain: '.articles',
+    articlesContainer: '.articles__container',
+    articlesNotFound: '.articles__not-found',
+    articlesPreloader: '.articles__search',
+    articlesShowmoreButton: '.articles__button',
 
     // Card elements
-    cardContainer: '.results__cards-container',
+    cardContainer: '.articles__cards-container',
     cardTemplate: '#card-template',
     card: '.card',
     cardButton: '.card__button',
@@ -97,21 +96,6 @@ const CONFIG = {
     cardImage: '.card__image',
     cardText: '.card__text',
     cardLink: '.card__link',
-    cardGen: {
-      cardElement: 'card',
-      cardFoundElement: 'card_found',
-      cardSavedElement: 'card_saved',
-      cardImageElement: 'card__image',
-      cardButtonElement: 'card__button',
-      cardBtnSavedElement: 'card__button_saved',
-      cardBtnSaveElement: 'card__button_save',
-      cardBtnDeleteElement: 'card__button_delete',
-      cardContentElement: 'card__content',
-      cardDateElement: 'card__date',
-      cardTitleElement: 'card__title',
-      cardTextElement: 'card__text',
-      cardLinkElement: 'card__link',
-    },
   },
   months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
   params: {

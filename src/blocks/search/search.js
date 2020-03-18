@@ -7,7 +7,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props.element);
     this.newsApi = props.newsApi;
-    this.newsFeed = props.results;
+    this.newsFeed = props.articles;
     this.input = this.element.querySelector(CONFIG.elements.searchInput);
     this.submitButton = this.element.querySelector(CONFIG.elements.searchButton);
     this.searchError = this.element.querySelector(CONFIG.elements.searchError);
@@ -31,7 +31,7 @@ class SearchBar extends Component {
           throw new Error('Новости не найдены');
         }
         this.newsFeed.hidePreloader();
-        this.newsFeed.showResults(news);
+        this.newsFeed.showArticles(news);
       }).catch((err) => {
         this.newsFeed.hidePreloader();
         this.newsFeed.showNotFound();

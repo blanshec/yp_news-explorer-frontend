@@ -89,8 +89,8 @@
     </div>
 
     <header class="header header_light">
-      <!-- На данной странице отображен вариант с расскрытым мобильным меню.  
-        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже. 
+      <!-- На данной странице отображен вариант с расскрытым мобильным меню.
+        Для того чтобы посмотреть страницу в корректном виде,пожалуйста выполните все условия переключения классов, описанные ниже.
         Так же не забудьте, пожалуйста, добавить noscroll класс к элементу main.root.  -->
       <div class="header__container">
         <!-- При отображении мобильного меню необходимо переключить  -light и _light классы на -dark и _dark
@@ -128,8 +128,8 @@
         <span class="svd-lead__keywords_bold">Тайга</span> и 2 другим</p>
     </section>
 
-    <section class="saved-articles">
-      <div class="saved-articles__container">
+    <section class="articles articles_saved">
+      <div class="articles__cards-container">
 
         <template id='card-template'>
           <div class="card card_saved">
@@ -154,7 +154,78 @@
               </p>
               <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
             </div>
+          </div>
         </template>
+
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="../<%= require('../../images/card01.png')%>"
+              alt="card header: national parks" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="../<%= require('../../images/card01.png')%>"
+              alt="card header: national parks" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
+          </div>
+        </div>
+        <div class="card card_saved">
+          <div class="card__header">
+            <img class="card__image" src="../<%= require('../../images/card01.png')%>"
+              alt="card header: national parks" />
+            <span class="card__tag">История</span>
+            <button class="card__button card__button_delete">
+              <i class="icon icon__delete"></i>
+            </button>
+          </div>
+          <div class="card__content">
+            <div class="card__date">
+              2 августа, 2019
+            </div>
+            <h4 class="title card__title">
+              Национальное достояние – парки
+            </h4>
+            <p class="card__text">
+              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
+              парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            </p>
+            <a class="link card__link" href="https://lenta.ru" target="_blank">Лента.ру</a>
+          </div>
+        </div>
 
       </div>
 

@@ -1,6 +1,6 @@
-@import "./_small/results__title_small.css";
+@import "./_small/articles__title_small.css";
 
-.results__title {
+.articles__title {
   font-size: 40px;
   line-height: 46px;
 
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .results__title {
+  .articles__title {
     font-size: 30px;
     line-height: 34px;
   }

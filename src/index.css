@@ -26,8 +26,8 @@
 /* Import search styles */
 @import "./blocks/search/search.css";
 
-/* Import results style  */
-@import "./blocks/results/results.css";
+/* Import articles style  */
+@import "./blocks/articles/articles.css";
 
 /* Import about-author styles */
 @import "./blocks/about-author/about-author.css";

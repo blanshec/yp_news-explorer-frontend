@@ -11,7 +11,7 @@ import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
 import SearchBar from '../blocks/search/search';
 import CardGenerator from '../blocks/common/card/card';
-import NewsFeed from '../blocks/results/newsfeed';
+import NewsFeed from '../blocks/articles/newsfeed';
 
 const api = new BackendApi(CONFIG.backendApi);
 const newsApi = new NewsApi(CONFIG.newsApi);
@@ -55,7 +55,7 @@ const header = new Header({
 
 const cardGenerator = new CardGenerator();
 const newsFeed = new NewsFeed({
-  element: document.querySelector(CONFIG.elements.resultsMain),
+  element: document.querySelector(CONFIG.elements.articlesMain),
   cardGenerator,
   api,
 });
@@ -63,7 +63,7 @@ const newsFeed = new NewsFeed({
 const searchBar = new SearchBar({
   element: document.querySelector(CONFIG.elements.searchForm),
   newsApi,
-  results: newsFeed,
+  articles: newsFeed,
 });
 
 const stateManager = new StateManager({ header });

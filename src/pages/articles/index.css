@@ -24,7 +24,7 @@
 @import "../../blocks/svd-lead/svd-lead.css";
 
 /* Import saved articles styles */
-@import "../../blocks/saved-articles/saved-articles.css";
+@import "../../blocks//articles/articles.css";
 
 /* Import footer styles */
 @import "../../blocks/footer/footer.css";

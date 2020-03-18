@@ -5,11 +5,11 @@ class NewsFeed extends Component {
   constructor(props) {
     super(props.element);
     this.api = props.api;
-    this.preloaderBlock = this.element.querySelector(CONFIG.elements.resultsPreloader);
-    this.notFoundBlock = this.element.querySelector(CONFIG.elements.resultsNotFound);
-    this.container = this.element.querySelector(CONFIG.elements.resultsContainer);
+    this.preloaderBlock = this.element.querySelector(CONFIG.elements.articlesPreloader);
+    this.notFoundBlock = this.element.querySelector(CONFIG.elements.articlesNotFound);
+    this.container = this.element.querySelector(CONFIG.elements.articlesContainer);
     this.cardContainer = this.element.querySelector(CONFIG.elements.cardContainer);
-    this.showMoreButton = this.element.querySelector(CONFIG.elements.resultsShowmoreButton);
+    this.showMoreButton = this.element.querySelector(CONFIG.elements.articlesShowmoreButton);
     this.pageSize = CONFIG.params.pageSize;
     this.news = {};
 
@@ -48,7 +48,7 @@ class NewsFeed extends Component {
     }
   }
 
-  showResults(data) {
+  showarticles(data) {
     this.news = data;
     this.loadCards({ news: this.news, start: 0 });
     this.element.classList.remove(CONFIG.elements.status.nodisplay);
@@ -59,7 +59,7 @@ class NewsFeed extends Component {
     this.loadCards({ news: this.news, start: this.currentIndex });
   }
 
-  hideResults() {
+  hidearticles() {
     this.element.classList.add(CONFIG.elements.status.nodisplay);
     this.container.classList.add(CONFIG.elements.status.nodisplay);
   }
@@ -87,7 +87,7 @@ class NewsFeed extends Component {
   hideAll() {
     this.hidePreloader();
     this.hideNotFound();
-    this.hideResults();
+    this.hidearticles();
   }
 
   clear() {
