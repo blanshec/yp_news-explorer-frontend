@@ -20,7 +20,7 @@ class NewsFeed extends Component {
 
   async loadCards(params) {
     this.isLoggedIn = !!localStorage.getItem('username');
-    if (this.loggedIn) {
+    if (this.isLoggedIn) {
       try {
         this.savedLinks = await this.api.getArticles()
           .then((articles) => articles.data.map((x) => x.title));
@@ -48,15 +48,15 @@ class NewsFeed extends Component {
     }
   }
 
-  showMore() {
-    this.loadCards({ news: this.news, start: this.currentIndex });
-  }
-
   showResults(data) {
     this.news = data;
     this.loadCards({ news: this.news, start: 0 });
     this.element.classList.remove(CONFIG.elements.status.nodisplay);
     this.container.classList.remove(CONFIG.elements.status.nodisplay);
+  }
+
+  showMore() {
+    this.loadCards({ news: this.news, start: this.currentIndex });
   }
 
   hideResults() {

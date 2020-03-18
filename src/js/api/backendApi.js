@@ -73,7 +73,8 @@ export default class BackendApi {
         if (!res.ok) {
           throw new Error(res.statusText);
         }
-        await res.json();
+        const resultToReturn = await res.json();
+        return resultToReturn;
       })
       .catch((err) => {
         throw new Error(err.message);

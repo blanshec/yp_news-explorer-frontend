@@ -30,7 +30,6 @@ class SearchBar extends Component {
         if (!news.length) {
           throw new Error('Новости не найдены');
         }
-        console.log(news)
         this.newsFeed.hidePreloader();
         this.newsFeed.showResults(news);
       }).catch((err) => {

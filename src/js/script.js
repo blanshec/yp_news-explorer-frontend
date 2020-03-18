@@ -59,6 +59,7 @@ const newsFeed = new NewsFeed({
   cardGenerator,
   api,
 });
+// eslint-disable-next-line no-unused-vars
 const searchBar = new SearchBar({
   element: document.querySelector(CONFIG.elements.searchForm),
   newsApi,
@@ -70,7 +71,6 @@ stateManager.initHandlers();
 
 document.addEventListener(EVENTS.saveNewsData, async (customEvent) => {
   const result = await api.saveArticle(customEvent.detail);
-  console.log(result)
   if (result && result.data) {
     document.dispatchEvent(new CustomEvent(EVENTS.savedNews, { detail: result.data }));
   }

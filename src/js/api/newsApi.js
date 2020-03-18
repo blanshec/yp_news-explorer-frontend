@@ -28,7 +28,7 @@ class NewsApi {
             image: article.urlToImage,
             source: article.source.name,
             link: article.url,
-            tag: searchString,
+            keyword: searchString,
           }
         });
       })
