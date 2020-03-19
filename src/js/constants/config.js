@@ -26,6 +26,7 @@ const CONFIG = {
       // Common statuses
       noscroll: 'noscroll',
       nodisplay: 'nodisplay',
+      errorboxAnim: 'errorbox-animate',
 
       // Header statuses
       headerNavInactive: 'header__navigation_inactive',
@@ -55,7 +56,11 @@ const CONFIG = {
     // Common elements
     root: '.root',
     icon: '.icon',
-    errorBox: '.errrorbox',
+
+    // Errorbox elements
+    errorBox: '.errorbox',
+    errorTextField: '.errorbox__text',
+    errorCloseButton: '.errorbox__close',
 
     // Header elements
     header: '.header',
