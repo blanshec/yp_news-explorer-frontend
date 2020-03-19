@@ -7,6 +7,7 @@
 @import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
 /* Import common styles */
+@import "./blocks/common/errorbox/errorbox.css";
 @import "./blocks/common/button/button.css";
 @import "./blocks/common/link/link.css";
 @import "./blocks/common/preloader/preloader.css";

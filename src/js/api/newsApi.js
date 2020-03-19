@@ -1,4 +1,4 @@
-import ERRORS from "../constants/errorMessages";
+import ERRORS from '../constants/errorMessages';
 
 class NewsApi {
   constructor(props) {
@@ -19,19 +19,15 @@ class NewsApi {
         }
         return res.json();
       })
-      .then((data) => {
-        return data.articles.map((article) => {
-          return {
-            date: new Date(Date.parse(article.publishedAt)),
-            title: article.title,
-            text: article.description,
-            image: article.urlToImage,
-            source: article.source.name,
-            link: article.url,
-            keyword: searchString,
-          }
-        });
-      })
+      .then((data) => data.articles.map((article) => ({
+        date: new Date(Date.parse(article.publishedAt)),
+        title: article.title,
+        text: article.description,
+        image: article.urlToImage,
+        source: article.source.name,
+        link: article.url,
+        keyword: searchString,
+      })))
       .catch(() => { });
   }
 }

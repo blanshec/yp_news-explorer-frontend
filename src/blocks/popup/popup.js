@@ -9,12 +9,12 @@ export default class Popup extends Component {
   }
 
   open() {
-    this.element.classList.remove(CONFIG.elements.status.nodisplay);
+    this.show();
     document.querySelector(CONFIG.elements.root).classList.add(CONFIG.elements.status.noscroll);
   }
 
   close() {
-    this.element.classList.add(CONFIG.elements.status.nodisplay);
+    this.hide();
     document.querySelector(CONFIG.elements.root).classList.remove(CONFIG.elements.status.noscroll);
   }
 }

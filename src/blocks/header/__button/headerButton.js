@@ -13,18 +13,17 @@ export default class HeaderButton extends Component {
   }
 
   async signOutUser() {
-    await this.api.signOut()
-      .then(() => {
-        localStorage.removeItem('username');
-        this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
-          detail: {
-            isLoggedIn: false,
-          },
-        });
-      })
-      .catch(() => {
-        throw new Error();
+    try {
+      await this.api.signOut();
+      localStorage.removeItem('username');
+      this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
+        detail: {
+          isLoggedIn: false,
+        },
       });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async render(event) {
