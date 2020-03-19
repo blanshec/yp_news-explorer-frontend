@@ -1,22 +1,21 @@
 /* eslint-disable class-methods-use-this */
+import ERRORS from '../constants/errorMessages';
 
 export default class BackendApi {
   constructor(props) {
     this.props = props;
   }
 
-  _request(url, requestData) {
-    return fetch(url, requestData)
-      .then(async (res) => {
-        if (!res.ok) {
-          const message = await res.json().then((answer) => answer.message);
-          throw new Error(message);
-        }
-        return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+  async _request(url, requestData) {
+    try {
+      const response = await fetch(url, requestData);
+      if (!response.ok) {
+        throw ERRORS.badRequest;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   _postRequest(data) {
