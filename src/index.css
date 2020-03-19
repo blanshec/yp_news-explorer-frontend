@@ -6,7 +6,7 @@
 @import "./vendor/fonts/Roboto-Slab/Roboto-Slab.css";
 @import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
-/* Import common styles */ 
+/* Import common styles */
 @import "./blocks/common/button/button.css";
 @import "./blocks/common/link/link.css";
 @import "./blocks/common/preloader/preloader.css";
