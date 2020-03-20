@@ -1,0 +1,10 @@
+.articles__cards-container_saved {
+  width: 86%;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .articles__cards-container_saved {
+    width: 90%;
+  }
+}

@@ -1,18 +1,25 @@
 .search__error {
-  color: red;
+  color: white;
   position: absolute;
   left: 30px;
-  top: -20px;
+  top: -45px;
+  background-color: rgba(233, 52, 52, 0.7);
+  margin: 0 auto;
+  padding: 10px;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1023px) {
   .search__error {
-    top: -35px;
+    top: -50px;
+    padding: 5px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .search__error {
-    top: -40px;
+    top: -55px;
+    left: 0;
+    padding: 5px;
   }
 }

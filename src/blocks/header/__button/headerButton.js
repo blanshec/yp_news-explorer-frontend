@@ -12,18 +12,19 @@ export default class HeaderButton extends Component {
     this.constructor.dispatchNewEvent(EVENTS.headerButtonClicked);
   }
 
-  async signOutUser() {
-    try {
-      await this.api.signOut();
-      localStorage.removeItem('username');
-      this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
-        detail: {
-          isLoggedIn: false,
-        },
+  signOutUser() {
+    this.api.signOut()
+      .then(() => {
+        localStorage.removeItem('username');
+        this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
+          detail: {
+            isLoggedIn: false,
+          },
+        });
+      })
+      .catch((error) => {
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
-    } catch (err) {
-      console.log(err);
-    }
   }
 
   async render(event) {
@@ -59,8 +60,10 @@ export default class HeaderButton extends Component {
   _requestUserData() {
     return this.api.getUsername()
       .then((res) => {
-        localStorage.setItem('username', res);
+        localStorage.setItem('username', res.username);
       })
-      .catch(() => { });
+      .catch((error) => {
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
+      });
   }
 }

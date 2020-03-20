@@ -2,7 +2,7 @@
 @import './__close/errorbox__close.css';
 
 .errorbox {
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   width: 100%;
   left: 0;

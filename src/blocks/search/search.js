@@ -2,6 +2,7 @@ import validator from 'validator';
 import Component from '../Component';
 import CONFIG from '../../js/constants/config';
 import ERRORS from '../../js/constants/errorMessages';
+import EVENTS from '../../js/constants/events';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -28,14 +29,15 @@ class SearchBar extends Component {
     this.newsApi.getNews(this.input.value, CONFIG.params.searchTimeSpan)
       .then((news) => {
         if (!news.length) {
-          throw new Error('Новости не найдены');
+          this.newsFeed.hidePreloader();
+          this.newsFeed.showNotFound();
+        } else {
+          this.newsFeed.hidePreloader();
+          this.newsFeed.showArticles(news);
         }
-        this.newsFeed.hidePreloader();
-        this.newsFeed.showArticles(news);
-      }).catch((err) => {
-        this.newsFeed.hidePreloader();
-        this.newsFeed.showNotFound();
-        throw new Error(err);
+      }).catch((error) => {
+        this.newsFeed.hideAll();
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }
 

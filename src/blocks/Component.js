@@ -11,7 +11,6 @@ export default class Component {
 
   show() {
     this.element.classList.remove(CONFIG.elements.status.nodisplay);
-
   }
 
   hide() {

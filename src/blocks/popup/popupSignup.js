@@ -8,6 +8,7 @@ export default class PopupSignup extends Popup {
   constructor(props) {
     super(props.element);
     this.api = props.api;
+    this.errorbox = props.errorbox;
     this.popupMessage = props.popupMessage;
     this.submitButton = this.element.querySelector(CONFIG.elements.popupButtonSubmit);
     this.form = this.element.querySelector(CONFIG.elements.popupForm);
@@ -55,7 +56,7 @@ export default class PopupSignup extends Popup {
         this.popupMessage.open();
       })
       .catch((error) => {
-        this.submitButton.textContent = error.message;
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }
 

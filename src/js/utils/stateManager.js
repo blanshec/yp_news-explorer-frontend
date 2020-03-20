@@ -2,14 +2,9 @@ import EVENTS from '../constants/events';
 
 class stateManager {
   constructor(props) {
-    this.api = props.api;
     this.header = props.header;
     this.headerButton = props.header.headerButton;
     this.usernameExists = !!localStorage.getItem('username');
-  }
-
-  getUsernameExists() {
-    return this.usernameExists;
   }
 
   initHandlers() {

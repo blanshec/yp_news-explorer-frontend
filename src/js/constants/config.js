@@ -101,6 +101,10 @@ const CONFIG = {
     articlesPreloader: '.articles__search',
     articlesShowmoreButton: '.articles__button',
 
+    leadTitle: '.svd-lead__title',
+    leadKeywords: '.svd-lead__keywords',
+    leadKeywordsHolder: '.svd-lead__keywords_holder',
+
     // Card elements
     cardContainer: '.articles__cards-container',
     cardTemplate: '#card-template',
@@ -123,6 +127,7 @@ const CONFIG = {
     validateSearchMaxLength: 30,
     searchTimeSpan: 604800000,
     pageSize: 3,
+    keywordCount: 3,
   },
 };
 

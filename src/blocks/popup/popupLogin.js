@@ -8,6 +8,7 @@ export default class PopupLogin extends Popup {
   constructor(props) {
     super(props.element);
     this.api = props.api;
+    this.errorbox = props.errorbox;
     this.submitButton = this.element.querySelector(CONFIG.elements.popupButtonSubmit);
     this.form = this.element.querySelector(CONFIG.elements.popupForm);
     this.errors = this.element.querySelectorAll(CONFIG.elements.popupError);
@@ -40,6 +41,7 @@ export default class PopupLogin extends Popup {
     this.inputs.forEach((input) => {
       data[input.name] = input.value;
     });
+
     this.api.signIn(data)
       .then(() => {
         this.constructor.dispatchNewEvent(EVENTS.authUpdated, {
@@ -50,7 +52,7 @@ export default class PopupLogin extends Popup {
         this.close();
       })
       .catch((error) => {
-        this.submitButton.textContent = error.message;
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }
 

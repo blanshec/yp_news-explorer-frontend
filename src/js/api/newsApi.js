@@ -5,21 +5,20 @@ class NewsApi {
     this.url = props.newsUrl;
   }
 
-  getNews(searchString, timeSpan) {
+  async getNews(searchString, timeSpan) {
     const dateNow = new Date();
     const dateFrom = new Date(dateNow.getTime() - timeSpan);
     const dateToStr = `${dateNow.getFullYear()}-${dateNow.getMonth() + 1}-${dateNow.getDate()}`;
     const dateFromStr = `${dateFrom.getFullYear()}-${dateFrom.getMonth() + 1}-${dateFrom.getDate()}`;
     const url = `${this.url}&q='${encodeURI(searchString)}'&from=${dateFromStr}&to=${dateToStr}`;
 
-    return fetch(url)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(ERRORS.newsSearchQueryError);
-        }
-        return res.json();
-      })
-      .then((data) => data.articles.map((article) => ({
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw ERRORS.badSearchQuery;
+      }
+      let data = await response.json();
+      data = data.articles.map((article) => ({
         date: new Date(Date.parse(article.publishedAt)),
         title: article.title,
         text: article.description,
@@ -27,8 +26,11 @@ class NewsApi {
         source: article.source.name,
         link: article.url,
         keyword: searchString,
-      })))
-      .catch(() => { });
+      }));
+      return data;
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 }
 

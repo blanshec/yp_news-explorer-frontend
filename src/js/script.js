@@ -1,7 +1,5 @@
 import CONFIG from './constants/config';
-import EVENTS from './constants/events';
 import BackendApi from './api/backendApi';
-import NewsApi from './api/newsApi';
 import StateManager from './utils/stateManager';
 
 import Errorbox from '../blocks/common/errorbox/errorbox';
@@ -10,25 +8,19 @@ import HeaderButton from '../blocks/header/__button/headerButton';
 import Popup from '../blocks/popup/popup';
 import PopupSignup from '../blocks/popup/popupSignup';
 import PopupLogin from '../blocks/popup/popupLogin';
-import SearchBar from '../blocks/search/search';
-import CardGenerator from '../blocks/common/card/card';
-import NewsFeed from '../blocks/articles/newsfeed';
 
 const api = new BackendApi(CONFIG.backendApi);
-const newsApi = new NewsApi(CONFIG.newsApi);
-
+// eslint-disable-next-line no-unused-vars
 const errorbox = new Errorbox(document.querySelector(CONFIG.elements.errorBox));
 
 const popupMessage = new Popup(document.querySelector(CONFIG.elements.popupMessage));
 const popupSignup = new PopupSignup({
   api,
   popupMessage,
-  errorbox,
   element: document.querySelector(CONFIG.elements.popupSignup),
 });
 const popupLogin = new PopupLogin({
   api,
-  errorbox,
   element: document.querySelector(CONFIG.elements.popupLogin),
 });
 const switchPopupButtons = document.querySelectorAll(CONFIG.elements.popupLink);
@@ -57,31 +49,5 @@ const header = new Header({
   headerButton,
   element: document.querySelector(CONFIG.elements.header),
 });
-
-const cardGenerator = new CardGenerator();
-const newsFeed = new NewsFeed({
-  element: document.querySelector(CONFIG.elements.articlesMain),
-  cardGenerator,
-  api,
-});
-
-// eslint-disable-next-line no-unused-vars
-const searchBar = new SearchBar({
-  element: document.querySelector(CONFIG.elements.searchForm),
-  newsApi,
-  articles: newsFeed,
-});
-
 const stateManager = new StateManager({ header });
 stateManager.initHandlers();
-
-document.addEventListener(EVENTS.saveNewsData, async (customEvent) => {
-  try {
-    const result = await api.saveArticle(customEvent.detail);
-    if (result && result.data) {
-      document.dispatchEvent(new CustomEvent(EVENTS.savedNews, { detail: result.data }));
-    }
-  } catch (error) {
-
-  }
-});

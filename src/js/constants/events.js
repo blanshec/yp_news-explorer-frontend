@@ -1,6 +1,9 @@
 const EVENTS = {
+  errorTriggered: 'errorTriggered',
   authUpdated: 'authUpdated',
   headerButtonClicked: 'headerButtonClicked',
-  saveNewsData: 'saveNewsData',
+  saveArticleData: 'saveArticleData',
+  savedArticle: 'savedArticle',
+  deleteArticleData: 'deleteArticleData',
 };
 export default EVENTS;

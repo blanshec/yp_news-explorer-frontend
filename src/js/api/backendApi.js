@@ -6,18 +6,6 @@ export default class BackendApi {
     this.props = props;
   }
 
-  async _request(url, requestData) {
-    try {
-      const response = await fetch(url, requestData);
-      if (!response.ok) {
-        throw ERRORS.badRequest;
-      }
-      return response.json();
-    } catch (error) {
-      throw new Error(error);
-    }
-  }
-
   _postRequest(data) {
     return {
       method: 'POST',
@@ -29,66 +17,122 @@ export default class BackendApi {
     };
   }
 
-  async signOut() {
-    return fetch(this.props.logout,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-      })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Ошибка при выходе: ${res.status}`);
-        return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
-      });
-  }
-
-  async signUp(data) {
-    await this._request(this.props.signup, this._postRequest(data));
-  }
-
-  async signIn(data) {
-    await this._request(this.props.login, this._postRequest(data));
-  }
-
-  async saveArticle(data) {
-    await this._request(this.props.articles, this._postRequest(data));
-  }
-
-  async getArticles() {
-    const data = {
+  _getRequest() {
+    return {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
       credentials: 'include',
     };
-    return fetch(this.props.articles, data)
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
-        const resultToReturn = await res.json();
-        return resultToReturn;
-      })
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+  }
+
+  _deleteRequest() {
+    return {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      credentials: 'include',
+    };
+  }
+
+  async signOut() {
+    try {
+      const response = await fetch(this.props.logout, this._getRequest());
+      if (!response.ok) {
+        throw ERRORS.badSignout;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async signUp(data) {
+    try {
+      const response = await fetch(this.props.signup, this._postRequest(data));
+      if (!response.ok) {
+        throw ERRORS.badSignup;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async signIn(data) {
+    try {
+      const response = await fetch(this.props.login, this._postRequest(data));
+      if (response.status === 401) {
+        throw ERRORS.unableAuth;
+      }
+      if (!response.ok) {
+        throw ERRORS.badSignin;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async saveArticle(data) {
+    try {
+      const response = await fetch(this.props.articles, this._postRequest(data));
+      if (response.status === 401) {
+        throw ERRORS.unableAuth;
+      }
+      if (!response.ok) {
+        throw ERRORS.unableSaveArticle;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async deleteArticle(id) {
+    try {
+      const response = await fetch(`${this.props.articles}/${id}`, this._deleteRequest());
+      if (response.status === 401) {
+        throw ERRORS.unableAuth;
+      }
+      if (!response.ok) {
+        throw ERRORS.unableDeleteArticle;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async getArticles() {
+    try {
+      const response = await fetch(this.props.articles, this._getRequest());
+      if (response.status === 401) {
+        throw ERRORS.unableAuth;
+      }
+      if (!response.ok) {
+        throw ERRORS.badSavedArticlesRequest;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async getUsername() {
-    return fetch(this.props.getUser, { credentials: 'include' })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Ошибка чтения ${res.status}`);
-        return res.json();
-      })
-      .then((userData) => userData.username)
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+    try {
+      const response = await fetch(this.props.getUser, { credentials: 'include' });
+      if (response.status === 401) {
+        throw ERRORS.unableAuth;
+      }
+      if (!response.ok) {
+        throw ERRORS.badRequest;
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 }
