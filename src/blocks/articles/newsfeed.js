@@ -15,20 +15,21 @@ class NewsFeed extends Component {
   }
 
   async getSavedArticles() {
-    const fetchedLinks = await this.api.getArticles()
-      .then((articles) => articles.data.map((x) => ({
+    try {
+      const fetchedLinks = await this.api.getArticles();
+      const result = fetchedLinks.data.map((x) => ({
         id: x._id,
         link: x.link,
-      })))
-      .catch((error) => {
-        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
-      });
-    if (fetchedLinks) {
-      return fetchedLinks.reduce((obj, item) => {
-        // eslint-disable-next-line no-param-reassign
-        obj[item.id] = item.link;
-        return obj;
-      }, {});
+      }));
+      if (result) {
+        return result.reduce((obj, item) => {
+          // eslint-disable-next-line no-param-reassign
+          obj[item.id] = item.link;
+          return obj;
+        }, {});
+      }
+    } catch (error) {
+      this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
     }
     return {};
   }

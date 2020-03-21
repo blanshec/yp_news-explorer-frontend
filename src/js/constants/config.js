@@ -122,7 +122,7 @@ const CONFIG = {
       cardButtonSaved: 'card__button_saved',
       cardButtonSaveLoggedOut: 'card__button_save-loggedout',
       cardButtonSave: 'card__button_save',
-    }
+    },
   },
   months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
   params: {

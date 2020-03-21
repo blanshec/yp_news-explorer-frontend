@@ -56,6 +56,7 @@ class CardGenerator extends Component {
 
     saveButton.addEventListener('click', (event) => {
       event.preventDefault();
+      saveButton.disabled = true;
       if (params.feed === CONFIG.params.savefeed) {
         this.deleteCard(params.data);
       } else if (isSaved && (params.feed === CONFIG.params.articlefeed)) {
@@ -68,15 +69,18 @@ class CardGenerator extends Component {
       if (event.detail.link === link) {
         isSaved = true;
         this._addSavedCardStyle(saveButtonIcon, saveButton);
+        saveButton.disabled = false;
       }
     });
     document.addEventListener(EVENTS.deletedArticle, (event) => {
       if (event.detail.link === link) {
         if (params.feed === 'savefeed') {
           isSaved = false;
+          saveButton.disabled = false;
         } else if (isSaved && (params.feed === 'articlefeed')) {
           this._addLoggedinUnsavedStyle(saveButtonIcon, saveButton);
           isSaved = false;
+          saveButton.disabled = false;
         }
       }
     });
