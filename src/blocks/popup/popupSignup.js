@@ -27,10 +27,10 @@ export default class PopupSignup extends Popup {
     this.inputs.forEach((_input) => {
       if (_input.name === 'email') {
         this.inputEmail = _input;
-        this.inputEmail.addEventListener('input', this._validateEmail.bind(this));
+        this.inputEmail.addEventListener('input', this.validateEmail.bind(this));
       } else if (_input.name === 'password') {
         this.inputPassword = _input;
-        this.inputPassword.addEventListener('input', this._validatePassword.bind(this));
+        this.inputPassword.addEventListener('input', this.validatePassword.bind(this));
       } else if (_input.name === 'username') {
         this.inputUsername = _input;
         this.inputUsername.addEventListener('input', this._validateUsername.bind(this));
@@ -47,9 +47,12 @@ export default class PopupSignup extends Popup {
     event.preventDefault();
     const data = {};
 
-    this.inputs.forEach((input) => {
-      data[input.name] = input.value;
+    this.inputs.forEach((_input) => {
+      data[_input.name] = _input.value;
+      _input.disabled = true;
     });
+    this.submitButton.disabled = true;
+
     this.api.signUp(data)
       .then(() => {
         this.close();
@@ -58,51 +61,6 @@ export default class PopupSignup extends Popup {
       .catch((error) => {
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
-  }
-
-  _validateEmail(event) {
-    const input = event.target;
-    const isValid = validator.isEmail(input.value);
-
-    if (isValid) {
-      this.validInputs.email = true;
-      this.errorEmail.classList.add(CONFIG.elements.status.nodisplay);
-    } else {
-      this.validInputs.email = false;
-      if (input.value.length === 0) {
-        this.errorEmail.textContent = ERRORS.emailRequired;
-      } else {
-        this.errorEmail.textContent = ERRORS.emailIsInvalid;
-      }
-      this.errorEmail.classList.remove(CONFIG.elements.status.nodisplay);
-    }
-    this._validateForm();
-    return isValid;
-  }
-
-  _validatePassword(event) {
-    const input = event.target;
-    const isValid = validator.isLength(input.value, {
-      min: CONFIG.params.validPasswordMinLength,
-      max: CONFIG.params.validPasswordMaxLength,
-    });
-
-    if (isValid) {
-      this.validInputs.password = true;
-      this.errorPassword.classList.add(CONFIG.elements.status.nodisplay);
-    } else {
-      this.validInputs.password = false;
-      if (input.value.length === 0) {
-        this.errorPassword.textContent = ERRORS.passwordRequired;
-      } else {
-        this.errorPassword.textContent = ERRORS.passwordIsInvalid;
-      }
-      this.errorPassword.classList.remove(CONFIG.elements.status.nodisplay);
-    }
-
-    this._validateForm();
-
-    return isValid;
   }
 
   _validateUsername(event) {
@@ -125,19 +83,8 @@ export default class PopupSignup extends Popup {
       this.errorUsername.classList.remove(CONFIG.elements.status.nodisplay);
     }
 
-    this._validateForm();
+    this.validateForm();
 
     return isValid;
-  }
-
-  _validateForm() {
-    const values = Object.values(this.validInputs);
-    const isValidForm = values.reduce((value, next) => value && next);
-    if (isValidForm) {
-      this.submitButton.disabled = false;
-    } else {
-      this.submitButton.disabled = true;
-    }
-    return true;
   }
 }

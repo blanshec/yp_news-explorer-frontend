@@ -21,7 +21,7 @@ class SavesFeed extends NewsFeed {
   }
 
   renderLead(articleCount) {
-    this.leadTitle.innerText = `${this.username}, у вас ${articleCount} сохраненных статей`;
+    this.leadTitle.innerText = `${this.username}, у вас ${articleCount} ${articleCount === 1 ? 'сохраненная статья' : 'сохраненных статей'}`;
     this.leadKeywordsHolder.innerText = this.prepareKeywords();
   }
 
@@ -55,13 +55,16 @@ class SavesFeed extends NewsFeed {
   }
 
   async showCards() {
-    await this.api.getArticles()
-      .then((articles) => {
-        this.cards = articles;
-      });
-    this.renderLead(this.cards.data.length);
-    this.savedLinks = await this.getSavedArticles();
-    this.loadCards({ articles: this.cards });
+    try {
+      this.cards = await this.api.getArticles();
+      // this.savedLinks stores map with _id:url-link as key:value. Such array comes form
+      // this.getSavedArticles. It is necceary to get for deletion of the card in current build.
+      this.savedLinks = await this.getSavedArticles();
+      this.renderLead(this.cards.data.length);
+      this.loadCards({ articles: this.cards });
+    } catch (error) {
+      this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
+    }
   }
 
   loadCards(params) {
@@ -76,12 +79,12 @@ class SavesFeed extends NewsFeed {
   }
 
   _removeById() {
-    document.addEventListener(EVENTS.deleteArticleData, async (customEvent) => {
+    document.addEventListener(EVENTS.deletedArticle, async (event) => {
       const childernCards = this.cardContainer.querySelectorAll(CONFIG.elements.card);
 
       for (let i = 0; i < childernCards.length; i += 1) {
         const childLink = childernCards[i].querySelector('.card__link').href;
-        if (childLink === customEvent.detail.link) {
+        if (childLink === event.detail.link) {
           this.cardContainer.removeChild(childernCards[i]);
           this.renderLead(childernCards.length - 1);
         }

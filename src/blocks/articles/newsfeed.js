@@ -35,14 +35,21 @@ class NewsFeed extends Component {
 
   _setDeleteHandler() {
     document.addEventListener(EVENTS.deleteArticleData, async (customEvent) => {
-      const idKey = Object.keys(this.savedLinks)[Object
-        .values(this.savedLinks).indexOf(customEvent.detail.link)];
-
-      await this.api.deleteArticle(idKey)
-        .catch((error) => {
-          this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
-        });
-      this.savedLinks = await this.getSavedArticles();
+      try {
+        const idKey = Object.keys(this.savedLinks)[Object
+          .values(this.savedLinks).indexOf(customEvent.detail.link)];
+        const result = await this.api.deleteArticle(idKey);
+        if (result) {
+          this.savedLinks = await this.getSavedArticles();
+          this.constructor.dispatchNewEvent(EVENTS.deletedArticle, {
+            detail: {
+              link: customEvent.detail.link,
+            },
+          });
+        }
+      } catch (error) {
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
+      }
     });
   }
 }

@@ -20,7 +20,7 @@ class CardGenerator extends Component {
   generateCard(params) {
     const newCard = this.template.cloneNode(true).content;
 
-    if (params.feed === 'savefeed') {
+    if (params.feed === CONFIG.params.savefeed) {
       const saveDate = new Date(params.data.date);
       newCard.querySelector(CONFIG.elements.cardDate).textContent = `${saveDate.getDate()} ${CONFIG.months[saveDate.getMonth()]} ${saveDate.getFullYear()}`;
     } else {
@@ -39,32 +39,45 @@ class CardGenerator extends Component {
   }
 
   _manageSaveButton(card, params) {
+    const link = card.querySelector(CONFIG.elements.cardLink).href;
     const saveButtonIcon = card.querySelector(CONFIG.elements.icon);
     const saveButton = card.querySelector(CONFIG.elements.cardButton);
     this.isLoggedIn = params.authStatus;
-    let isSaved = this._checkCardForSave(params);
+    let isSaved = false;
 
     if (this.isLoggedIn) {
-      this._addLoggedunUnsavedStyle(saveButtonIcon, saveButton);
+      isSaved = this._checkCardForSave(params);
+      this._addLoggedinUnsavedStyle(saveButtonIcon, saveButton);
       saveButton.disabled = false;
     }
-    if (isSaved && (params.feed === 'articlefeed')) {
+    if (isSaved && (params.feed === CONFIG.params.articlefeed)) {
       this._addSavedCardStyle(saveButtonIcon, saveButton);
     }
 
     saveButton.addEventListener('click', (event) => {
       event.preventDefault();
-      if (params.feed === 'savefeed') {
+      if (params.feed === CONFIG.params.savefeed) {
         this.deleteCard(params.data);
-        isSaved = false;
-      } else if (isSaved && (params.feed === 'articlefeed')) {
+      } else if (isSaved && (params.feed === CONFIG.params.articlefeed)) {
         this.deleteCard(params.data);
-        isSaved = false;
-        this._addLoggedunUnsavedStyle(saveButtonIcon, saveButton);
       } else {
         this.saveCard(params.data);
+      }
+    });
+    document.addEventListener(EVENTS.savedArticle, (event) => {
+      if (event.detail.link === link) {
         isSaved = true;
         this._addSavedCardStyle(saveButtonIcon, saveButton);
+      }
+    });
+    document.addEventListener(EVENTS.deletedArticle, (event) => {
+      if (event.detail.link === link) {
+        if (params.feed === 'savefeed') {
+          isSaved = false;
+        } else if (isSaved && (params.feed === 'articlefeed')) {
+          this._addLoggedinUnsavedStyle(saveButtonIcon, saveButton);
+          isSaved = false;
+        }
       }
     });
   }
@@ -77,17 +90,20 @@ class CardGenerator extends Component {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  _addLoggedunUnsavedStyle(icon, button) {
+  _addLoggedinUnsavedStyle(icon, button) {
     icon.classList.remove(CONFIG.elements.status.iconSaved);
     icon.classList.add(CONFIG.elements.status.iconSave);
-    button.classList.add('card__button_save');
-    button.classList.remove('card__button_save-loggedout');
+    button.classList.add(CONFIG.elements.cardStatuses.cardButtonSave);
+    button.classList.remove(CONFIG.elements.cardStatuses.cardButtonSaveLoggedOut);
   }
 
   // eslint-disable-next-line class-methods-use-this
   _addSavedCardStyle(icon, button) {
-    button.classList.add('card__button_saved');
-    button.classList.remove('card__button_save-loggedout', 'card__button_save');
+    button.classList.add(CONFIG.elements.cardStatuses.cardButtonSaved);
+    button.classList.remove(
+      CONFIG.elements.cardStatuses.cardButtonSaveLoggedOut,
+      CONFIG.elements.cardStatuses.cardButtonSave,
+    );
     icon.classList.add(CONFIG.elements.status.iconSaved);
     icon.classList.remove(CONFIG.elements.status.iconSave);
   }

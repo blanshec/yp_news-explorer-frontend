@@ -75,6 +75,7 @@ const CONFIG = {
     popupSignup: '.popup__signup',
     popupLogin: '.popup__login',
     popupMessage: '.popup__message',
+    popupContainer: '.popup__container',
     popupCloseButton: '.popup__button_close',
     popupTitle: '.popup__title',
     popupForm: '.popup__form',
@@ -101,6 +102,7 @@ const CONFIG = {
     articlesPreloader: '.articles__search',
     articlesShowmoreButton: '.articles__button',
 
+    // Lead saved articles elements
     leadTitle: '.svd-lead__title',
     leadKeywords: '.svd-lead__keywords',
     leadKeywordsHolder: '.svd-lead__keywords_holder',
@@ -116,9 +118,16 @@ const CONFIG = {
     cardImage: '.card__image',
     cardText: '.card__text',
     cardLink: '.card__link',
+    cardStatuses: {
+      cardButtonSaved: 'card__button_saved',
+      cardButtonSaveLoggedOut: 'card__button_save-loggedout',
+      cardButtonSave: 'card__button_save',
+    }
   },
   months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
   params: {
+    articlefeed: 'articlefeed',
+    savefeed: 'savefeed',
     validPasswordMinLength: 8,
     validPasswordMaxLength: 30,
     validNameMinLength: 2,

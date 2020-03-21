@@ -18,13 +18,15 @@ class SearchBar extends Component {
     this.input.addEventListener('input', this._validateInput.bind(this));
   }
 
-  async searchByKeyword(event) {
+  searchByKeyword(event) {
     event.preventDefault();
     const data = {};
     data[this.input.name] = this.input.value;
 
     this.newsFeed.clear();
     this.newsFeed.showPreloader();
+    this.input.disabled = true;
+    this.submitButton.disabled = true;
 
     this.newsApi.getNews(this.input.value, CONFIG.params.searchTimeSpan)
       .then((news) => {
@@ -35,6 +37,8 @@ class SearchBar extends Component {
           this.newsFeed.hidePreloader();
           this.newsFeed.showArticles(news);
         }
+        this.input.disabled = false;
+        this.submitButton.disabled = false;
       }).catch((error) => {
         this.newsFeed.hideAll();
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });

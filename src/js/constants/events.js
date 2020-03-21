@@ -4,6 +4,7 @@ const EVENTS = {
   headerButtonClicked: 'headerButtonClicked',
   saveArticleData: 'saveArticleData',
   savedArticle: 'savedArticle',
+  deletedArticle: 'deletedArticle',
   deleteArticleData: 'deleteArticleData',
 };
 export default EVENTS;

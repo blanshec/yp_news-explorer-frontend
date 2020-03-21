@@ -20,14 +20,14 @@ class Articlefeed extends NewsFeed {
         const result = await this.api.saveArticle(customEvent.detail);
         this.savedLinks = await this.getSavedArticles();
         if (result) {
-          document.dispatchEvent(new CustomEvent(EVENTS.savedArticle, { detail: result }));
+          this.constructor.dispatchNewEvent((EVENTS.savedArticle), {
+            detail: {
+              link: customEvent.detail.link,
+            },
+          });
         }
       } catch (error) {
-        document.dispatchEvent(new CustomEvent(EVENTS.errorTriggered, {
-          detail: {
-            message: error,
-          },
-        }));
+        this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       }
     });
   }
