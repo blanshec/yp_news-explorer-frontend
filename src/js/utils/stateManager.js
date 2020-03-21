@@ -17,6 +17,7 @@ class stateManager {
       this._renderHeader(event);
     });
     this.headerButton.element.addEventListener('click', () => {
+      this.usernameExists = !!localStorage.getItem('username');
       this._handleHeaderButton();
     });
   }

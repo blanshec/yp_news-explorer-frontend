@@ -36,7 +36,9 @@ class SearchBar extends Component {
         } else {
           this.newsFeed.hidePreloader();
           this.newsFeed.showArticles(news);
+          this.newsFeed.scrollToResult();
         }
+        this.input.value = '';
         this.input.disabled = false;
         this.submitButton.disabled = false;
       }).catch((error) => {

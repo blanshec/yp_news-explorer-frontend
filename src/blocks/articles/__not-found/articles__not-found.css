@@ -1,5 +1,5 @@
 .articles__not-found {
-  width: 356px;
+  max-width: 356px;
   margin: 0 auto;
 
   text-align: center;
