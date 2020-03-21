@@ -39,6 +39,7 @@ export default class PopupLogin extends Popup {
 
     this.inputs.forEach((_input) => {
       data[_input.name] = _input.value;
+      // eslint-disable-next-line no-param-reassign
       _input.disabled = true;
     });
     this.submitButton.disabled = true;

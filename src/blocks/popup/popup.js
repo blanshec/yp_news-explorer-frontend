@@ -31,6 +31,7 @@ export default class Popup extends Component {
     if (this.element.contains(this.form)) {
       this.form.reset();
       this.inputs.forEach((_input) => {
+        // eslint-disable-next-line no-param-reassign
         _input.disabled = false;
       });
       this.submitButton.disabled = false;

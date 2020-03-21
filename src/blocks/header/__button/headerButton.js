@@ -37,10 +37,10 @@ export default class HeaderButton extends Component {
     if (event.detail.isLoggedIn) {
       try {
         await this._requestUserData();
+        this._addLogoutIcon();
       } catch (error) {
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       }
-      this._addLogoutIcon();
     } else {
       this.element.textContent = 'Авторизоваться';
     }
