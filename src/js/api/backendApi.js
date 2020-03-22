@@ -64,9 +64,6 @@ export default class BackendApi {
   async signIn(data) {
     try {
       const response = await fetch(this.props.login, this._postRequest(data));
-      if (response.status === 401) {
-        throw ERRORS.unableAuth;
-      }
       if (!response.ok) {
         throw ERRORS.badSignin;
       }
