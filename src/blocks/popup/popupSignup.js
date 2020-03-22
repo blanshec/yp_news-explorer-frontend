@@ -60,6 +60,11 @@ export default class PopupSignup extends Popup {
         this.popupMessage.open();
       })
       .catch((error) => {
+        this.inputs.forEach((_input) => {
+          // eslint-disable-next-line no-param-reassign
+          _input.disabled = false;
+        });
+        this.submitButton.disabled = false;
         this.submitButton.disabled = false;
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
