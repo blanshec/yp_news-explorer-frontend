@@ -60,6 +60,7 @@ export default class PopupSignup extends Popup {
         this.popupMessage.open();
       })
       .catch((error) => {
+        this.submitButton.disabled = false;
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }

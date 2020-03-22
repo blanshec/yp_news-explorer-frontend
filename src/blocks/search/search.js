@@ -38,11 +38,12 @@ class SearchBar extends Component {
           this.newsFeed.showArticles(news);
           this.newsFeed.scrollToResult();
         }
-        this.input.value = '';
         this.input.disabled = false;
         this.submitButton.disabled = false;
       }).catch((error) => {
         this.newsFeed.hideAll();
+        this.input.disabled = false;
+        this.submitButton.disabled = false;
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }

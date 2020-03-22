@@ -54,6 +54,7 @@ export default class PopupLogin extends Popup {
         this.close();
       })
       .catch((error) => {
+        this.submitButton.disabled = false;
         this.constructor.dispatchNewEvent(EVENTS.errorTriggered, { detail: { message: error } });
       });
   }
