@@ -1,6 +1,7 @@
 @import "./_save/card__button_save.css";
 @import "./_saved/card__button_saved.css";
 @import "./_delete/card__button_delete.css";
+@import "./_save-loggedout/card__button_save-loggedout.css";
 
 .card__button {
   height: 40px;

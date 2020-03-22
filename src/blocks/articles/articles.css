@@ -1,0 +1,20 @@
+@import "./__cards-container/articles__cards-container.css";
+@import "./__container/articles__container.css";
+@import "./__title/articles__title.css";
+@import "./_inactive/articles_inactive.css";
+@import "./__search/articles__search.css";
+@import "./__text/articles__text.css";
+@import "./__button/articles__button.css";
+@import "./__not-found/articles__not-found.css";
+@import "./_saved/articles_saved.css";
+
+.articles {
+  padding: 80px 0;
+  background-color: #F5F6F7;
+}
+
+@media screen and (max-width: 1023px) {
+  .articles {
+    padding: 40px 0;
+  }
+}

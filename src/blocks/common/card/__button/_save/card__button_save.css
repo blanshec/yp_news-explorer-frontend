@@ -13,7 +13,7 @@
 }
 
 .card__button_save:hover::before {
-  content: 'Войдите, чтобы сохранять статьи';
+  content: 'Сохранить';
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;

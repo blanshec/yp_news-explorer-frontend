@@ -1,0 +1,36 @@
+@import './__text/errorbox__text.css';
+@import './__close/errorbox__close.css';
+
+.errorbox {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #E93434;
+  
+}
+
+.errorbox__content {
+  width: 86%;
+  max-width: 1440px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+@keyframes slidedown {
+  from {
+    top: -30px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.errorbox-animate {
+  animation: slidedown .75s ease-out ;
+}

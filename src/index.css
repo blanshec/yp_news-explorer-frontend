@@ -7,7 +7,7 @@
 @import "./vendor/fonts/Source-Sans-Pro/Source-Sans-Pro.css";
 
 /* Import common styles */
-@import "./blocks/common/noscroll/noscroll.css";
+@import "./blocks/common/errorbox/errorbox.css";
 @import "./blocks/common/button/button.css";
 @import "./blocks/common/link/link.css";
 @import "./blocks/common/preloader/preloader.css";
@@ -27,14 +27,19 @@
 /* Import search styles */
 @import "./blocks/search/search.css";
 
-/* Import results style  */
-@import "./blocks/results/results.css";
+/* Import articles style  */
+@import "./blocks/articles/articles.css";
 
 /* Import about-author styles */
 @import "./blocks/about-author/about-author.css";
 
 /* Import footer styles */
 @import "./blocks/footer/footer.css";
+
+/* Import behavioral styles */
+@import "./blocks/common/noscroll/noscroll.css";
+@import "./blocks/common/nodisplay/nodisplay.css";
+@import "./blocks//common//errorbox/errorbox.css";
 
 body {
   margin: 0;

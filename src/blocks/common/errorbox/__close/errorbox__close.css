@@ -1,0 +1,12 @@
+.button.errorbox__close {
+  background-color: none;
+  padding: 0;
+}
+
+.button.errorbox__close:hover {
+  background-color: white;
+}
+
+.button.errorbox__close:active {
+  background-color: #e4e4e4;
+}

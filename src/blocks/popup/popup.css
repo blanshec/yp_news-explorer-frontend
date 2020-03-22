@@ -9,7 +9,6 @@
 @import "./__link/popup__link.css";
 @import "./__text/popup__text.css";
 @import "./__title/popup__title.css";
-@import "./_inactive/popup_inactive.css";
 @import "./__error/popup__error.css";
 
 .popup {

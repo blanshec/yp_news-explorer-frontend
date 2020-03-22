@@ -1,0 +1,10 @@
+.articles__container {
+  margin: 0 auto;
+  width: 86%;
+}
+
+@media screen and (max-width: 1023px) {
+  .articles__container {
+    width: 90%;
+  }
+}

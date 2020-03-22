@@ -1,5 +1,4 @@
 .noscroll {
-  width: 100vw;
-  position: fixed;
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: hidden;
 }
