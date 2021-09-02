@@ -2,6 +2,8 @@
 
 ## Дипломная работа Yandex.Praktikum
 
+(CURRENTLY DOWN)
+
 <https://newsexplo.gq/>
 
 <https://blanshec.github.io/yp_news-explorer-frontend/>
