@@ -52,6 +52,6 @@
     "dotenv": "8.2.0",
     "package.json": "2.0.1",
     "swiper": "5.2.1",
-    "validator": "11.1.0"
+    "validator": "13.7.0"
   }
 }
